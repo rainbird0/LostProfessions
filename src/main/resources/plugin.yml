@@ -1,0 +1,7 @@
+name: Lostprofessions
+version: ${project.version}
+main: net.lostfables.lughgk.lostprofessions.Lostprofessions
+api-version: 1.13
+authors: [LughGK, Korvic]
+description: A small profession system
+website: lostfables.net
