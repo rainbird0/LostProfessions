@@ -5,3 +5,9 @@ api-version: 1.13
 authors: [LughGK, Korvic]
 description: A small profession system
 website: lostfables.net
+depend: [Tythan]
+commands:
+  limenu:
+    description: A lore item menu
+  liadd:
+    description: Add items to the lore items table!
