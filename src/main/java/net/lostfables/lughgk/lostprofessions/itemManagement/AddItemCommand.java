@@ -24,7 +24,7 @@ public class AddItemCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 
-        if(sender instanceof Player && sender.hasPermission("LostProfessions.additem")) {
+        if(sender instanceof Player && sender.hasPermission("lostprofessions.additem")) {
             Player player = (Player) sender;
             if(addItemToTable(player.getInventory().getItemInMainHand())) {
                 player.sendMessage(ChatColor.DARK_AQUA + "[LostProfessions] Item has been added to the lore item menu.");
@@ -45,6 +45,7 @@ public class AddItemCommand implements CommandExecutor {
             plugin.setCurrentItemIDs(plugin.getCurrentItemIDs()+1);
             statement.executeUpdate();
             plugin.getConnection().close();
+            plugin.updateCurrentItems();
             return true;
         } catch(SQLException e) {
             e.printStackTrace();

@@ -1,14 +1,18 @@
 package net.lostfables.lughgk.lostprofessions;
 
+import co.lotc.core.bukkit.util.ItemUtil;
 import net.lostfables.lughgk.lostprofessions.itemManagement.AddItemCommand;
 import net.lostfables.lughgk.lostprofessions.itemManagement.LoreItemMenuCommand;
+import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public final class Lostprofessions extends JavaPlugin {
 
@@ -18,6 +22,7 @@ public final class Lostprofessions extends JavaPlugin {
     private String host,database,username,password;
     private List<String> table;
     private int port, currentItemIDs;
+    public Map<Integer, ItemStack> items = new HashMap<>();
 
 
     @Override
@@ -25,7 +30,7 @@ public final class Lostprofessions extends JavaPlugin {
         saveDefaultConfig();
         SQLControl = new MySQLController(this);
         SQLControl.mysqlSetup();
-        updateCurrentItemIDs();
+        updateCurrentItems();
 
         new LoreItemMenuCommand(this);
         new AddItemCommand(this);
@@ -40,16 +45,20 @@ public final class Lostprofessions extends JavaPlugin {
         // Plugin shutdown logic
     }
 
-    public void updateCurrentItemIDs() {
+    public void updateCurrentItems() {
         try {
             getSQLControl().openConnection();
-            PreparedStatement statement = getConnection().prepareStatement("SELECT * FROM " + getTable().get(0) + " WHERE ID=(SELECT MAX(ID) FROM " + getTable().get(0) + ");");
-            ResultSet results = statement.executeQuery();
-            results.next();
-            setCurrentItemIDs(results.getInt("ID"));
+            PreparedStatement statement = getConnection().prepareStatement("SELECT * FROM " + getTable().get(0));
+            ResultSet rs = statement.executeQuery();
+            int id = 0;
+            while (rs.next()) {
+                id = rs.getInt(1);
+                items.put(id, ItemUtil.getItemFromYaml(rs.getString(2)));
+            }
+            setCurrentItemIDs(id);
             getConnection().close();
-        } catch (SQLException e) {
-            getLogger().info("Could not update current amount of stored lore items! This is probably not an error if on install.");
+        } catch(Exception e) {
+            e.printStackTrace();
         }
     }
 

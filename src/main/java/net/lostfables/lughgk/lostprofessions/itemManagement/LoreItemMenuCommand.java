@@ -20,6 +20,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class LoreItemMenuCommand implements CommandExecutor {
 
@@ -32,7 +34,7 @@ public class LoreItemMenuCommand implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if(sender instanceof Player) {
+        if(sender instanceof Player && sender.hasPermission("lostprofessions.menu")) {
             Player player = (Player) sender;
             Menu itemMenu = null;
             itemMenu = itemMenuBuilder(itemMenu);
@@ -44,36 +46,19 @@ public class LoreItemMenuCommand implements CommandExecutor {
     private Menu itemMenuBuilder(Menu itemMenuBase) {
 
         ArrayList<Icon> icons = new ArrayList<>();
-        ArrayList<ItemStack> items = new ArrayList<>();
 
         try {
-            plugin.getSQLControl().openConnection();
-            PreparedStatement statement = plugin.getConnection().prepareStatement("SELECT * FROM " + plugin.getTable().get(0));
-            ResultSet rs = statement.executeQuery();
-            while (rs.next()) {
-                //try {
-                    items.add(ItemUtil.getItemFromYaml(rs.getString(2)));
-                //}catch(Exception e) {
-
-                //}
-            }
-            plugin.getConnection().close();
-        } catch(Exception e) {
-            e.printStackTrace();
-        }
-
-        try {
-            for (int index = 0; index < items.size(); index++) {
+            for (int index = 0; index < plugin.getCurrentItemIDs(); index++) {
                 int finalIndex = index;
                 Icon item = new Button() {
                     @Override
                     public ItemStack getItemStack(MenuAgent menuAgent) {
-                        return items.get(finalIndex);
+                        return plugin.items.get(finalIndex+1);
                     }
 
                     @Override
                     public void click(MenuAction menuAction) {
-                        menuAction.getPlayer().setItemOnCursor(items.get(finalIndex));
+                        menuAction.getPlayer().setItemOnCursor(plugin.items.get(finalIndex+1));
                     }
                 };
 
