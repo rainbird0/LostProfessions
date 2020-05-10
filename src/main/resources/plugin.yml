@@ -7,9 +7,5 @@ description: A small profession system
 website: lostfables.net
 depend: [Tythan]
 commands:
-  limenu:
-    description: A lore item menu
-    permission: lostprofessions.menu
-  liadd:
-    description: Add items to the lore items table!
-    permission: lostprofessions.additem
+  loreitems:
+    description: Lore items basecommand
