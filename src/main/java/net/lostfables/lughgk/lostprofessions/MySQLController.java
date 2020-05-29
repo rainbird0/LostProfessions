@@ -1,10 +1,9 @@
 package net.lostfables.lughgk.lostprofessions;
+import co.lotc.core.bukkit.util.ItemUtil;
 import net.md_5.bungee.api.ChatColor;
 import org.bukkit.plugin.Plugin;
 
-import java.sql.Driver;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
+import java.sql.*;
 import java.util.List;
 
 

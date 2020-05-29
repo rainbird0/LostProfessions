@@ -68,6 +68,11 @@
 
     <dependencies>
         <dependency>
+            <groupId>net.lordofthecraft</groupId>
+            <artifactId>ItemEdit</artifactId>
+            <version>1.13.2-R0.1</version>
+        </dependency>
+        <dependency>
             <groupId>com.destroystokyo.paper</groupId>
             <artifactId>paper-api</artifactId>
             <version>1.13.2-R0.1-SNAPSHOT</version>
@@ -76,7 +81,7 @@
         <dependency>
             <groupId>co.lotc</groupId>
             <artifactId>tythan-bukkit</artifactId>
-            <version>0.7.1</version>
+            <version>0.7.2</version>
         </dependency>
     </dependencies>
 </project>

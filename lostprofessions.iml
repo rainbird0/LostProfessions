@@ -21,6 +21,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Maven: net.lordofthecraft:ItemEdit:1.13.2-R0.1" level="project" />
+    <orderEntry type="library" name="Maven: commons-codec:commons-codec:1.14" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: com.destroystokyo.paper:paper-api:1.13.2-R0.1-SNAPSHOT" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: commons-lang:commons-lang:2.6" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: com.googlecode.json-simple:json-simple:1.1.1" level="project" />
@@ -36,10 +38,12 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.ow2.asm:asm-commons:7.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.ow2.asm:asm-tree:7.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.ow2.asm:asm-analysis:7.1" level="project" />
-    <orderEntry type="library" name="Maven: co.lotc:tythan-bukkit:0.7.1" level="project" />
-    <orderEntry type="library" name="Maven: co.lotc:tythan-common:0.7.1" level="project" />
+    <orderEntry type="library" name="Maven: co.lotc:tythan-bukkit:0.7.2" level="project" />
+    <orderEntry type="library" name="Maven: co.lotc:tythan-common:0.7.2" level="project" />
     <orderEntry type="library" name="Maven: com.comphenix.protocol:ProtocolLib:4.5.0" level="project" />
     <orderEntry type="library" name="Maven: cglib:cglib-nodep:3.2.5" level="project" />
     <orderEntry type="library" name="Maven: com.comphenix.executors:BukkitExecutors:1.1-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-buffer:4.1.49.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-common:4.1.49.Final" level="project" />
   </component>
 </module>

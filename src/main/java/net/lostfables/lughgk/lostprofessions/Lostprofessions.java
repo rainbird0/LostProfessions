@@ -3,6 +3,7 @@ package net.lostfables.lughgk.lostprofessions;
 import co.lotc.core.bukkit.command.Commands;
 import co.lotc.core.bukkit.util.ItemUtil;
 import net.lostfables.lughgk.lostprofessions.itemManagement.LoreItemCommands;
+import net.lostfables.lughgk.lostprofessions.items.LostProfessionItems;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -25,15 +26,19 @@ public final class Lostprofessions extends JavaPlugin {
     private int port, currentItemIDs;
     public Map<Integer, ItemStack> items = new HashMap<>();
 
+    public final static String BASE_PERMISSION = "LostProfessions";
+
+
 
     @Override
     public void onEnable() {
+        instance = this;
         saveDefaultConfig();
         SQLControl = new MySQLController(this);
         SQLControl.mysqlSetup();
         updateCurrentItems();
 
-        System.out.println(items.toString());
+        new LostProfessionItems();
 
         Commands.build(getCommand("loreitems"), () -> new LoreItemCommands(this));
 
@@ -60,14 +65,14 @@ public final class Lostprofessions extends JavaPlugin {
             }
             setCurrentItemIDs(id);
 
-            for(int index = 0; index < getCurrentItemIDs(); index++) {
-                if(items.get(index+1) != null) {
+            for(int index = 1; index < getCurrentItemIDs(); index++) {
+                if(items.get(index) != null) {
                     //do nothing
                 } else {
-                    items.put(index+1, new ItemStack(Material.AIR));
+                    items.put(index, new ItemStack(Material.AIR));
                     statement = getConnection().prepareStatement("INSERT INTO " + getTable().get(0) + " (ID,ITEM) VALUES (?,?)");
-                    statement.setInt(1, index+1);
-                    statement.setString(2, ItemUtil.getItemYaml(items.get(index+1)));
+                    statement.setInt(1, index);
+                    statement.setString(2, ItemUtil.getItemYaml(items.get(index)));
                     statement.executeUpdate();
                 }
             }
