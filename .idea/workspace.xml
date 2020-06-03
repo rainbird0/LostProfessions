@@ -7,22 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f8271c4-f1de-4a31-a745-6950338bbd14" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_14.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_buffer_4_1_49_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_common_4_1_49_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_lordofthecraft_ItemEdit_1_13_2_R0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/lostfables/lughgk/lostprofessions/itemManagement/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/lostfables/lughgk/lostprofessions/items/LostProfessionItems.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/lostfables/lughgk/lostprofessions/items/PlaceHolderPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__co_lotc_tythan_bukkit_0_7_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__co_lotc_tythan_bukkit_0_7_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__co_lotc_tythan_common_0_7_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__co_lotc_tythan_common_0_7_2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lostprofessions.iml" beforeDir="false" afterPath="$PROJECT_DIR$/lostprofessions.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/lostfables/lughgk/lostprofessions/Lostprofessions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/lostfables/lughgk/lostprofessions/Lostprofessions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/lostfables/lughgk/lostprofessions/MySQLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/lostfables/lughgk/lostprofessions/MySQLController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/lostfables/lughgk/lostprofessions/itemManagement/LoreItemCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/lostfables/lughgk/lostprofessions/itemManagement/LoreItemCommands.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/lostfables/lughgk/lostprofessions/items/LostProfessionItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/lostfables/lughgk/lostprofessions/items/LostProfessionItems.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,14 +143,22 @@
       <option name="project" value="LOCAL" />
       <updated>1589074276822</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added some crafting recipes, updated to Tythan 0.7.2">
+      <created>1590757293950</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1590757293951</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added item to table command and table view command" />
     <MESSAGE value="changed the way items are catalogued, now shows null items in menu if there is no item to an ID." />
     <MESSAGE value="Switched over to Tythan commands" />
-    <option name="LAST_COMMIT_MESSAGE" value="Switched over to Tythan commands" />
+    <MESSAGE value="added some crafting recipes, updated to Tythan 0.7.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="added some crafting recipes, updated to Tythan 0.7.2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1060" y="505" key="#BuildArtifactsBeforeRunChooser" timestamp="1588774970345">
@@ -195,30 +189,30 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="968" y="547" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.2560.1400/-1920.349.1920.1040@0.0.2560.1400" timestamp="1588905821021" />
-    <state x="721" y="294" key="CommitChangelistDialog2" timestamp="1590757283258">
+    <state x="721" y="294" key="CommitChangelistDialog2" timestamp="1590757293403">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="721" y="294" key="CommitChangelistDialog2/0.0.2560.1400/-1920.349.1920.1040@0.0.2560.1400" timestamp="1590757283258" />
+    <state x="721" y="294" key="CommitChangelistDialog2/0.0.2560.1400/-1920.349.1920.1040@0.0.2560.1400" timestamp="1590757293403" />
     <state x="1060" y="455" key="FileChooserDialogImpl" timestamp="1588765603339">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1060" y="455" key="FileChooserDialogImpl/0.0.2560.1400/-1920.349.1920.1040@0.0.2560.1400" timestamp="1588765603339" />
-    <state width="2517" height="258" key="GridCell.Tab.0.bottom" timestamp="1590757283273">
+    <state width="1258" height="258" key="GridCell.Tab.0.bottom" timestamp="1591192608645">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="258" key="GridCell.Tab.0.bottom/0.0.2560.1400/-1920.349.1920.1040@0.0.2560.1400" timestamp="1590757283273" />
-    <state width="2517" height="258" key="GridCell.Tab.0.center" timestamp="1590757283273">
+    <state width="1258" height="258" key="GridCell.Tab.0.bottom/0.0.2560.1400/-1920.349.1920.1040@0.0.2560.1400" timestamp="1591192608645" />
+    <state width="1258" height="258" key="GridCell.Tab.0.center" timestamp="1591192608645">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="258" key="GridCell.Tab.0.center/0.0.2560.1400/-1920.349.1920.1040@0.0.2560.1400" timestamp="1590757283273" />
-    <state width="2517" height="258" key="GridCell.Tab.0.left" timestamp="1590757283273">
+    <state width="1258" height="258" key="GridCell.Tab.0.center/0.0.2560.1400/-1920.349.1920.1040@0.0.2560.1400" timestamp="1591192608645" />
+    <state width="1258" height="258" key="GridCell.Tab.0.left" timestamp="1591192608645">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="258" key="GridCell.Tab.0.left/0.0.2560.1400/-1920.349.1920.1040@0.0.2560.1400" timestamp="1590757283273" />
-    <state width="2517" height="258" key="GridCell.Tab.0.right" timestamp="1590757283273">
+    <state width="1258" height="258" key="GridCell.Tab.0.left/0.0.2560.1400/-1920.349.1920.1040@0.0.2560.1400" timestamp="1591192608645" />
+    <state width="1258" height="258" key="GridCell.Tab.0.right" timestamp="1591192608645">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="258" key="GridCell.Tab.0.right/0.0.2560.1400/-1920.349.1920.1040@0.0.2560.1400" timestamp="1590757283273" />
+    <state width="1258" height="258" key="GridCell.Tab.0.right/0.0.2560.1400/-1920.349.1920.1040@0.0.2560.1400" timestamp="1591192608645" />
     <state x="760" y="274" key="SettingsEditor" timestamp="1590741892886">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
