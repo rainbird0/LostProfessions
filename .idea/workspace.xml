@@ -7,8 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f8271c4-f1de-4a31-a745-6950338bbd14" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/lostfables/lughgk/lostprofessions/items/CraftingEvents.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/lostfables/lughgk/lostprofessions/items/FurnaceEvents.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/lostfables/lughgk/lostprofessions/Lostprofessions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/lostfables/lughgk/lostprofessions/Lostprofessions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/lostfables/lughgk/lostprofessions/items/LostProfessionItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/lostfables/lughgk/lostprofessions/items/LostProfessionItems.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/lostfables/lughgk/lostprofessions/items/PlaceHolderPlayer.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590757293951</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added furnace recipes">
+      <created>1591193631114</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1591193631114</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -158,7 +169,8 @@
     <MESSAGE value="changed the way items are catalogued, now shows null items in menu if there is no item to an ID." />
     <MESSAGE value="Switched over to Tythan commands" />
     <MESSAGE value="added some crafting recipes, updated to Tythan 0.7.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="added some crafting recipes, updated to Tythan 0.7.2" />
+    <MESSAGE value="added furnace recipes" />
+    <option name="LAST_COMMIT_MESSAGE" value="added furnace recipes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1060" y="505" key="#BuildArtifactsBeforeRunChooser" timestamp="1588774970345">
@@ -189,30 +201,50 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="968" y="547" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.2560.1400/-1920.349.1920.1040@0.0.2560.1400" timestamp="1588905821021" />
-    <state x="721" y="294" key="CommitChangelistDialog2" timestamp="1590757293403">
+    <state x="721" y="294" key="CommitChangelistDialog2" timestamp="1591193630543">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="721" y="294" key="CommitChangelistDialog2/0.0.2560.1400/-1920.349.1920.1040@0.0.2560.1400" timestamp="1590757293403" />
+    <state x="721" y="294" key="CommitChangelistDialog2/0.0.2560.1400/-1920.349.1920.1040@0.0.2560.1400" timestamp="1591193630543" />
     <state x="1060" y="455" key="FileChooserDialogImpl" timestamp="1588765603339">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1060" y="455" key="FileChooserDialogImpl/0.0.2560.1400/-1920.349.1920.1040@0.0.2560.1400" timestamp="1588765603339" />
-    <state width="1258" height="258" key="GridCell.Tab.0.bottom" timestamp="1591192608645">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="938" height="361" key="GridCell.Tab.0.bottom" timestamp="1591235880008">
+      <screen x="-1920" y="349" width="1920" height="1040" />
     </state>
-    <state width="1258" height="258" key="GridCell.Tab.0.bottom/0.0.2560.1400/-1920.349.1920.1040@0.0.2560.1400" timestamp="1591192608645" />
-    <state width="1258" height="258" key="GridCell.Tab.0.center" timestamp="1591192608645">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="938" height="361" key="GridCell.Tab.0.bottom/0.0.2560.1400/-1920.349.1920.1040@-1920.349.1920.1040" timestamp="1591235880008" />
+    <state width="1258" height="361" key="GridCell.Tab.0.bottom/0.0.2560.1400/-1920.349.1920.1040@0.0.2560.1400" timestamp="1591223487065" />
+    <state width="938" height="361" key="GridCell.Tab.0.center" timestamp="1591235880008">
+      <screen x="-1920" y="349" width="1920" height="1040" />
     </state>
-    <state width="1258" height="258" key="GridCell.Tab.0.center/0.0.2560.1400/-1920.349.1920.1040@0.0.2560.1400" timestamp="1591192608645" />
-    <state width="1258" height="258" key="GridCell.Tab.0.left" timestamp="1591192608645">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="938" height="361" key="GridCell.Tab.0.center/0.0.2560.1400/-1920.349.1920.1040@-1920.349.1920.1040" timestamp="1591235880008" />
+    <state width="1258" height="361" key="GridCell.Tab.0.center/0.0.2560.1400/-1920.349.1920.1040@0.0.2560.1400" timestamp="1591223487065" />
+    <state width="938" height="361" key="GridCell.Tab.0.left" timestamp="1591235880008">
+      <screen x="-1920" y="349" width="1920" height="1040" />
     </state>
-    <state width="1258" height="258" key="GridCell.Tab.0.left/0.0.2560.1400/-1920.349.1920.1040@0.0.2560.1400" timestamp="1591192608645" />
-    <state width="1258" height="258" key="GridCell.Tab.0.right" timestamp="1591192608645">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="938" height="361" key="GridCell.Tab.0.left/0.0.2560.1400/-1920.349.1920.1040@-1920.349.1920.1040" timestamp="1591235880008" />
+    <state width="1258" height="361" key="GridCell.Tab.0.left/0.0.2560.1400/-1920.349.1920.1040@0.0.2560.1400" timestamp="1591223487064" />
+    <state width="938" height="361" key="GridCell.Tab.0.right" timestamp="1591235880008">
+      <screen x="-1920" y="349" width="1920" height="1040" />
     </state>
-    <state width="1258" height="258" key="GridCell.Tab.0.right/0.0.2560.1400/-1920.349.1920.1040@0.0.2560.1400" timestamp="1591192608645" />
+    <state width="938" height="361" key="GridCell.Tab.0.right/0.0.2560.1400/-1920.349.1920.1040@-1920.349.1920.1040" timestamp="1591235880008" />
+    <state width="1258" height="361" key="GridCell.Tab.0.right/0.0.2560.1400/-1920.349.1920.1040@0.0.2560.1400" timestamp="1591223487065" />
+    <state width="938" height="348" key="GridCell.Tab.1.bottom" timestamp="1591227966361">
+      <screen x="-1920" y="349" width="1920" height="1040" />
+    </state>
+    <state width="938" height="348" key="GridCell.Tab.1.bottom/0.0.2560.1400/-1920.349.1920.1040@-1920.349.1920.1040" timestamp="1591227966361" />
+    <state width="938" height="348" key="GridCell.Tab.1.center" timestamp="1591227966361">
+      <screen x="-1920" y="349" width="1920" height="1040" />
+    </state>
+    <state width="938" height="348" key="GridCell.Tab.1.center/0.0.2560.1400/-1920.349.1920.1040@-1920.349.1920.1040" timestamp="1591227966361" />
+    <state width="938" height="348" key="GridCell.Tab.1.left" timestamp="1591227966361">
+      <screen x="-1920" y="349" width="1920" height="1040" />
+    </state>
+    <state width="938" height="348" key="GridCell.Tab.1.left/0.0.2560.1400/-1920.349.1920.1040@-1920.349.1920.1040" timestamp="1591227966361" />
+    <state width="938" height="348" key="GridCell.Tab.1.right" timestamp="1591227966361">
+      <screen x="-1920" y="349" width="1920" height="1040" />
+    </state>
+    <state width="938" height="348" key="GridCell.Tab.1.right/0.0.2560.1400/-1920.349.1920.1040@-1920.349.1920.1040" timestamp="1591227966361" />
     <state x="760" y="274" key="SettingsEditor" timestamp="1590741892886">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

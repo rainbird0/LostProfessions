@@ -3,6 +3,8 @@ package net.lostfables.lughgk.lostprofessions;
 import co.lotc.core.bukkit.command.Commands;
 import co.lotc.core.bukkit.util.ItemUtil;
 import net.lostfables.lughgk.lostprofessions.itemManagement.LoreItemCommands;
+import net.lostfables.lughgk.lostprofessions.items.CraftingEvents;
+import net.lostfables.lughgk.lostprofessions.items.FurnaceEvents;
 import net.lostfables.lughgk.lostprofessions.items.LostProfessionItems;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
@@ -34,16 +36,23 @@ public final class Lostprofessions extends JavaPlugin {
     public void onEnable() {
         instance = this;
         saveDefaultConfig();
-        SQLControl = new MySQLController(this);
-        SQLControl.mysqlSetup();
-        updateCurrentItems();
+
+
+        //Lore item management
+        try {
+            SQLControl = new MySQLController(this);
+            SQLControl.mysqlSetup();
+            updateCurrentItems();
+        }catch (Exception e) {
+            Commands.build(getCommand("loreitems"), () -> new LoreItemCommands(this));
+        }
+
+        //Recipes
 
         new LostProfessionItems();
+        new CraftingEvents();
+        new FurnaceEvents();
 
-        Commands.build(getCommand("loreitems"), () -> new LoreItemCommands(this));
-
-
-        // Plugin startup logic
 
     }
 
