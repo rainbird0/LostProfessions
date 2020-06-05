@@ -43,8 +43,9 @@ public final class Lostprofessions extends JavaPlugin {
             SQLControl = new MySQLController(this);
             SQLControl.mysqlSetup();
             updateCurrentItems();
-        }catch (Exception e) {
             Commands.build(getCommand("loreitems"), () -> new LoreItemCommands(this));
+        }catch (Exception e) {
+
         }
 
         //Recipes

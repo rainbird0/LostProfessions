@@ -7,6 +7,11 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.PrepareItemCraftEvent;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.Recipe;
+import org.bukkit.inventory.ShapedRecipe;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class CraftingEvents implements Listener {
 
@@ -16,17 +21,76 @@ public class CraftingEvents implements Listener {
 
     @EventHandler(priority= EventPriority.HIGH)
     public void customCrafting(PrepareItemCraftEvent e){
-        if(e.getInventory().getResult() != null && e.getInventory().getResult().getType() == Material.IRON_NUGGET) {
-            for( int i = 0 ; i < e.getInventory().getSize() ; i++ ){
-                final ItemStack item = e.getInventory().getItem(i);
-                if(e.getInventory().getItem(i) != null) {
-                    if(item.getType() == Material.IRON_INGOT) {
-                        if(item.getItemMeta().getDisplayName().contains("Iron Ingot")){
-                            e.getInventory().setResult(new ItemStack(Material.LEATHER, 1));
-                        }
-                    }
+        if(e.getInventory().getResult() != null && e.getInventory().getResult().equals(LostProfessionItems.pickaxe(Component.BLUEPRINT))) {
+
+            List<Component> metal = new ArrayList<>();
+            List<Component> stick = new ArrayList<>();
+
+            try {
+                metal.add(Component.getFromString(e.getInventory().getItem(1).getItemMeta().getDisplayName()));
+                metal.add(Component.getFromString(e.getInventory().getItem(2).getItemMeta().getDisplayName()));
+                metal.add(Component.getFromString(e.getInventory().getItem(2).getItemMeta().getDisplayName()));
+            } catch(NullPointerException ignored) {
+                e.getInventory().setResult(null);
+                return;
+            }
+
+            for(int i = 1; i < metal.size(); i++) {
+                if(!metal.get(i).equals(metal.get(i-1))) {
+                    e.getInventory().setResult(null);
+                    return;
                 }
             }
+
+            e.getInventory().setResult(LostProfessionItems.pickaxe(metal.get(0));
+            return;
+        }
+
+        if(e.getInventory().getResult() != null && e.getInventory().getResult().equals(LostProfessionItems.shovel(Component.BLUEPRINT))) {
+
+            List<String> metal = new ArrayList<>();
+            List<String> stick = new ArrayList<>();
+
+            try {
+
+            } catch(NullPointerException ignored) {
+                e.getInventory().setResult(null);
+                return;
+            }
+
+            for(int i = 1; i < metal.size(); i++) {
+                if(!metal.get(i).equals(metal.get(i-1))) {
+                    e.getInventory().setResult(null);
+                    return;
+                }
+            }
+
+            e.getInventory().setResult(LostProfessionItems.shovel(Component.getFromString(ingot.get(0))));
+            return;
+        }
+
+        if(e.getInventory().getResult() != null && e.getInventory().getResult().equals(LostProfessionItems.hoe(Component.BLUEPRINT))) {
+
+            List<Component> metal = new ArrayList();
+            List<Component> stick = new ArrayList();
+
+            try {
+                metal.add(Component.getFromString(e.getInventory().getItem(1).getItemMeta().getDisplayName()));
+                metal.add(Component.getFromString(e.getInventory().getItem(2).getItemMeta().getDisplayName()));
+            } catch(NullPointerException ignored) {
+                e.getInventory().setResult(null);
+                return;
+            }
+
+            for(int i = 1; i < metal.size(); i++) {
+                if(!metal.get(i).equals(metal.get(i-1))) {
+                    e.getInventory().setResult(null);
+                    return;
+                }
+            }
+
+            e.getInventory().setResult(LostProfessionItems.hoe(metal.get(0));
+            return;
         }
     }
 }

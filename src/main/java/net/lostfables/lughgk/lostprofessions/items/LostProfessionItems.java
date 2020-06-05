@@ -15,9 +15,7 @@ import org.bukkit.inventory.*;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.LeatherArmorMeta;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 public class LostProfessionItems implements Listener {
 
@@ -26,22 +24,58 @@ public class LostProfessionItems implements Listener {
         remove(Material.LEATHER_CHESTPLATE);
         remove(Material.LEATHER_LEGGINGS);
         remove(Material.LEATHER_BOOTS);
+
         remove(Material.IRON_HELMET);
         remove(Material.IRON_CHESTPLATE);
         remove(Material.IRON_LEGGINGS);
         remove(Material.IRON_BOOTS);
+        remove(Material.BUCKET);
+        remove(Material.IRON_NUGGET);
+        remove(Material.IRON_BLOCK);
+        remove(Material.IRON_INGOT);
+        remove(Material.IRON_BARS);
+        remove(Material.IRON_DOOR);
+        remove(Material.IRON_TRAPDOOR);
+        remove(Material.IRON_AXE);
+        remove(Material.IRON_PICKAXE);
+        remove(Material.IRON_SWORD);
+        remove(Material.IRON_HOE);
+        remove(Material.IRON_SHOVEL);
+        remove(Material.COMPASS);
+        remove(Material.SHIELD);
+        remove(Material.SHEARS);
+        remove(Material.ANVIL);
+
         remove(Material.GOLDEN_HELMET);
         remove(Material.GOLDEN_CHESTPLATE);
         remove(Material.GOLDEN_LEGGINGS);
         remove(Material.GOLDEN_BOOTS);
+        remove(Material.GOLD_NUGGET);
+        remove(Material.GOLD_INGOT);
+        remove(Material.GOLD_BLOCK);
+        remove(Material.GOLDEN_AXE);
+        remove(Material.GOLDEN_PICKAXE);
+        remove(Material.GOLDEN_SWORD);
+        remove(Material.GOLDEN_HOE);
+        remove(Material.GOLDEN_SHOVEL);
+        remove(Material.CLOCK);
+
         remove(Material.DIAMOND_BOOTS);
         remove(Material.DIAMOND_CHESTPLATE);
         remove(Material.DIAMOND_LEGGINGS);
         remove(Material.DIAMOND_HELMET);
-        remove(Material.GOLD_NUGGET);
-        remove(Material.BUCKET);
-        remove(Material.IRON_INGOT);
-        remove(Material.GOLD_INGOT);
+        remove(Material.DIAMOND_BLOCK);
+        remove(Material.DIAMOND_AXE);
+        remove(Material.DIAMOND_PICKAXE);
+        remove(Material.DIAMOND_SWORD);
+        remove(Material.DIAMOND_HOE);
+        remove(Material.DIAMOND_SHOVEL);
+        remove(Material.ENCHANTING_TABLE);
+
+        remove(Material.SPECTRAL_ARROW);
+        remove(Material.BOW);
+        remove(Material.FISHING_ROD);
+
         remove(Material.REDSTONE);
         remove(Material.LAPIS_LAZULI);
 
@@ -52,7 +86,7 @@ public class LostProfessionItems implements Listener {
 
         //Furnace Recipes
         nsKey = new NamespacedKey(Lostprofessions.get(), "ironore_smelt");
-        recipeList.add(new FurnaceRecipe(nsKey, ironIngot(), Material.IRON_ORE, 0, 1));
+        recipeList.add(new FurnaceRecipe(nsKey, ironIngot(), Material.IRON_ORE, 0, 400));
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "goldore_smelt");
         recipeList.add(new FurnaceRecipe(nsKey, goldIngot(), Material.GOLD_ORE, 0, 1));
@@ -140,6 +174,30 @@ public class LostProfessionItems implements Listener {
         r.setIngredient('L', Material.LEATHER);
         recipeList.add(r);
 
+        nsKey = new NamespacedKey(Lostprofessions.get(), "pickaxe");
+        r = new ShapedRecipe(nsKey, pickaxe(Component.BLUEPRINT));
+        r.shape("NMN", " S ", " S ");
+        r.setIngredient('M', Material.IRON_INGOT);
+        r.setIngredient('N', Material.IRON_NUGGET);
+        r.setIngredient('S', Material.STICK);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "shovel");
+        r = new ShapedRecipe(nsKey, shovel(Component.BLUEPRINT));
+        r.shape(" M ", " S ", " S ");
+        r.setIngredient('M', Material.IRON_INGOT);
+        r.setIngredient('N', Material.IRON_NUGGET);
+        r.setIngredient('S', Material.STICK);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "hoe");
+        r = new ShapedRecipe(nsKey, shovel(Component.BLUEPRINT));
+        r.shape("NM ", " S ", " S ");
+        r.setIngredient('M', Material.IRON_INGOT);
+        r.setIngredient('N', Material.IRON_NUGGET);
+        r.setIngredient('S', Material.STICK);
+        recipeList.add(r);
+
         for(int x = 0; x < recipeList.size(); x++) {
             Lostprofessions.get().getServer().addRecipe(recipeList.get(x));
         }
@@ -147,6 +205,10 @@ public class LostProfessionItems implements Listener {
 
 
     }
+
+    //Recipe handling
+
+
 
     public static void remove(Material m) {
         Iterator<Recipe> IR = Lostprofessions.get().getServer().recipeIterator();
@@ -170,6 +232,63 @@ public class LostProfessionItems implements Listener {
 
         return false;
     }
+
+    //Tools
+
+    public static ItemStack pickaxe(Component component) {
+        ItemStack item = new ItemStack(Material.IRON_PICKAXE);
+        ItemBuilder ib = new ItemBuilder(item);
+        ib.setName("Pickaxe");
+        ib.setType(Type.TOOL);
+        ib.setRarity(component.getRarity());
+        ib.applyTags();
+        ib.setDesc(null, "This pickaxe consists of a 36 inch wooden handle to which an 18 inch long " + component.getName() + " pickaxe head is attached. This tool weighs 2.5 pounds, and is primarily used to chip at and break stone or claim the ore contained within it.");
+        ib.addApproval(null, Approval.PLUGIN);
+
+        return item;
+    }
+
+    public static ItemStack shovel(Component component) {
+        ItemStack item = new ItemStack(Material.IRON_SHOVEL);
+        ItemBuilder ib = new ItemBuilder(item);
+        ib.setName("Shovel");
+        ib.setType(Type.TOOL);
+        ib.setRarity(component.getRarity());
+        ib.applyTags();
+        ib.setDesc(null, "This shovel consists of a 37 inch long wooden handle, to which a " + component.getName() + " 10 inch across 7 inch tall shovelhead is attached. It weighs 4.5 pounds. This tool is mainly used to dig at dirt, soil, or similar substances.");
+        ib.addApproval(null, Approval.PLUGIN);
+
+        return item;
+    }
+
+    public static ItemStack hoe(Component component) {
+        ItemStack item = new ItemStack(Material.IRON_HOE);
+        ItemBuilder ib = new ItemBuilder(item);
+        ib.setName("Hoe");
+        ib.setType(Type.TOOL);
+        ib.applyTags();
+        ib.setDesc(null, "This hoe consists of a 60 inch wooden handle, to which a " + component.getName() + " draw head is attached, being 2 inches in width and 5 inches in length. It weighs 3.5 pounds, and is primarily used to dig up soil and create trenches that seeds will be placed in during preparing a field for farming.");
+        ib.addApproval(null, Approval.PLUGIN);
+
+        return item;
+    }
+
+    public static ItemStack woodcutteraxe() {
+        ItemStack item = new ItemStack(Material.LEATHER_HELMET);
+        LeatherArmorMeta im = (LeatherArmorMeta) item.getItemMeta();
+        im.setColor(Color.WHITE);
+        item.setItemMeta(im);
+        ItemBuilder ib = new ItemBuilder(item);
+        ib.setName("Quilted Cloth Coif");
+        ib.setType(Type.LIGHT_ARMOR);
+        ib.applyTags();
+        ib.setDesc(null, "This coif is a close fitting cap made from quilted linen that is worn by both men and women that covers the top, back, and sides of the head.");
+        ib.addApproval(null, Approval.PLUGIN);
+
+        return item;
+    }
+
+    //Light Armor
 
     public static ItemStack clothCoif() {
         ItemStack item = new ItemStack(Material.LEATHER_HELMET);
@@ -208,7 +327,7 @@ public class LostProfessionItems implements Listener {
         ib.setName("Hood");
         ib.setType(Type.LIGHT_ARMOR);
         ib.applyTags();
-        ib.setDesc(null, "A cloth coif is a close fitting cap made from quilted linen that is worn by both men and women that covers the top, back, and sides of the head.");
+        ib.setDesc(null, "This hood is made from cloth, and covers the top, back, sides, and forehead of the wearer’s head when worn. The hood is primarily designed to shield its wearer from the harshness of the elements, and may be used to protect the user's face from rain, wind, and snow, amongst other things. ");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -223,7 +342,7 @@ public class LostProfessionItems implements Listener {
         ib.setName("Gambeson");
         ib.setType(Type.LIGHT_ARMOR);
         ib.applyTags();
-        ib.setDesc(null, "A cloth coif is a close fitting cap made from quilted linen that is worn by both men and women that covers the top, back, and sides of the head.");
+        ib.setDesc(null, "This padded jacket of gambeson covers the wearer’s arms and chest, made of layers of various forms of cloth, cotton, wool, and linen. It can be worn by itself or underneath armour, and is capable of stopping arrows from bows on the lower end of the draw weight spectrum, as well as direct hits from lighter weapons or maces.");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -238,7 +357,7 @@ public class LostProfessionItems implements Listener {
         ib.setName("Robes");
         ib.setType(Type.LIGHT_ARMOR);
         ib.applyTags();
-        ib.setDesc(null, "A cloth coif is a close fitting cap made from quilted linen that is worn by both men and women that covers the top, back, and sides of the head.");
+        ib.setDesc(null, "This set of cloth robes is very light, and, when worn, cover the wearer’s chest, arms, and legs. They have no straps, and are put on by taking the robes and placing it over the wearer’s head. Almost anything can pierce this garment, and it offers virtually no protection.");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -252,7 +371,7 @@ public class LostProfessionItems implements Listener {
         ib.setName("Harness");
         ib.setType(Type.LIGHT_ARMOR);
         ib.applyTags();
-        ib.setDesc(null, "A cloth coif is a close fitting cap made from quilted linen that is worn by both men and women that covers the top, back, and sides of the head.");
+        ib.setDesc(null, "This piece of armor has a tanned leather chest piece that protects both the back and front of the wearer’s chest, which can be tightened or loosened by tugging at a leather strap placed behind the chestpiece. Leather arm pads are bound with string along the outer part of the wearer’s arms curving with them, leaving only the inner part of his arm unprotected. This string may be tightened or loosened to ensure that the pads fit. ");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -267,7 +386,7 @@ public class LostProfessionItems implements Listener {
         ib.setName("Quilted Chausses");
         ib.setType(Type.LIGHT_ARMOR);
         ib.applyTags();
-        ib.setDesc(null, "A cloth coif is a close fitting cap made from quilted linen that is worn by both men and women that covers the top, back, and sides of the head.");
+        ib.setDesc(null, "These Quilted Chausses are made of layers of various types of cloth, cotton, wool, and linen. They extend from the waist to the ankle, completely covering everything in between those places. It can be worn by itself or underneath armour, and is capable of stopping arrows from bows on the lower end of the draw weight spectrum, as well as hits from lighter weapons or maces, and can dampen the harm that stronger weapons do. ");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -278,10 +397,10 @@ public class LostProfessionItems implements Listener {
         LeatherArmorMeta im = (LeatherArmorMeta) item.getItemMeta();
         item.setItemMeta(im);
         ItemBuilder ib = new ItemBuilder(item);
-        ib.setName("Hood");
+        ib.setName("Leather Tassets");
         ib.setType(Type.LIGHT_ARMOR);
         ib.applyTags();
-        ib.setDesc(null, "A cloth coif is a close fitting cap made from quilted linen that is worn by both men and women that covers the top, back, and sides of the head.");
+        ib.setDesc(null, "This piece of armor is made of tanned leather armor pads which are bound with string along the wearer’s legs and curving with them, leaving only the inner thigh and inner calf unprotected. This string may be tightened or loosened to ensure that the pads fit. ");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -296,7 +415,7 @@ public class LostProfessionItems implements Listener {
         ib.setName("Braies");
         ib.setType(Type.LIGHT_ARMOR);
         ib.applyTags();
-        ib.setDesc(null, "A cloth coif is a close fitting cap made from quilted linen that is worn by both men and women that covers the top, back, and sides of the head.");
+        ib.setDesc(null, "This linen garment is shaped like a pair of pants, and is sometimes worn as underwear. It offers no protection whatsoever against any credible attack, and is very light.");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -308,10 +427,10 @@ public class LostProfessionItems implements Listener {
         im.setColor(Color.WHITE);
         item.setItemMeta(im);
         ItemBuilder ib = new ItemBuilder(item);
-        ib.setName("Hood");
+        ib.setName("Leather Boots");
         ib.setType(Type.LIGHT_ARMOR);
         ib.applyTags();
-        ib.setDesc(null, "A cloth coif is a close fitting cap made from quilted linen that is worn by both men and women that covers the top, back, and sides of the head.");
+        ib.setDesc(null, "This pair of boots are made from tanned leather, which is stitched together with string. ");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -326,9 +445,24 @@ public class LostProfessionItems implements Listener {
         ib.setName("Shoes");
         ib.setType(Type.LIGHT_ARMOR);
         ib.applyTags();
-        ib.setDesc(null, "A cloth coif is a close fitting cap made from quilted linen that is worn by both men and women that covers the top, back, and sides of the head.");
+        ib.setDesc(null, "This pair of leather shoes are made from plain leather, which is stitched together with string. ");
         ib.addApproval(null, Approval.PLUGIN);
 
+        return item;
+    }
+
+    //METALS
+
+    public static ItemStack metalPiece(Component component) {
+        ItemStack item = new ItemStack(Material.IRON_NUGGET);
+        ItemBuilder ib = new ItemBuilder(item);
+        ib.setName(component.getName() + " Chunk");
+        ib.setType(Type.METAL);
+        ib.setQuality(Quality.NATURAL);
+        ib.setRarity(component.getRarity());
+        ib.applyTags();
+        ib.setDesc(null, "This is a small chunk of " + component.getName() + ". \n\n [*] This chunk weighs 0.2 kg");
+        ib.addApproval(null, Approval.PLUGIN);
         return item;
     }
 
