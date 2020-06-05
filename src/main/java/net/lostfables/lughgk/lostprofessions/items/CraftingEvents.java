@@ -21,6 +21,20 @@ public class CraftingEvents implements Listener {
 
     @EventHandler(priority= EventPriority.HIGH)
     public void customCrafting(PrepareItemCraftEvent e){
+        if(e.getInventory().getResult() != null && e.getInventory().getResult().equals(LostProfessionItems.metalPiece(Component.BLUEPRINT))) {
+
+            for(int i = 1; i <= e.getInventory().getMatrix().length; i++) {
+                try {
+                    ItemStack item = LostProfessionItems.metalPiece(Component.getFromString(e.getInventory().getItem(i).getItemMeta().getDisplayName()));
+                    item.setAmount(5);
+                    e.getInventory().setResult(item);
+                } catch(Exception ex) {
+
+                }
+            }
+
+            return;
+        }
         if(e.getInventory().getResult() != null && e.getInventory().getResult().equals(LostProfessionItems.pickaxe(Component.BLUEPRINT))) {
 
             List<Component> metal = new ArrayList<>();
@@ -29,6 +43,29 @@ public class CraftingEvents implements Listener {
             try {
                 metal.add(Component.getFromString(e.getInventory().getItem(1).getItemMeta().getDisplayName()));
                 metal.add(Component.getFromString(e.getInventory().getItem(2).getItemMeta().getDisplayName()));
+                metal.add(Component.getFromString(e.getInventory().getItem(3).getItemMeta().getDisplayName()));
+            } catch(NullPointerException ignored) {
+                e.getInventory().setResult(null);
+                return;
+            }
+
+            for(int i = 1; i < metal.size(); i++) {
+                if(!metal.get(i).equals(metal.get(i-1))) {
+                    e.getInventory().setResult(null);
+                    return;
+                }
+            }
+
+            e.getInventory().setResult(LostProfessionItems.pickaxe(metal.get(0)));
+            return;
+        }
+
+        if(e.getInventory().getResult() != null && e.getInventory().getResult().equals(LostProfessionItems.shovel(Component.BLUEPRINT))) {
+
+            List<Component> metal = new ArrayList<>();
+            List<Component> stick = new ArrayList<>();
+
+            try {
                 metal.add(Component.getFromString(e.getInventory().getItem(2).getItemMeta().getDisplayName()));
             } catch(NullPointerException ignored) {
                 e.getInventory().setResult(null);
@@ -42,30 +79,7 @@ public class CraftingEvents implements Listener {
                 }
             }
 
-            e.getInventory().setResult(LostProfessionItems.pickaxe(metal.get(0));
-            return;
-        }
-
-        if(e.getInventory().getResult() != null && e.getInventory().getResult().equals(LostProfessionItems.shovel(Component.BLUEPRINT))) {
-
-            List<String> metal = new ArrayList<>();
-            List<String> stick = new ArrayList<>();
-
-            try {
-
-            } catch(NullPointerException ignored) {
-                e.getInventory().setResult(null);
-                return;
-            }
-
-            for(int i = 1; i < metal.size(); i++) {
-                if(!metal.get(i).equals(metal.get(i-1))) {
-                    e.getInventory().setResult(null);
-                    return;
-                }
-            }
-
-            e.getInventory().setResult(LostProfessionItems.shovel(Component.getFromString(ingot.get(0))));
+            e.getInventory().setResult(LostProfessionItems.shovel(metal.get(0)));
             return;
         }
 
@@ -89,7 +103,7 @@ public class CraftingEvents implements Listener {
                 }
             }
 
-            e.getInventory().setResult(LostProfessionItems.hoe(metal.get(0));
+            e.getInventory().setResult(LostProfessionItems.hoe(metal.get(0)));
             return;
         }
     }

@@ -126,6 +126,11 @@ public class LostProfessionItems implements Listener {
 
 
         //Shapeless recipes
+        nsKey = new NamespacedKey(Lostprofessions.get(), "metal_chunk");
+        slR = new ShapelessRecipe(nsKey, metalPiece(Component.BLUEPRINT));
+        slR.addIngredient(Material.IRON_INGOT);
+        recipeList.add(slR);
+
         nsKey = new NamespacedKey(Lostprofessions.get(), "gold_piece");
         slR = new ShapelessRecipe(nsKey, goldPiece());
         slR.addIngredient(Material.GOLD_INGOT);
@@ -186,12 +191,11 @@ public class LostProfessionItems implements Listener {
         r = new ShapedRecipe(nsKey, shovel(Component.BLUEPRINT));
         r.shape(" M ", " S ", " S ");
         r.setIngredient('M', Material.IRON_INGOT);
-        r.setIngredient('N', Material.IRON_NUGGET);
         r.setIngredient('S', Material.STICK);
         recipeList.add(r);
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "hoe");
-        r = new ShapedRecipe(nsKey, shovel(Component.BLUEPRINT));
+        r = new ShapedRecipe(nsKey, hoe(Component.BLUEPRINT));
         r.shape("NM ", " S ", " S ");
         r.setIngredient('M', Material.IRON_INGOT);
         r.setIngredient('N', Material.IRON_NUGGET);
@@ -266,6 +270,7 @@ public class LostProfessionItems implements Listener {
         ItemBuilder ib = new ItemBuilder(item);
         ib.setName("Hoe");
         ib.setType(Type.TOOL);
+        ib.setRarity(component.getRarity());
         ib.applyTags();
         ib.setDesc(null, "This hoe consists of a 60 inch wooden handle, to which a " + component.getName() + " draw head is attached, being 2 inches in width and 5 inches in length. It weighs 3.5 pounds, and is primarily used to dig up soil and create trenches that seeds will be placed in during preparing a field for farming.");
         ib.addApproval(null, Approval.PLUGIN);
