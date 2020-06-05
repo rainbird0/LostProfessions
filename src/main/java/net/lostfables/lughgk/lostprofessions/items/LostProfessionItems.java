@@ -86,43 +86,43 @@ public class LostProfessionItems implements Listener {
 
         //Furnace Recipes
         nsKey = new NamespacedKey(Lostprofessions.get(), "ironore_smelt");
-        recipeList.add(new FurnaceRecipe(nsKey, ironIngot(), Material.IRON_ORE, 0, 400));
+        recipeList.add(new FurnaceRecipe(nsKey, ironIngot(), Material.IRON_ORE, 0, 6000));
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "goldore_smelt");
-        recipeList.add(new FurnaceRecipe(nsKey, goldIngot(), Material.GOLD_ORE, 0, 1));
+        recipeList.add(new FurnaceRecipe(nsKey, goldIngot(), Material.GOLD_ORE, 0, 6000));
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "lapisore_smelt");
-        recipeList.add(new FurnaceRecipe(nsKey, cobaltIngot(), Material.LAPIS_ORE, 0, 1));
+        recipeList.add(new FurnaceRecipe(nsKey, cobaltIngot(), Material.LAPIS_ORE, 0, 6000));
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "redstoneore_smelt");
-        recipeList.add(new FurnaceRecipe(nsKey, calamiteIngot(), Material.REDSTONE_ORE, 0, 1));
+        recipeList.add(new FurnaceRecipe(nsKey, calamiteIngot(), Material.REDSTONE_ORE, 0, 6000));
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "diorite_smelt");
-        recipeList.add(new FurnaceRecipe(nsKey, silverIngot(), Material.DIORITE, 0, 1));
+        recipeList.add(new FurnaceRecipe(nsKey, silverIngot(), Material.DIORITE, 0, 6000));
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "coal_ore_smelt");
-        recipeList.add(new FurnaceRecipe(nsKey, tungstenIngot(), Material.COAL_ORE, 0, 1));
+        recipeList.add(new FurnaceRecipe(nsKey, tungstenIngot(), Material.COAL_ORE, 0, 6000));
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "iron_block_smelt");
-        recipeList.add(new FurnaceRecipe(nsKey, platinumIngot(), Material.IRON_BLOCK, 0, 1));
+        recipeList.add(new FurnaceRecipe(nsKey, platinumIngot(), Material.IRON_BLOCK, 0, 6000));
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "prismarine_smelt");
-        recipeList.add(new FurnaceRecipe(nsKey, luminideIngot(), Material.PRISMARINE, 0, 1));
+        recipeList.add(new FurnaceRecipe(nsKey, luminideIngot(), Material.PRISMARINE, 0, 6000));
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "magmablock_smelt");
-        recipeList.add(new FurnaceRecipe(nsKey, meteoricMetalIngot(), Material.MAGMA_BLOCK, 0, 1));
+        recipeList.add(new FurnaceRecipe(nsKey, meteoricMetalIngot(), Material.MAGMA_BLOCK, 0, 6000));
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "orangeterracota_smelt");
-        recipeList.add(new FurnaceRecipe(nsKey, copperIngot(), Material.ORANGE_TERRACOTTA, 0, 1));
+        recipeList.add(new FurnaceRecipe(nsKey, copperIngot(), Material.ORANGE_TERRACOTTA, 0, 6000));
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "purple_glazed_terracota_smelt");
-        recipeList.add(new FurnaceRecipe(nsKey, litherCoal(), Material.PURPLE_GLAZED_TERRACOTTA, 0, 1));
+        recipeList.add(new FurnaceRecipe(nsKey, litherCoal(), Material.PURPLE_GLAZED_TERRACOTTA, 0, 6000));
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "smoothredsandstone_smelt");
-        recipeList.add(new FurnaceRecipe(nsKey, palladiumIngot(), Material.SMOOTH_RED_SANDSTONE, 0, 1));
+        recipeList.add(new FurnaceRecipe(nsKey, palladiumIngot(), Material.SMOOTH_RED_SANDSTONE, 0, 6000));
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "smoothquartz_smelt");
-        recipeList.add(new FurnaceRecipe(nsKey, tinIngot(), Material.SMOOTH_QUARTZ, 0, 1));
+        recipeList.add(new FurnaceRecipe(nsKey, tinIngot(), Material.SMOOTH_QUARTZ, 0, 6000));
 
 
         //Shapeless recipes
@@ -138,7 +138,11 @@ public class LostProfessionItems implements Listener {
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "iron_ingot");
         slR = new ShapelessRecipe(nsKey, ironIngot());
-        slR.addIngredient(Material.STRING);
+        slR.addIngredient(Material.IRON_NUGGET);
+        slR.addIngredient(Material.IRON_NUGGET);
+        slR.addIngredient(Material.IRON_NUGGET);
+        slR.addIngredient(Material.IRON_NUGGET);
+        slR.addIngredient(Material.IRON_NUGGET);
         recipeList.add(slR);
 
         //Shaped recipes
@@ -202,6 +206,14 @@ public class LostProfessionItems implements Listener {
         r.setIngredient('S', Material.STICK);
         recipeList.add(r);
 
+        nsKey = new NamespacedKey(Lostprofessions.get(), "wcaxe");
+        r = new ShapedRecipe(nsKey, woodcutteraxe(Component.BLUEPRINT));
+        r.shape("NM ", "NS ", " S ");
+        r.setIngredient('M', Material.IRON_INGOT);
+        r.setIngredient('N', Material.IRON_NUGGET);
+        r.setIngredient('S', Material.STICK);
+        recipeList.add(r);
+
         for(int x = 0; x < recipeList.size(); x++) {
             Lostprofessions.get().getServer().addRecipe(recipeList.get(x));
         }
@@ -241,6 +253,9 @@ public class LostProfessionItems implements Listener {
 
     public static ItemStack pickaxe(Component component) {
         ItemStack item = new ItemStack(Material.IRON_PICKAXE);
+        ItemMeta im = item.getItemMeta();
+        im.setUnbreakable(true);
+        item.setItemMeta(im);
         ItemBuilder ib = new ItemBuilder(item);
         ib.setName("Pickaxe");
         ib.setType(Type.TOOL);
@@ -254,6 +269,9 @@ public class LostProfessionItems implements Listener {
 
     public static ItemStack shovel(Component component) {
         ItemStack item = new ItemStack(Material.IRON_SHOVEL);
+        ItemMeta im = item.getItemMeta();
+        im.setUnbreakable(true);
+        item.setItemMeta(im);
         ItemBuilder ib = new ItemBuilder(item);
         ib.setName("Shovel");
         ib.setType(Type.TOOL);
@@ -268,6 +286,9 @@ public class LostProfessionItems implements Listener {
     public static ItemStack hoe(Component component) {
         ItemStack item = new ItemStack(Material.IRON_HOE);
         ItemBuilder ib = new ItemBuilder(item);
+        ItemMeta im = item.getItemMeta();
+        im.setUnbreakable(true);
+        item.setItemMeta(im);
         ib.setName("Hoe");
         ib.setType(Type.TOOL);
         ib.setRarity(component.getRarity());
@@ -278,16 +299,17 @@ public class LostProfessionItems implements Listener {
         return item;
     }
 
-    public static ItemStack woodcutteraxe() {
-        ItemStack item = new ItemStack(Material.LEATHER_HELMET);
-        LeatherArmorMeta im = (LeatherArmorMeta) item.getItemMeta();
-        im.setColor(Color.WHITE);
+    public static ItemStack woodcutteraxe(Component component) {
+        ItemStack item = new ItemStack(Material.IRON_AXE);
+        ItemMeta im = item.getItemMeta();
+        im.setUnbreakable(true);
         item.setItemMeta(im);
         ItemBuilder ib = new ItemBuilder(item);
-        ib.setName("Quilted Cloth Coif");
-        ib.setType(Type.LIGHT_ARMOR);
+        ib.setName("Woodcutter's Axe");
+        ib.setType(Type.TOOL);
+        ib.setRarity(component.getRarity());
         ib.applyTags();
-        ib.setDesc(null, "This coif is a close fitting cap made from quilted linen that is worn by both men and women that covers the top, back, and sides of the head.");
+        ib.setDesc(null, "This tool is made of an unornamented wooden handle, which measures 31 inches in length, at the top of which a " + component.getName() + " axe-head is attached. This axe-head is unornamented, and is 8.7 inches in length and 13.5 inches in height. The axe itself weighs 3.5 pounds, and is used to cut down trees or split logs.");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -298,6 +320,8 @@ public class LostProfessionItems implements Listener {
     public static ItemStack clothCoif() {
         ItemStack item = new ItemStack(Material.LEATHER_HELMET);
         LeatherArmorMeta im = (LeatherArmorMeta) item.getItemMeta();
+        im.setUnbreakable(true);
+        item.setItemMeta(im);
         im.setColor(Color.WHITE);
         item.setItemMeta(im);
         ItemBuilder ib = new ItemBuilder(item);
@@ -313,6 +337,8 @@ public class LostProfessionItems implements Listener {
     public static ItemStack leatherHelm() {
         ItemStack item = new ItemStack(Material.LEATHER_HELMET);
         LeatherArmorMeta im = (LeatherArmorMeta) item.getItemMeta();
+        im.setUnbreakable(true);
+        item.setItemMeta(im);
         item.setItemMeta(im);
         ItemBuilder ib = new ItemBuilder(item);
         ib.setName("Leather Helm");
@@ -327,6 +353,8 @@ public class LostProfessionItems implements Listener {
     public static ItemStack hood() {
         ItemStack item = new ItemStack(Material.LEATHER_HELMET);
         LeatherArmorMeta im = (LeatherArmorMeta) item.getItemMeta();
+        im.setUnbreakable(true);
+        item.setItemMeta(im);
         item.setItemMeta(im);
         ItemBuilder ib = new ItemBuilder(item);
         ib.setName("Hood");
@@ -341,6 +369,8 @@ public class LostProfessionItems implements Listener {
     public static ItemStack gambeson() {
         ItemStack item = new ItemStack(Material.LEATHER_CHESTPLATE);
         LeatherArmorMeta im = (LeatherArmorMeta) item.getItemMeta();
+        im.setUnbreakable(true);
+        item.setItemMeta(im);
         im.setColor(Color.WHITE);
         item.setItemMeta(im);
         ItemBuilder ib = new ItemBuilder(item);
@@ -356,6 +386,8 @@ public class LostProfessionItems implements Listener {
     public static ItemStack robes() {
         ItemStack item = new ItemStack(Material.LEATHER_CHESTPLATE);
         LeatherArmorMeta im = (LeatherArmorMeta) item.getItemMeta();
+        im.setUnbreakable(true);
+        item.setItemMeta(im);
         im.setColor(Color.WHITE);
         item.setItemMeta(im);
         ItemBuilder ib = new ItemBuilder(item);
@@ -371,7 +403,9 @@ public class LostProfessionItems implements Listener {
     public static ItemStack harness() {
         ItemStack item = new ItemStack(Material.LEATHER_CHESTPLATE);
         LeatherArmorMeta im = (LeatherArmorMeta) item.getItemMeta();
+        im.setUnbreakable(true);
         item.setItemMeta(im);
+
         ItemBuilder ib = new ItemBuilder(item);
         ib.setName("Harness");
         ib.setType(Type.LIGHT_ARMOR);
@@ -386,6 +420,7 @@ public class LostProfessionItems implements Listener {
         ItemStack item = new ItemStack(Material.LEATHER_LEGGINGS);
         LeatherArmorMeta im = (LeatherArmorMeta) item.getItemMeta();
         im.setColor(Color.WHITE);
+        im.setUnbreakable(true);
         item.setItemMeta(im);
         ItemBuilder ib = new ItemBuilder(item);
         ib.setName("Quilted Chausses");
@@ -400,6 +435,7 @@ public class LostProfessionItems implements Listener {
     public static ItemStack leatherTasset() {
         ItemStack item = new ItemStack(Material.LEATHER_LEGGINGS);
         LeatherArmorMeta im = (LeatherArmorMeta) item.getItemMeta();
+        im.setUnbreakable(true);
         item.setItemMeta(im);
         ItemBuilder ib = new ItemBuilder(item);
         ib.setName("Leather Tassets");
@@ -415,6 +451,7 @@ public class LostProfessionItems implements Listener {
         ItemStack item = new ItemStack(Material.LEATHER_LEGGINGS);
         LeatherArmorMeta im = (LeatherArmorMeta) item.getItemMeta();
         im.setColor(Color.WHITE);
+        im.setUnbreakable(true);
         item.setItemMeta(im);
         ItemBuilder ib = new ItemBuilder(item);
         ib.setName("Braies");
@@ -430,6 +467,7 @@ public class LostProfessionItems implements Listener {
         ItemStack item = new ItemStack(Material.LEATHER_BOOTS);
         LeatherArmorMeta im = (LeatherArmorMeta) item.getItemMeta();
         im.setColor(Color.WHITE);
+        im.setUnbreakable(true);
         item.setItemMeta(im);
         ItemBuilder ib = new ItemBuilder(item);
         ib.setName("Leather Boots");
@@ -445,6 +483,7 @@ public class LostProfessionItems implements Listener {
         ItemStack item = new ItemStack(Material.LEATHER_BOOTS);
         LeatherArmorMeta im = (LeatherArmorMeta) item.getItemMeta();
         im.setColor(Color.WHITE);
+        im.setUnbreakable(true);
         item.setItemMeta(im);
         ItemBuilder ib = new ItemBuilder(item);
         ib.setName("Shoes");

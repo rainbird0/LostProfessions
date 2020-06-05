@@ -11,6 +11,7 @@ import org.bukkit.inventory.Recipe;
 import org.bukkit.inventory.ShapedRecipe;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class CraftingEvents implements Listener {
@@ -21,6 +22,7 @@ public class CraftingEvents implements Listener {
 
     @EventHandler(priority= EventPriority.HIGH)
     public void customCrafting(PrepareItemCraftEvent e){
+        //METALPIECE
         if(e.getInventory().getResult() != null && e.getInventory().getResult().equals(LostProfessionItems.metalPiece(Component.BLUEPRINT))) {
 
             for(int i = 1; i <= e.getInventory().getMatrix().length; i++) {
@@ -35,6 +37,34 @@ public class CraftingEvents implements Listener {
 
             return;
         }
+
+        //METALINGOT
+        if(e.getInventory().getResult() != null && e.getInventory().getResult().equals(LostProfessionItems.ironIngot())) {
+            List<Component> metal = new ArrayList<>();
+
+
+            for(ItemStack item : Arrays.asList(e.getInventory().getMatrix())) {
+                if(item != null && item.getType() == Material.IRON_NUGGET) {
+                    metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
+                }
+            }
+
+
+            for(int i = 1; i < metal.size(); i++) {
+                if(!metal.get(i).equals(metal.get(i-1))) {
+                    System.out.println(metal.get(i).equals(metal.get(i-1)));
+                    e.getInventory().setResult(null);
+                    return;
+                }
+            }
+
+            e.getInventory().setResult(metal.get(0).getItem());
+
+        }
+
+
+
+        //PICKAXE
         if(e.getInventory().getResult() != null && e.getInventory().getResult().equals(LostProfessionItems.pickaxe(Component.BLUEPRINT))) {
 
             List<Component> metal = new ArrayList<>();
@@ -60,6 +90,7 @@ public class CraftingEvents implements Listener {
             return;
         }
 
+        //SHOVEL
         if(e.getInventory().getResult() != null && e.getInventory().getResult().equals(LostProfessionItems.shovel(Component.BLUEPRINT))) {
 
             List<Component> metal = new ArrayList<>();
@@ -83,6 +114,7 @@ public class CraftingEvents implements Listener {
             return;
         }
 
+        //HOE
         if(e.getInventory().getResult() != null && e.getInventory().getResult().equals(LostProfessionItems.hoe(Component.BLUEPRINT))) {
 
             List<Component> metal = new ArrayList();
@@ -104,6 +136,32 @@ public class CraftingEvents implements Listener {
             }
 
             e.getInventory().setResult(LostProfessionItems.hoe(metal.get(0)));
+            return;
+        }
+
+        //WOODCUTTER'S AXE
+        if(e.getInventory().getResult() != null && e.getInventory().getResult().equals(LostProfessionItems.woodcutteraxe(Component.BLUEPRINT))) {
+
+            List<Component> metal = new ArrayList();
+            List<Component> stick = new ArrayList();
+
+            try {
+                metal.add(Component.getFromString(e.getInventory().getItem(1).getItemMeta().getDisplayName()));
+                metal.add(Component.getFromString(e.getInventory().getItem(2).getItemMeta().getDisplayName()));
+                metal.add(Component.getFromString(e.getInventory().getItem(4).getItemMeta().getDisplayName()));
+            } catch(NullPointerException ignored) {
+                e.getInventory().setResult(null);
+                return;
+            }
+
+            for(int i = 1; i < metal.size(); i++) {
+                if(!metal.get(i).equals(metal.get(i-1))) {
+                    e.getInventory().setResult(null);
+                    return;
+                }
+            }
+
+            e.getInventory().setResult(LostProfessionItems.woodcutteraxe(metal.get(0)));
             return;
         }
     }
