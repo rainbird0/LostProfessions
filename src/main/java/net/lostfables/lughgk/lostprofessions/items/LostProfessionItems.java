@@ -75,6 +75,7 @@ public class LostProfessionItems implements Listener {
         remove(Material.SPECTRAL_ARROW);
         remove(Material.BOW);
         remove(Material.FISHING_ROD);
+        remove(Material.TURTLE_HELMET);
 
         remove(Material.REDSTONE);
         remove(Material.LAPIS_LAZULI);
@@ -254,6 +255,441 @@ public class LostProfessionItems implements Listener {
         r.setIngredient('L', Material.LEATHER);
         recipeList.add(r);
 
+        nsKey = new NamespacedKey(Lostprofessions.get(), "reinforced_boots");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, reinforced_boots(Component.BLUEPRINT));
+        r.shape("   ", "L L", "N N");
+        r.setIngredient('L', Material.LEATHER);
+        r.setIngredient('N', Material.IRON_NUGGET);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "soft_reinforced_boots");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, reinforced_boots(Component.BLUEPRINT));
+        r.shape("   ", "L L", "N N");
+        r.setIngredient('L', Material.LEATHER);
+        r.setIngredient('N', Material.ACACIA_BUTTON);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "hard_reinforced_boots");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, reinforced_boots(Component.BLUEPRINT));
+        r.shape("   ", "L L", "N N");
+        r.setIngredient('L', Material.LEATHER);
+        r.setIngredient('N', Material.DARK_OAK_BUTTON);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "nasal_helm");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, nasal_helm(Component.BLUEPRINT));
+        r.shape("III", " N ", "   ");
+        r.setIngredient('I', Material.IRON_INGOT);
+        r.setIngredient('N', Material.IRON_NUGGET);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "soft_nasal_helm");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, nasal_helm(Component.BLUEPRINT));
+        r.shape("III", " N ", "   ");
+        r.setIngredient('I', Material.BRICK);
+        r.setIngredient('N', Material.ACACIA_BUTTON);
+        recipeList.add(r);
+        nsKey = new NamespacedKey(Lostprofessions.get(), "hard_nasal_helm");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, nasal_helm(Component.BLUEPRINT));
+        r.shape("III", " N ", "   ");
+        r.setIngredient('I', Material.NETHER_BRICK);
+        r.setIngredient('N', Material.DARK_OAK_BUTTON);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "maille_coif");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, maille_coif(Component.BLUEPRINT));
+        r.shape("III", "I I", "   ");
+        r.setIngredient('I', Material.IRON_NUGGET);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "soft_maille_coif");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, maille_coif(Component.BLUEPRINT));
+        r.shape("III", "I I", "   ");
+        r.setIngredient('I', Material.ACACIA_BUTTON);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "hard_maille_coif");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, maille_coif(Component.BLUEPRINT));
+        r.shape("III", "I I", "   ");
+        r.setIngredient('I', Material.DARK_OAK_BUTTON);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "barbute");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, barbute(Component.BLUEPRINT));
+        r.shape("III", "N N", "   ");
+        r.setIngredient('I', Material.IRON_INGOT);
+        r.setIngredient('N', Material.IRON_NUGGET);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "soft_barbute");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, barbute(Component.BLUEPRINT));
+        r.shape("III", "N N", "   ");
+        r.setIngredient('I', Material.BRICK);
+        r.setIngredient('N', Material.ACACIA_BUTTON);
+        recipeList.add(r);
+        nsKey = new NamespacedKey(Lostprofessions.get(), "hard_barbute");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, barbute(Component.BLUEPRINT));
+        r.shape("III", "N N", "   ");
+        r.setIngredient('I', Material.NETHER_BRICK);
+        r.setIngredient('N', Material.DARK_OAK_BUTTON);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "brigandine");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, brigandine(Component.BLUEPRINT));
+        r.shape("I I", "NIN", "INI");
+        r.setIngredient('I', Material.LEATHER);
+        r.setIngredient('N', Material.IRON_NUGGET);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "soft_brigandine");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, brigandine(Component.BLUEPRINT));
+        r.shape("I I", "NIN", "INI");
+        r.setIngredient('I', Material.LEATHER);
+        r.setIngredient('N', Material.ACACIA_BUTTON);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "hard_brigandine");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, brigandine(Component.BLUEPRINT));
+        r.shape("I I", "NIN", "INI");
+        r.setIngredient('I', Material.LEATHER);
+        r.setIngredient('N', Material.DARK_OAK_BUTTON);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "hauberk");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, hauberk(Component.BLUEPRINT));
+        r.shape("N N", "NNN", "NNN");
+        r.setIngredient('N', Material.IRON_NUGGET);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "soft_hauberk");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, hauberk(Component.BLUEPRINT));
+        r.shape("N N", "NNN", "NNN");
+        r.setIngredient('N', Material.ACACIA_BUTTON);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "hard_hauberk");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, hauberk(Component.BLUEPRINT));
+        r.shape("N N", "NNN", "NNN");
+        r.setIngredient('N', Material.DARK_OAK_BUTTON);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "maille_chausses");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, maille_chausses(Component.BLUEPRINT));
+        r.shape("NNN", "N N", "N N");
+        r.setIngredient('N', Material.IRON_NUGGET);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "soft_maille_chausses");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, maille_chausses(Component.BLUEPRINT));
+        r.shape("NNN", "N N", "N N");
+        r.setIngredient('N', Material.ACACIA_BUTTON);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "hard_maille_chausses");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, maille_chausses(Component.BLUEPRINT));
+        r.shape("NNN", "N N", "N N");
+        r.setIngredient('N', Material.DARK_OAK_BUTTON);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "cuisse");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, cuisse(Component.BLUEPRINT));
+        r.shape("III", "N N", "N N");
+        r.setIngredient('I', Material.IRON_INGOT);
+        r.setIngredient('N', Material.IRON_NUGGET);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "soft_cuisse");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, cuisse(Component.BLUEPRINT));
+        r.shape("III", "N N", "N N");
+        r.setIngredient('I', Material.BRICK);
+        r.setIngredient('N', Material.ACACIA_BUTTON);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "hard_cuisse");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, cuisse(Component.BLUEPRINT));
+        r.shape("III", "N N", "N N");
+        r.setIngredient('I', Material.NETHER_BRICK);
+        r.setIngredient('N', Material.DARK_OAK_BUTTON);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "fullplatelegs");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, fullplatelegs(Component.BLUEPRINT));
+        r.shape("III", "I I", "I I");
+        r.setIngredient('I', Material.IRON_INGOT);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "softfullplatelegs");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, fullplatelegs(Component.BLUEPRINT));
+        r.shape("III", "I I", "I I");
+        r.setIngredient('I', Material.BRICK);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "hardfullplatelegs");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, fullplatelegs(Component.BLUEPRINT));
+        r.shape("III", "I I", "I I");
+        r.setIngredient('I', Material.NETHER_BRICK);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "closehelm");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, close_helm(Component.BLUEPRINT));
+        r.shape("III", "I I", " I ");
+        r.setIngredient('I', Material.IRON_INGOT);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "softclosehelm");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, close_helm(Component.BLUEPRINT));
+        r.shape("III", "I I", " I ");
+        r.setIngredient('I', Material.BRICK);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "hardclosehelm");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, close_helm(Component.BLUEPRINT));
+        r.shape("III", "I I", " I ");
+        r.setIngredient('I', Material.NETHER_BRICK);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "fullplateboots");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, fullplateboots(Component.BLUEPRINT));
+        r.shape("   ", "I I", "I I");
+        r.setIngredient('I', Material.IRON_INGOT);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "softfullplateboots");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, fullplateboots(Component.BLUEPRINT));
+        r.shape("   ", "I I", "I I");
+        r.setIngredient('I', Material.BRICK);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "hardfullplateboots");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, fullplateboots(Component.BLUEPRINT));
+        r.shape("   ", "I I", "I I");
+        r.setIngredient('I', Material.NETHER_BRICK);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "fullplatechest");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, fullplatechest(Component.BLUEPRINT));
+        r.shape("I I", "III", "III");
+        r.setIngredient('I', Material.IRON_INGOT);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "softfullplatechest");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, fullplatechest(Component.BLUEPRINT));
+        r.shape("I I", "III", "III");
+        r.setIngredient('I', Material.BRICK);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "hardfullplatechest");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, fullplatechest(Component.BLUEPRINT));
+        r.shape("I I", "III", "III");
+        r.setIngredient('I', Material.NETHER_BRICK);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "oakroundshield");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, round_shield());
+        r.shape(" I ", "IXI", " I ");
+        r.setIngredient('I', Material.OAK_PLANKS);
+        r.setIngredient('X', Material.LEATHER);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "acroundshield");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, round_shield());
+        r.shape(" I ", "IXI", " I ");
+        r.setIngredient('I', Material.ACACIA_PLANKS);
+        r.setIngredient('X', Material.LEATHER);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "birchroundshield");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, round_shield());
+        r.shape(" I ", "IXI", " I ");
+        r.setIngredient('I', Material.BIRCH_PLANKS);
+        r.setIngredient('X', Material.LEATHER);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "doakroundshield");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, round_shield());
+        r.shape(" I ", "IXI", " I ");
+        r.setIngredient('I', Material.DARK_OAK_PLANKS);
+        r.setIngredient('X', Material.LEATHER);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "jungroundshield");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, round_shield());
+        r.shape(" I ", "IXI", " I ");
+        r.setIngredient('I', Material.JUNGLE_PLANKS);
+        r.setIngredient('X', Material.LEATHER);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "sprucroundshield");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, round_shield());
+        r.shape(" I ", "IXI", " I ");
+        r.setIngredient('I', Material.SPRUCE_PLANKS);
+        r.setIngredient('X', Material.LEATHER);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "heatershield");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, heater_shield(Component.BLUEPRINT));
+        r.shape("XXX", "XXX", " X ");
+        r.setIngredient('X', Material.IRON_NUGGET);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "softheatershield");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, heater_shield(Component.BLUEPRINT));
+        r.shape("XXX", "XXX", " X ");
+        r.setIngredient('X', Material.ACACIA_BUTTON);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "hardheatershield");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, heater_shield(Component.BLUEPRINT));
+        r.shape("XXX", "XXX", " X ");
+        r.setIngredient('X', Material.DARK_OAK_BUTTON);
+        recipeList.add(r);
+
+        //Shaped Recipes - Weapons
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "dagger");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, dagger(Component.BLUEPRINT));
+        r.shape("   ", " N ", " S ");
+        r.setIngredient('N', Material.IRON_NUGGET);
+        r.setIngredient('S', Material.STICK);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "softdagger");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, dagger(Component.BLUEPRINT));
+        r.shape("   ", " N ", " S ");
+        r.setIngredient('N', Material.ACACIA_BUTTON);
+        r.setIngredient('S', Material.STICK);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "harddagger");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, dagger(Component.BLUEPRINT));
+        r.shape("   ", " N ", " S ");
+        r.setIngredient('N', Material.DARK_OAK_BUTTON);
+        r.setIngredient('S', Material.STICK);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "longsword");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, longsword(Component.BLUEPRINT));
+        r.shape(" N ", " M ", " S ");
+        r.setIngredient('M', Material.IRON_INGOT);
+        r.setIngredient('N', Material.IRON_NUGGET);
+        r.setIngredient('S', Material.STICK);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "softlongsword");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, longsword(Component.BLUEPRINT));
+        r.shape(" N ", " M ", " S ");
+        r.setIngredient('M', Material.BRICK);
+        r.setIngredient('N', Material.ACACIA_BUTTON);
+        r.setIngredient('S', Material.STICK);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "hardlongsword");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, longsword(Component.BLUEPRINT));
+        r.shape(" N ", " M ", " S ");
+        r.setIngredient('M', Material.NETHER_BRICK);
+        r.setIngredient('N', Material.DARK_OAK_BUTTON);
+        r.setIngredient('S', Material.STICK);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "shortspear");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, shortspear(Component.BLUEPRINT));
+        r.shape("  N", " S ", "S  ");
+        r.setIngredient('N', Material.IRON_NUGGET);
+        r.setIngredient('S', Material.STICK);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "softshortspear");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, shortspear(Component.BLUEPRINT));
+        r.shape("  N", " S ", "S  ");
+        r.setIngredient('N', Material.ACACIA_BUTTON);
+        r.setIngredient('S', Material.STICK);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "hardshortspear");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, shortspear(Component.BLUEPRINT));
+        r.shape("  N", " S ", "S  ");
+        r.setIngredient('N', Material.DARK_OAK_BUTTON);
+        r.setIngredient('S', Material.STICK);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "spear");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, shortspear(Component.BLUEPRINT));
+        r.shape("  N", " S ", "S  ");
+        r.setIngredient('N', Material.IRON_INGOT);
+        r.setIngredient('S', Material.STICK);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "softspear");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, shortspear(Component.BLUEPRINT));
+        r.shape("  N", " S ", "S  ");
+        r.setIngredient('N', Material.BRICK);
+        r.setIngredient('S', Material.STICK);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "hardspear");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, shortspear(Component.BLUEPRINT));
+        r.shape("  N", " S ", "S  ");
+        r.setIngredient('N', Material.NETHER_BRICK);
+        r.setIngredient('S', Material.STICK);
+        recipeList.add(r);
+
         //Shaped Recipes - Tools
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "pickaxe");
@@ -291,6 +727,22 @@ public class LostProfessionItems implements Listener {
         r.setIngredient('S', Material.STICK);
         recipeList.add(r);
 
+        nsKey = new NamespacedKey(Lostprofessions.get(), "softshovel");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, shovel(Component.BLUEPRINT));
+        r.shape(" M ", " S ", " S ");
+        r.setIngredient('M', Material.BRICK);
+        r.setIngredient('S', Material.STICK);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "hardshovel");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, shovel(Component.BLUEPRINT));
+        r.shape(" M ", " S ", " S ");
+        r.setIngredient('M', Material.NETHER_BRICK);
+        r.setIngredient('S', Material.STICK);
+        recipeList.add(r);
+
         nsKey = new NamespacedKey(Lostprofessions.get(), "hoe");
         Lostprofessions.get().getKeySet().add(nsKey);
         r = new ShapedRecipe(nsKey, hoe(Component.BLUEPRINT));
@@ -300,12 +752,48 @@ public class LostProfessionItems implements Listener {
         r.setIngredient('S', Material.STICK);
         recipeList.add(r);
 
+        nsKey = new NamespacedKey(Lostprofessions.get(), "softhoe");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, hoe(Component.BLUEPRINT));
+        r.shape("NM ", " S ", " S ");
+        r.setIngredient('M', Material.BRICK);
+        r.setIngredient('N', Material.ACACIA_BUTTON);
+        r.setIngredient('S', Material.STICK);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "hardhoe");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, hoe(Component.BLUEPRINT));
+        r.shape("NM ", " S ", " S ");
+        r.setIngredient('M', Material.NETHER_BRICK);
+        r.setIngredient('N', Material.DARK_OAK_BUTTON);
+        r.setIngredient('S', Material.STICK);
+        recipeList.add(r);
+
         nsKey = new NamespacedKey(Lostprofessions.get(), "wcaxe");
         Lostprofessions.get().getKeySet().add(nsKey);
         r = new ShapedRecipe(nsKey, woodcutteraxe(Component.BLUEPRINT));
         r.shape("NM ", "NS ", " S ");
         r.setIngredient('M', Material.IRON_INGOT);
         r.setIngredient('N', Material.IRON_NUGGET);
+        r.setIngredient('S', Material.STICK);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "softwcaxe");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, woodcutteraxe(Component.BLUEPRINT));
+        r.shape("NM ", "NS ", " S ");
+        r.setIngredient('M', Material.BRICK);
+        r.setIngredient('N', Material.ACACIA_BUTTON);
+        r.setIngredient('S', Material.STICK);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "hardwcaxe");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, woodcutteraxe(Component.BLUEPRINT));
+        r.shape("NM ", "NS ", " S ");
+        r.setIngredient('M', Material.NETHER_BRICK);
+        r.setIngredient('N', Material.DARK_OAK_BUTTON);
         r.setIngredient('S', Material.STICK);
         recipeList.add(r);
 
@@ -339,9 +827,16 @@ public class LostProfessionItems implements Listener {
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "shears");
         Lostprofessions.get().getKeySet().add(nsKey);
-        r = new ShapedRecipe(nsKey, iron_bars());
+        r = new ShapedRecipe(nsKey, shears());
         r.shape("  N", " N ", "   ");
         r.setIngredient('N', Material.IRON_NUGGET);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "soft_shears");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, shears());
+        r.shape("  N", " N ", "   ");
+        r.setIngredient('N', Material.ACACIA_BUTTON);
         recipeList.add(r);
 
 
@@ -378,6 +873,18 @@ public class LostProfessionItems implements Listener {
         return false;
     }
     //Mineman Stuff
+
+    public static ItemStack shears() {
+        ItemStack item = new ItemStack(Material.SHEARS);
+        ItemBuilder ib = new ItemBuilder(item);
+        ib.setRarity(Rarity.COMMON);
+        ib.setName("Shears");
+        ib.setType(Type.TOOL);
+        ib.applyTags();
+        ib.setDesc(null, "A set of shears, good for acquiring wool and plant goods.");
+        ib.addApproval(null, Approval.PLUGIN);
+        return item;
+    }
 
     public static ItemStack bucket() {
         ItemStack item = new ItemStack(Material.BUCKET);
@@ -973,6 +1480,199 @@ public class LostProfessionItems implements Listener {
         return item;
     }
 
+    //MEDIUM ARMOR
+    public static ItemStack reinforced_boots(Component component) {
+        ItemStack item = new ItemStack(Material.LEATHER_BOOTS);
+        LeatherArmorMeta im = (LeatherArmorMeta) item.getItemMeta();
+        im.setColor(Color.BLACK);
+        im.setUnbreakable(true);
+        item.setItemMeta(im);
+        ItemBuilder ib = new ItemBuilder(item);
+        ib.setName("Reinforced Boots");
+        ib.setType(Type.MEDIUM_ARMOR);
+        ib.applyTags();
+        ib.setDesc(null, "This pair of boots are made from tanned leather, which is stitched together with string. It is also reinforced, on the sole, heel, and tip of the boot predominantly, with " + component.getName() + ", making it easier to traverse rough terrain in exchange for slowing the wearer down slightly. The reinforcements also add power to the wearer’s kicks.");
+        ib.addApproval(null, Approval.PLUGIN);
+
+        return item;
+    }
+
+    public static ItemStack nasal_helm(Component component) {
+        ItemStack item = new ItemStack(Material.IRON_HELMET);
+        ItemMeta im = item.getItemMeta();
+        im.setUnbreakable(true);
+        item.setItemMeta(im);
+        ItemBuilder ib = new ItemBuilder(item);
+        ib.setName("Nasal Helmet");
+        ib.setRarity(component.getRarity());
+        ib.setType(Type.MEDIUM_ARMOR);
+        ib.applyTags();
+        ib.setDesc(null, "This helmet consists of a 1.5mm " + component.getName() + ", rounded top, which covers the wearer’s head entirely down to their forehead, at which point it stops, and a " + component.getName() + " nose guard, which is a piece of rectangular " + component.getName() + " that extends down from the top of the helmet to protect their nose. The top and nosguard can deflect arrows, as well as weapons that rely on their edge to do damage unless said weapons are wielded by an incredibly strong person. They are more vulnerable to blunt weapons, which cause dents in the armor’s " + component.getName() + " that can similarly hurt their wearer. This helmet is generally worn in conjunction with a chainmail coif.");
+        ib.addApproval(null, Approval.PLUGIN);
+
+        return item;
+    }
+
+    public static ItemStack maille_coif(Component component) {
+        ItemStack item = new ItemStack(Material.CHAINMAIL_HELMET);
+        ItemMeta im = item.getItemMeta();
+        im.setUnbreakable(true);
+        item.setItemMeta(im);
+        ItemBuilder ib = new ItemBuilder(item);
+        ib.setName("Maille Coif");
+        ib.setRarity(component.getRarity());
+        ib.setType(Type.MEDIUM_ARMOR);
+        ib.applyTags();
+        ib.setDesc(null, "This piece of armor is, for all intensive purposes, a hood made of " + component.getName() + " chainmail. It covers the wearer’s throat, forehead, and back and side of head completely. The chainmail links of the armour is designed to protect against and can resist slashing and stabbing weapons, and its non-rigid nature makes it less vulnerable against blunt weapons. This piece of apparel can be worn underneath or in conjunction with many types of head armour. ");
+        ib.addApproval(null, Approval.PLUGIN);
+
+        return item;
+    }
+
+    public static ItemStack barbute(Component component) {
+        ItemStack item = new ItemStack(Material.IRON_HELMET);
+        ItemMeta im = item.getItemMeta();
+        im.setUnbreakable(true);
+        item.setItemMeta(im);
+        ItemBuilder ib = new ItemBuilder(item);
+        ib.setName("Barbute");
+        ib.setRarity(component.getRarity());
+        ib.setType(Type.MEDIUM_ARMOR);
+        ib.applyTags();
+        ib.setDesc(null, "This helmet is made of 1.5mm " + component.getName() + ", which is forged in such a way that it covers the back and sides of the wearer’s head, as well as most of the front, leaving a long, connected gap over where the eyes, nose, and mouth of the helmet’s wearer is. The wearer’s throat is also left unprotected. This helmet can deflect arrows, as well as weapons that rely on their edge to do damage, but is more vulnerable to blunt weapons. ");
+        ib.addApproval(null, Approval.PLUGIN);
+
+        return item;
+    }
+
+    public static ItemStack brigandine(Component component) {
+        ItemStack item = new ItemStack(Material.LEATHER_CHESTPLATE);
+        LeatherArmorMeta im = (LeatherArmorMeta) item.getItemMeta();
+        im.setColor(Color.BLACK);
+        im.setUnbreakable(true);
+        item.setItemMeta(im);
+        ItemBuilder ib = new ItemBuilder(item);
+        ib.setName("Brigandine");
+        ib.setRarity(component.getRarity());
+        ib.setType(Type.MEDIUM_ARMOR);
+        ib.applyTags();
+        ib.setDesc(null, "This body-armour is made of two parts, a tanned leather cover akin to an armless apron, which covers the front, back, and side of the wearer’s chest, as well as their upper thighs, dipping to cover them much like a skirt would. On top of this leather many tiny " + component.getName() + " squares are attached, reinforcing and strengthening it. This form of construction makes the Brigandine less vulnerable against blunt weapons, although by stabbing through the 2mm cracks in between the " + component.getName() + " boxes one can bypass them completely and only face the tanned leather undergarment. Apart from that, the " + component.getName() + " boxes are quite efficient at repelling both cutting and stabbing strikes. ");
+        ib.addApproval(null, Approval.PLUGIN);
+
+        return item;
+    }
+
+    public static ItemStack hauberk(Component component) {
+        ItemStack item = new ItemStack(Material.CHAINMAIL_CHESTPLATE);
+        ItemMeta im = item.getItemMeta();
+        im.setUnbreakable(true);
+        item.setItemMeta(im);
+        ItemBuilder ib = new ItemBuilder(item);
+        ib.setName("Hauberk");
+        ib.setRarity(component.getRarity());
+        ib.setType(Type.MEDIUM_ARMOR);
+        ib.applyTags();
+        ib.setDesc(null, "This Hauberk is made of " + component.getName() + " chainmail, and covers the wearer’s chest and arms completely. From the chest, two sheets of chainmail fall, protecting the wearer’s upper thighs with the exception of their inner thigh. This armour can be worn by itself, or underneath other armors. The chainmail links of this armour are designed to protect against and can resist slashing and stabbing weapons, and its non-rigid nature makes it less vulnerable against blunt weapons. This piece of apparel can be worn underneath or in conjunction with many types of leg armor. ");
+        ib.addApproval(null, Approval.PLUGIN);
+
+        return item;
+    }
+
+    public static ItemStack maille_chausses(Component component) {
+        ItemStack item = new ItemStack(Material.CHAINMAIL_LEGGINGS);
+        ItemMeta im = item.getItemMeta();
+        im.setUnbreakable(true);
+        item.setItemMeta(im);
+        ItemBuilder ib = new ItemBuilder(item);
+        ib.setName("Maille Chausses");
+        ib.setRarity(component.getRarity());
+        ib.setType(Type.MEDIUM_ARMOR);
+        ib.applyTags();
+        ib.setDesc(null, "These maille chausses are made of interlinked " + component.getName() + " chainmail. They extend from the waist to the ankle, completely covering everything in between those places. It can be worn by itself or underneath armour. The chainmail links of this armour are designed to protect against and can resist slashing and stabbing weapons, and its non-rigid nature makes it less vulnerable against blunt weapons. This piece of apparel can be worn underneath or in conjunction with many types of leg armor. ");
+        ib.addApproval(null, Approval.PLUGIN);
+
+        return item;
+    }
+
+    public static ItemStack cuisse(Component component) {
+        ItemStack item = new ItemStack(Material.CHAINMAIL_LEGGINGS);
+        ItemMeta im = item.getItemMeta();
+        im.setUnbreakable(true);
+        item.setItemMeta(im);
+        ItemBuilder ib = new ItemBuilder(item);
+        ib.setName("Cuisse");
+        ib.setRarity(component.getRarity());
+        ib.setType(Type.MEDIUM_ARMOR);
+        ib.applyTags();
+        ib.setDesc(null, " This piece of plate armor is made of 1.55mm " + component.getName() + ", and, when worn, covers all sides of the user’s thigh, ending right above the knee so that it does not significantly impede its wearer’s movement, which it does to a smaller extent. This cuisse can deflect arrows, as well as weapons that rely on their edge to do damage unless said weapons are wielded by an incredibly strong person.They are more vulnerable to blunt weapons which cause dents in the cuisse’s " + component.getName() + " that can similarly hurt its wearer.");
+        ib.addApproval(null, Approval.PLUGIN);
+
+        return item;
+    }
+
+    public static ItemStack close_helm(Component component) {
+        ItemStack item = new ItemStack(Material.IRON_HELMET);
+        ItemMeta im = item.getItemMeta();
+        im.setUnbreakable(true);
+        item.setItemMeta(im);
+        ItemBuilder ib = new ItemBuilder(item);
+        ib.setName("Close Helm");
+        ib.setRarity(component.getRarity());
+        ib.setType(Type.HEAVY_ARMOR);
+        ib.applyTags();
+        ib.setDesc(null, "This close helm is made of two parts, a 1.5mm " + component.getName() + " frame that covers all of the wearer’s face apart from the parts covered by the visor, as well as the wearer’s neck and everything 3.5 inches from the neck on the wearer’s chest as a gorget. The visor can be opened to the side when needed. It covers the wearer’s eyes, nose, and mouth, a 2.5mm " + component.getName() + " slit being placed horizontally at the wearer’s eye level. The small size of the slit causes the helmet’s wearer to have impaired vision if the visor is covering their face. This close helm can deflect arrows, as well as weapons that rely on their edge to do damage. They are more vulnerable to blunt weapons which cause dents in the close helm’s " + component.getName() + ".");
+        ib.addApproval(null, Approval.PLUGIN);
+
+        return item;
+    }
+
+    public static ItemStack fullplatechest(Component component) {
+        ItemStack item = new ItemStack(Material.IRON_CHESTPLATE);
+        ItemMeta im = item.getItemMeta();
+        im.setUnbreakable(true);
+        item.setItemMeta(im);
+        ItemBuilder ib = new ItemBuilder(item);
+        ib.setName("Full Plate Chest");
+        ib.setRarity(component.getRarity());
+        ib.setType(Type.HEAVY_ARMOR);
+        ib.applyTags();
+        ib.setDesc(null, "This piece of armor is made of 1.5mm " + component.getName() + ", and consists of two layers, one of gambeson, and then one of plate armor. The layer of gambeson covers the wearer’s entire body and arms, and, on top of it, the plate armor is placed, covering the user’s arms and chest. The only part of the upper layer that is not made of plate is the area covering the user’s joints, where layers of chainmail are placed on top of the gambeson in replacement for the plate, forming a vulnerability in the armour. The wearer’s movement is impeded in this armour, but it can deflect arrows, as well as weapons that rely on their edge to do damage. The plate chest is more vulnerable to blunt weapons, which can cause dents in the plate’s " + component.getName() + ".");
+        ib.addApproval(null, Approval.PLUGIN);
+
+        return item;
+    }
+
+    public static ItemStack fullplatelegs(Component component) {
+        ItemStack item = new ItemStack(Material.IRON_LEGGINGS);
+        ItemMeta im = item.getItemMeta();
+        im.setUnbreakable(true);
+        item.setItemMeta(im);
+        ItemBuilder ib = new ItemBuilder(item);
+        ib.setName("Full Plate Legs");
+        ib.setRarity(component.getRarity());
+        ib.setType(Type.HEAVY_ARMOR);
+        ib.applyTags();
+        ib.setDesc(null, " These full plate legs are made of two layers, one of mail and one of 1.5mm " + component.getName() + ". Both layers extend from the waist to the leg, with the exception of the wearer’s joints, where the upper layer is replaced with chainmail and the lower with gambeson, forming a weak spot. To the sides of the wearer’s upper thigh, two curved " + component.getName() + " protectors are placed, hanging over their upper thigh and protecting it from strikes from the top, leaving the inner thigh exposed. The wearer’s movement is impeded in this armour, but it can deflect arrows, as well as weapons that rely on their edge to do damage. These plate legs are more vulnerable to blunt weapons, which can cause dents in the plate’s " + component.getName() + ".");
+        ib.addApproval(null, Approval.PLUGIN);
+
+        return item;
+    }
+
+    public static ItemStack fullplateboots(Component component) {
+        ItemStack item = new ItemStack(Material.IRON_BOOTS);
+        ItemMeta im = item.getItemMeta();
+        im.setUnbreakable(true);
+        item.setItemMeta(im);
+        ItemBuilder ib = new ItemBuilder(item);
+        ib.setName("Full Plate Boots");
+        ib.setRarity(component.getRarity());
+        ib.setType(Type.HEAVY_ARMOR);
+        ib.applyTags();
+        ib.setDesc(null, "These plate boots are made of 1.5mm " + component.getName() + ", and cover the wearer’s shins and foot. They consist of two layers, one of gambeson and one of plate, which follows the contours of the wearer’s body closely, with the exception of the ankle joint, where the outer layer of " + component.getName() + " is replaced with chainmail. These boots can deflect arrows, as well as weapons that rely on their edge to do damage, unless said weapons are wielded by an incredibly strong person.These boots are more vulnerable to blunt weapons, which can cause dents in the boot’s " + component.getName() + " that can similarly hurt their wearer.");
+        ib.addApproval(null, Approval.PLUGIN);
+
+        return item;
+    }
     //METALS
 
     public static ItemStack metalPiece(Component component) {

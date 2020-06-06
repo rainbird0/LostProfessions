@@ -55,6 +55,8 @@ public final class Lostprofessions extends JavaPlugin {
         new CraftingEvents();
         new FurnaceEvents();
 
+        getLogger().info(namespacedKeySet.size() + " custom recipes have been loaded.");
+
 
     }
 

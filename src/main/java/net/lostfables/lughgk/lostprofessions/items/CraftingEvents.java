@@ -203,6 +203,33 @@ public class CraftingEvents implements Listener {
                 return;
             }
 
+            //SHEARS
+            if (e.getInventory().getResult().equals(LostProfessionItems.shears())) {
+                List<Component> metal = new ArrayList<>();
+
+
+                for (ItemStack item : Arrays.asList(e.getInventory().getMatrix())) {
+                    if (item != null && (item.getType() == Material.IRON_NUGGET || item.getType() == Material.ACACIA_BUTTON)) {
+                        metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
+                    }
+                }
+
+                if (metal.contains(Component.BLUEPRINT)) {
+                    e.getInventory().setResult(null);
+                    return;
+                }
+
+                for (int i = 1; i < metal.size(); i++) {
+                    if (!metal.get(i).equals(metal.get(i - 1))) {
+                        e.getInventory().setResult(null);
+                        return;
+                    }
+                }
+
+                e.getInventory().setResult(LostProfessionItems.shears());
+                return;
+            }
+
             //SHOVEL
             if (e.getInventory().getResult().equals(LostProfessionItems.shovel(Component.BLUEPRINT))) {
 
@@ -309,6 +336,466 @@ public class CraftingEvents implements Listener {
             e.getInventory().setResult(LostProfessionItems.woodcutteraxe(metal.get(0)));
             return;
         }
+
+            //Reinforced Boot
+            if (e.getInventory().getResult().equals(LostProfessionItems.reinforced_boots(Component.BLUEPRINT))) {
+                List<Component> metal = new ArrayList<>();
+
+                for (ItemStack item : Arrays.asList(e.getInventory().getMatrix())) {
+                    if (item != null && (item.getType() == Material.IRON_NUGGET || item.getType() == Material.ACACIA_BUTTON || item.getType() == Material.DARK_OAK_BUTTON)) {
+                        metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
+                    }
+                }
+
+                if (metal.contains(Component.BLUEPRINT) || metal.contains(null)) {
+                    e.getInventory().setResult(null);
+                    return;
+                }
+
+                for (int i = 1; i < metal.size(); i++) {
+                    if (!metal.get(i).equals(metal.get(i - 1))) {
+                        e.getInventory().setResult(null);
+                        return;
+                    }
+                }
+
+                e.getInventory().setResult(LostProfessionItems.reinforced_boots(metal.get(0)));
+                return;
+            }
+
+            //Nasal Helmet
+            if (e.getInventory().getResult().equals(LostProfessionItems.nasal_helm(Component.BLUEPRINT))) {
+                List<Component> metal = new ArrayList<>();
+
+                for (ItemStack item : Arrays.asList(e.getInventory().getMatrix())) {
+                    if (item != null && (item.getType() == Material.IRON_NUGGET || item.getType() == Material.ACACIA_BUTTON || item.getType() == Material.DARK_OAK_BUTTON || item.getType() == Material.IRON_INGOT || item.getType() == Material.BRICK || item.getType() == Material.NETHER_BRICK)) {
+                        metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
+                    }
+                }
+
+                if (metal.contains(Component.BLUEPRINT) || metal.contains(null)) {
+                    e.getInventory().setResult(null);
+                    return;
+                }
+
+                for (int i = 1; i < metal.size(); i++) {
+                    if (!metal.get(i).equals(metal.get(i - 1))) {
+                        e.getInventory().setResult(null);
+                        return;
+                    }
+                }
+
+                e.getInventory().setResult(LostProfessionItems.nasal_helm(metal.get(0)));
+                return;
+            }
+
+            //Maille Coif
+            if (e.getInventory().getResult().equals(LostProfessionItems.maille_coif(Component.BLUEPRINT))) {
+                List<Component> metal = new ArrayList<>();
+
+                for (ItemStack item : Arrays.asList(e.getInventory().getMatrix())) {
+                    if (item != null && (item.getType() == Material.IRON_NUGGET || item.getType() == Material.ACACIA_BUTTON || item.getType() == Material.DARK_OAK_BUTTON)) {
+                        metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
+                    }
+                }
+
+                if (metal.contains(Component.BLUEPRINT) || metal.contains(null)) {
+                    e.getInventory().setResult(null);
+                    return;
+                }
+
+                for (int i = 1; i < metal.size(); i++) {
+                    if (!metal.get(i).equals(metal.get(i - 1))) {
+                        e.getInventory().setResult(null);
+                        return;
+                    }
+                }
+
+                e.getInventory().setResult(LostProfessionItems.maille_coif(metal.get(0)));
+                return;
+            }
+
+            //Barbute
+            if (e.getInventory().getResult().equals(LostProfessionItems.barbute(Component.BLUEPRINT))) {
+                List<Component> metal = new ArrayList<>();
+
+                for (ItemStack item : Arrays.asList(e.getInventory().getMatrix())) {
+                    if (item != null && (item.getType() == Material.IRON_NUGGET || item.getType() == Material.ACACIA_BUTTON || item.getType() == Material.DARK_OAK_BUTTON || item.getType() == Material.IRON_INGOT || item.getType() == Material.BRICK || item.getType() == Material.NETHER_BRICK)) {
+                        metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
+                    }
+                }
+
+                if (metal.contains(Component.BLUEPRINT) || metal.contains(null)) {
+                    e.getInventory().setResult(null);
+                    return;
+                }
+
+                for (int i = 1; i < metal.size(); i++) {
+                    if (!metal.get(i).equals(metal.get(i - 1))) {
+                        e.getInventory().setResult(null);
+                        return;
+                    }
+                }
+
+                e.getInventory().setResult(LostProfessionItems.barbute(metal.get(0)));
+                return;
+            }
+
+            //Brigandine
+            if (e.getInventory().getResult().equals(LostProfessionItems.brigandine(Component.BLUEPRINT))) {
+                List<Component> metal = new ArrayList<>();
+
+                for (ItemStack item : Arrays.asList(e.getInventory().getMatrix())) {
+                    if (item != null && (item.getType() == Material.IRON_NUGGET || item.getType() == Material.ACACIA_BUTTON || item.getType() == Material.DARK_OAK_BUTTON)) {
+                        metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
+                    }
+                }
+
+                if (metal.contains(Component.BLUEPRINT) || metal.contains(null)) {
+                    e.getInventory().setResult(null);
+                    return;
+                }
+
+                for (int i = 1; i < metal.size(); i++) {
+                    if (!metal.get(i).equals(metal.get(i - 1))) {
+                        e.getInventory().setResult(null);
+                        return;
+                    }
+                }
+
+                e.getInventory().setResult(LostProfessionItems.brigandine(metal.get(0)));
+                return;
+            }
+
+            //Hauberk
+            if (e.getInventory().getResult().equals(LostProfessionItems.hauberk(Component.BLUEPRINT))) {
+                List<Component> metal = new ArrayList<>();
+
+                for (ItemStack item : Arrays.asList(e.getInventory().getMatrix())) {
+                    if (item != null && (item.getType() == Material.IRON_NUGGET || item.getType() == Material.ACACIA_BUTTON || item.getType() == Material.DARK_OAK_BUTTON)) {
+                        metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
+                    }
+                }
+
+                if (metal.contains(Component.BLUEPRINT) || metal.contains(null)) {
+                    e.getInventory().setResult(null);
+                    return;
+                }
+
+                for (int i = 1; i < metal.size(); i++) {
+                    if (!metal.get(i).equals(metal.get(i - 1))) {
+                        e.getInventory().setResult(null);
+                        return;
+                    }
+                }
+
+                e.getInventory().setResult(LostProfessionItems.hauberk(metal.get(0)));
+                return;
+            }
+
+            //Maille Chausses
+            if (e.getInventory().getResult().equals(LostProfessionItems.maille_chausses(Component.BLUEPRINT))) {
+                List<Component> metal = new ArrayList<>();
+
+                for (ItemStack item : Arrays.asList(e.getInventory().getMatrix())) {
+                    if (item != null && (item.getType() == Material.IRON_NUGGET || item.getType() == Material.ACACIA_BUTTON || item.getType() == Material.DARK_OAK_BUTTON)) {
+                        metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
+                    }
+                }
+
+                if (metal.contains(Component.BLUEPRINT) || metal.contains(null)) {
+                    e.getInventory().setResult(null);
+                    return;
+                }
+
+                for (int i = 1; i < metal.size(); i++) {
+                    if (!metal.get(i).equals(metal.get(i - 1))) {
+                        e.getInventory().setResult(null);
+                        return;
+                    }
+                }
+
+                e.getInventory().setResult(LostProfessionItems.maille_chausses(metal.get(0)));
+                return;
+            }
+
+            //cuisse
+            if (e.getInventory().getResult().equals(LostProfessionItems.cuisse(Component.BLUEPRINT))) {
+                List<Component> metal = new ArrayList<>();
+
+                for (ItemStack item : Arrays.asList(e.getInventory().getMatrix())) {
+                    if (item != null && (item.getType() == Material.IRON_NUGGET || item.getType() == Material.ACACIA_BUTTON || item.getType() == Material.DARK_OAK_BUTTON || item.getType() == Material.IRON_INGOT || item.getType() == Material.BRICK || item.getType() == Material.NETHER_BRICK)) {
+                        metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
+                    }
+                }
+
+                if (metal.contains(Component.BLUEPRINT) || metal.contains(null)) {
+                    e.getInventory().setResult(null);
+                    return;
+                }
+
+                for (int i = 1; i < metal.size(); i++) {
+                    if (!metal.get(i).equals(metal.get(i - 1))) {
+                        e.getInventory().setResult(null);
+                        return;
+                    }
+                }
+
+                e.getInventory().setResult(LostProfessionItems.cuisse(metal.get(0)));
+                return;
+            }
+
+            //FULL PLATE LEGS
+            if (e.getInventory().getResult().equals(LostProfessionItems.fullplatelegs(Component.BLUEPRINT))) {
+
+                List<Component> metal = new ArrayList<>();
+
+
+                for (ItemStack item : Arrays.asList(e.getInventory().getMatrix())) {
+                    if (item != null && (item.getType() == Material.IRON_INGOT || item.getType() == Material.BRICK || item.getType() == Material.NETHER_BRICK)) {
+                        metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
+                    }
+                }
+
+                if (metal.contains(Component.BLUEPRINT)) {
+                    e.getInventory().setResult(null);
+                    return;
+                }
+
+                for (int i = 1; i < metal.size(); i++) {
+                    if (!metal.get(i).equals(metal.get(i - 1))) {
+                        e.getInventory().setResult(null);
+                        return;
+                    }
+                }
+
+                e.getInventory().setResult(LostProfessionItems.fullplatelegs(metal.get(0)));
+                return;
+            }
+
+            //CLOSE HELM
+            if (e.getInventory().getResult().equals(LostProfessionItems.close_helm(Component.BLUEPRINT))) {
+
+                List<Component> metal = new ArrayList<>();
+
+
+                for (ItemStack item : Arrays.asList(e.getInventory().getMatrix())) {
+                    if (item != null && (item.getType() == Material.IRON_INGOT || item.getType() == Material.BRICK || item.getType() == Material.NETHER_BRICK)) {
+                        metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
+                    }
+                }
+
+                if (metal.contains(Component.BLUEPRINT)) {
+                    e.getInventory().setResult(null);
+                    return;
+                }
+
+                for (int i = 1; i < metal.size(); i++) {
+                    if (!metal.get(i).equals(metal.get(i - 1))) {
+                        e.getInventory().setResult(null);
+                        return;
+                    }
+                }
+
+                e.getInventory().setResult(LostProfessionItems.close_helm(metal.get(0)));
+                return;
+            }
+
+            //FULL PLATE BOOTS
+            if (e.getInventory().getResult().equals(LostProfessionItems.fullplateboots(Component.BLUEPRINT))) {
+
+                List<Component> metal = new ArrayList<>();
+
+
+                for (ItemStack item : Arrays.asList(e.getInventory().getMatrix())) {
+                    if (item != null && (item.getType() == Material.IRON_INGOT || item.getType() == Material.BRICK || item.getType() == Material.NETHER_BRICK)) {
+                        metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
+                    }
+                }
+
+                if (metal.contains(Component.BLUEPRINT)) {
+                    e.getInventory().setResult(null);
+                    return;
+                }
+
+                for (int i = 1; i < metal.size(); i++) {
+                    if (!metal.get(i).equals(metal.get(i - 1))) {
+                        e.getInventory().setResult(null);
+                        return;
+                    }
+                }
+
+                e.getInventory().setResult(LostProfessionItems.fullplateboots(metal.get(0)));
+                return;
+            }
+
+            //FULL PLATE CHEST
+            if (e.getInventory().getResult().equals(LostProfessionItems.fullplatechest(Component.BLUEPRINT))) {
+
+                List<Component> metal = new ArrayList<>();
+
+
+                for (ItemStack item : Arrays.asList(e.getInventory().getMatrix())) {
+                    if (item != null && (item.getType() == Material.IRON_INGOT || item.getType() == Material.BRICK || item.getType() == Material.NETHER_BRICK)) {
+                        metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
+                    }
+                }
+
+                if (metal.contains(Component.BLUEPRINT)) {
+                    e.getInventory().setResult(null);
+                    return;
+                }
+
+                for (int i = 1; i < metal.size(); i++) {
+                    if (!metal.get(i).equals(metal.get(i - 1))) {
+                        e.getInventory().setResult(null);
+                        return;
+                    }
+                }
+
+                e.getInventory().setResult(LostProfessionItems.fullplatechest(metal.get(0)));
+                return;
+            }
+
+            //DAGGER
+            if (e.getInventory().getResult().equals(LostProfessionItems.dagger(Component.BLUEPRINT))) {
+
+                List<Component> metal = new ArrayList<>();
+
+
+                for (ItemStack item : Arrays.asList(e.getInventory().getMatrix())) {
+                    if (item != null && (item.getType() == Material.IRON_NUGGET || item.getType() == Material.ACACIA_BUTTON || item.getType() == Material.DARK_OAK_BUTTON)) {
+                        metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
+                    }
+                }
+
+                if (metal.contains(Component.BLUEPRINT)) {
+                    e.getInventory().setResult(null);
+                    return;
+                }
+
+                for (int i = 1; i < metal.size(); i++) {
+                    if (!metal.get(i).equals(metal.get(i - 1))) {
+                        e.getInventory().setResult(null);
+                        return;
+                    }
+                }
+
+                e.getInventory().setResult(LostProfessionItems.dagger(metal.get(0)));
+                return;
+            }
+
+            //LONGSWORD
+            if (e.getInventory().getResult().equals(LostProfessionItems.longsword(Component.BLUEPRINT))) {
+
+                List<Component> metal = new ArrayList<>();
+
+
+                for (ItemStack item : Arrays.asList(e.getInventory().getMatrix())) {
+                    if (item != null && (item.getType() == Material.IRON_NUGGET || item.getType() == Material.ACACIA_BUTTON || item.getType() == Material.DARK_OAK_BUTTON || item.getType() == Material.IRON_INGOT || item.getType() == Material.BRICK || item.getType() == Material.NETHER_BRICK)) {
+                        metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
+                    }
+                }
+
+                if (metal.contains(Component.BLUEPRINT)) {
+                    e.getInventory().setResult(null);
+                    return;
+                }
+
+                for (int i = 1; i < metal.size(); i++) {
+                    if (!metal.get(i).equals(metal.get(i - 1))) {
+                        e.getInventory().setResult(null);
+                        return;
+                    }
+                }
+
+                e.getInventory().setResult(LostProfessionItems.longsword(metal.get(0)));
+                return;
+            }
+
+            //SHORTSPEAR
+            if (e.getInventory().getResult().equals(LostProfessionItems.shortspear(Component.BLUEPRINT))) {
+
+                List<Component> metal = new ArrayList<>();
+
+
+                for (ItemStack item : Arrays.asList(e.getInventory().getMatrix())) {
+                    if (item != null && (item.getType() == Material.IRON_NUGGET || item.getType() == Material.ACACIA_BUTTON || item.getType() == Material.DARK_OAK_BUTTON)) {
+                        metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
+                    }
+                }
+
+                if (metal.contains(Component.BLUEPRINT)) {
+                    e.getInventory().setResult(null);
+                    return;
+                }
+
+                for (int i = 1; i < metal.size(); i++) {
+                    if (!metal.get(i).equals(metal.get(i - 1))) {
+                        e.getInventory().setResult(null);
+                        return;
+                    }
+                }
+
+                e.getInventory().setResult(LostProfessionItems.shortspear(metal.get(0)));
+                return;
+            }
+
+            //SPEAR
+            if (e.getInventory().getResult().equals(LostProfessionItems.spear(Component.BLUEPRINT))) {
+
+                List<Component> metal = new ArrayList<>();
+
+
+                for (ItemStack item : Arrays.asList(e.getInventory().getMatrix())) {
+                    if (item != null && (item.getType() == Material.IRON_INGOT || item.getType() == Material.BRICK || item.getType() == Material.NETHER_BRICK)) {
+                        metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
+                    }
+                }
+
+                if (metal.contains(Component.BLUEPRINT)) {
+                    e.getInventory().setResult(null);
+                    return;
+                }
+
+                for (int i = 1; i < metal.size(); i++) {
+                    if (!metal.get(i).equals(metal.get(i - 1))) {
+                        e.getInventory().setResult(null);
+                        return;
+                    }
+                }
+
+                e.getInventory().setResult(LostProfessionItems.spear(metal.get(0)));
+                return;
+            }
+
+            //Heater Shield
+            if (e.getInventory().getResult().equals(LostProfessionItems.heater_shield(Component.BLUEPRINT))) {
+
+                List<Component> metal = new ArrayList<>();
+
+
+                for (ItemStack item : Arrays.asList(e.getInventory().getMatrix())) {
+                    if (item != null && (item.getType() == Material.IRON_NUGGET || item.getType() == Material.ACACIA_BUTTON || item.getType() == Material.DARK_OAK_BUTTON)) {
+                        metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
+                    }
+                }
+
+                if (metal.contains(Component.BLUEPRINT)) {
+                    e.getInventory().setResult(null);
+                    return;
+                }
+
+                for (int i = 1; i < metal.size(); i++) {
+                    if (!metal.get(i).equals(metal.get(i - 1))) {
+                        e.getInventory().setResult(null);
+                        return;
+                    }
+                }
+
+                e.getInventory().setResult(LostProfessionItems.heater_shield(metal.get(0)));
+                return;
+            }
         }
     }
 }
