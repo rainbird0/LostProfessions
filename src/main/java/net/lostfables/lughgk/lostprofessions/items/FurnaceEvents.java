@@ -2,7 +2,9 @@ package net.lostfables.lughgk.lostprofessions.items;
 
 import net.lostfables.lughgk.lostprofessions.Lostprofessions;
 import net.md_5.bungee.api.ChatColor;
+import net.md_5.bungee.api.chat.BaseComponent;
 import org.bukkit.Material;
+import org.bukkit.NamespacedKey;
 import org.bukkit.block.Furnace;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -14,6 +16,10 @@ import org.bukkit.inventory.FurnaceRecipe;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.Recipe;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class FurnaceEvents implements Listener {
@@ -22,7 +28,7 @@ public class FurnaceEvents implements Listener {
         Lostprofessions.get().getServer().getPluginManager().registerEvents(this, Lostprofessions.get());
     }
 
-    //@EventHandler
+    @EventHandler
     public void furnaceInteractEvent(PlayerInteractEvent event) {
         if(event.getClickedBlock().getState() instanceof Furnace && ((Furnace) event.getClickedBlock().getState()).getCookTime() != 0) {
             ItemStack source = ((Furnace) event.getClickedBlock().getState()).getInventory().getSmelting();

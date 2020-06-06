@@ -7,6 +7,7 @@ import net.lostfables.lughgk.lostprofessions.items.CraftingEvents;
 import net.lostfables.lughgk.lostprofessions.items.FurnaceEvents;
 import net.lostfables.lughgk.lostprofessions.items.LostProfessionItems;
 import org.bukkit.Material;
+import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -14,21 +15,21 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public final class Lostprofessions extends JavaPlugin {
 
     private static Lostprofessions instance;
-    private MySQLController SQLControl;
-    private Connection connection;
-    private String host,database,username,password;
-    private List<String> table;
-    private int port, currentItemIDs;
-    public Map<Integer, ItemStack> items = new HashMap<>();
+    private static MySQLController SQLControl;
+    private static Connection connection;
+    private static String host,database,username,password;
+    private static List<String> table;
+    private static int port, currentItemIDs;
+    public static Map<Integer, ItemStack> items = new HashMap<>();
+    private static Collection<NamespacedKey> namespacedKeySet = new ArrayList<>();
 
     public final static String BASE_PERMISSION = "LostProfessions";
+    public final static String BASE_KEY = "LostProfessions";
 
 
 
@@ -90,6 +91,10 @@ public final class Lostprofessions extends JavaPlugin {
         } catch(SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    public static Collection<NamespacedKey> getKeySet() {
+        return namespacedKeySet;
     }
 
     @Deprecated

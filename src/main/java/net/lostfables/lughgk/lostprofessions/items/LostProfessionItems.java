@@ -86,57 +86,85 @@ public class LostProfessionItems implements Listener {
 
         //Furnace Recipes
         nsKey = new NamespacedKey(Lostprofessions.get(), "ironore_smelt");
+        Lostprofessions.get().getKeySet().add(nsKey);
         recipeList.add(new FurnaceRecipe(nsKey, ironIngot(), Material.IRON_ORE, 0, 6000));
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "goldore_smelt");
+        Lostprofessions.get().getKeySet().add(nsKey);
         recipeList.add(new FurnaceRecipe(nsKey, goldIngot(), Material.GOLD_ORE, 0, 6000));
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "lapisore_smelt");
+        Lostprofessions.get().getKeySet().add(nsKey);
         recipeList.add(new FurnaceRecipe(nsKey, cobaltIngot(), Material.LAPIS_ORE, 0, 6000));
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "redstoneore_smelt");
+        Lostprofessions.get().getKeySet().add(nsKey);
         recipeList.add(new FurnaceRecipe(nsKey, calamiteIngot(), Material.REDSTONE_ORE, 0, 6000));
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "diorite_smelt");
+        Lostprofessions.get().getKeySet().add(nsKey);
         recipeList.add(new FurnaceRecipe(nsKey, silverIngot(), Material.DIORITE, 0, 6000));
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "coal_ore_smelt");
+        Lostprofessions.get().getKeySet().add(nsKey);
         recipeList.add(new FurnaceRecipe(nsKey, tungstenIngot(), Material.COAL_ORE, 0, 6000));
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "iron_block_smelt");
+        Lostprofessions.get().getKeySet().add(nsKey);
         recipeList.add(new FurnaceRecipe(nsKey, platinumIngot(), Material.IRON_BLOCK, 0, 6000));
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "prismarine_smelt");
+        Lostprofessions.get().getKeySet().add(nsKey);
         recipeList.add(new FurnaceRecipe(nsKey, luminideIngot(), Material.PRISMARINE, 0, 6000));
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "magmablock_smelt");
+        Lostprofessions.get().getKeySet().add(nsKey);
         recipeList.add(new FurnaceRecipe(nsKey, meteoricMetalIngot(), Material.MAGMA_BLOCK, 0, 6000));
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "orangeterracota_smelt");
+        Lostprofessions.get().getKeySet().add(nsKey);
         recipeList.add(new FurnaceRecipe(nsKey, copperIngot(), Material.ORANGE_TERRACOTTA, 0, 6000));
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "purple_glazed_terracota_smelt");
+        Lostprofessions.get().getKeySet().add(nsKey);
         recipeList.add(new FurnaceRecipe(nsKey, litherCoal(), Material.PURPLE_GLAZED_TERRACOTTA, 0, 6000));
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "smoothredsandstone_smelt");
+        Lostprofessions.get().getKeySet().add(nsKey);
         recipeList.add(new FurnaceRecipe(nsKey, palladiumIngot(), Material.SMOOTH_RED_SANDSTONE, 0, 6000));
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "smoothquartz_smelt");
+        Lostprofessions.get().getKeySet().add(nsKey);
         recipeList.add(new FurnaceRecipe(nsKey, tinIngot(), Material.SMOOTH_QUARTZ, 0, 6000));
 
 
         //Shapeless recipes
         nsKey = new NamespacedKey(Lostprofessions.get(), "metal_chunk");
+        Lostprofessions.get().getKeySet().add(nsKey);
         slR = new ShapelessRecipe(nsKey, metalPiece(Component.BLUEPRINT));
         slR.addIngredient(Material.IRON_INGOT);
         recipeList.add(slR);
 
+        nsKey = new NamespacedKey(Lostprofessions.get(), "soft_metal_chunk");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        slR = new ShapelessRecipe(nsKey, softMetalPiece(Component.BLUEPRINT));
+        slR.addIngredient(Material.BRICK);
+        recipeList.add(slR);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "hard_metal_chunk");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        slR = new ShapelessRecipe(nsKey, hardMetalPiece(Component.BLUEPRINT));
+        slR.addIngredient(Material.NETHER_BRICK);
+        recipeList.add(slR);
+
         nsKey = new NamespacedKey(Lostprofessions.get(), "gold_piece");
+        Lostprofessions.get().getKeySet().add(nsKey);
         slR = new ShapelessRecipe(nsKey, goldPiece());
         slR.addIngredient(Material.GOLD_INGOT);
         recipeList.add(slR);
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "iron_ingot");
+        Lostprofessions.get().getKeySet().add(nsKey);
         slR = new ShapelessRecipe(nsKey, ironIngot());
         slR.addIngredient(Material.IRON_NUGGET);
         slR.addIngredient(Material.IRON_NUGGET);
@@ -147,6 +175,7 @@ public class LostProfessionItems implements Listener {
 
         //Shaped recipes
         nsKey = new NamespacedKey(Lostprofessions.get(), "cloth_coif");
+        Lostprofessions.get().getKeySet().add(nsKey);
         r = new ShapedRecipe(nsKey, clothCoif());
         r.shape("SWS", "W W", "   ");
         r.setIngredient('W', Material.WHITE_WOOL);
@@ -154,36 +183,42 @@ public class LostProfessionItems implements Listener {
         recipeList.add(r);
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "leather_helm");
+        Lostprofessions.get().getKeySet().add(nsKey);
         r = new ShapedRecipe(nsKey, leatherHelm());
         r.shape("LLL", "L L", "   ");
         r.setIngredient('L', Material.LEATHER);
         recipeList.add(r);
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "hood");
+        Lostprofessions.get().getKeySet().add(nsKey);
         r = new ShapedRecipe(nsKey, hood());
         r.shape(" W ", "W W", "   ");
         r.setIngredient('W', Material.WHITE_WOOL);
         recipeList.add(r);
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "gambeson");
+        Lostprofessions.get().getKeySet().add(nsKey);
         r = new ShapedRecipe(nsKey, gambeson());
         r.shape("W W", "WWW", "WWW");
         r.setIngredient('W', Material.WHITE_WOOL);
         recipeList.add(r);
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "robes");
+        Lostprofessions.get().getKeySet().add(nsKey);
         r = new ShapedRecipe(nsKey, robes());
         r.shape("S S", "SSS", "SSS");
         r.setIngredient('S', Material.STRING);
         recipeList.add(r);
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "harness");
+        Lostprofessions.get().getKeySet().add(nsKey);
         r = new ShapedRecipe(nsKey, harness());
         r.shape("L L", "LLL", "LLL");
         r.setIngredient('L', Material.LEATHER);
         recipeList.add(r);
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "pickaxe");
+        Lostprofessions.get().getKeySet().add(nsKey);
         r = new ShapedRecipe(nsKey, pickaxe(Component.BLUEPRINT));
         r.shape("NMN", " S ", " S ");
         r.setIngredient('M', Material.IRON_INGOT);
@@ -191,7 +226,26 @@ public class LostProfessionItems implements Listener {
         r.setIngredient('S', Material.STICK);
         recipeList.add(r);
 
+        nsKey = new NamespacedKey(Lostprofessions.get(), "hard_pickaxe");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, pickaxe(Component.BLUEPRINT));
+        r.shape("NMN", " S ", " S ");
+        r.setIngredient('M', Material.NETHER_BRICK);
+        r.setIngredient('N', Material.DARK_OAK_BUTTON);
+        r.setIngredient('S', Material.STICK);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "soft_pickaxe");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, pickaxe(Component.BLUEPRINT));
+        r.shape("NMN", " S ", " S ");
+        r.setIngredient('M', Material.BRICK);
+        r.setIngredient('N', Material.ACACIA_BUTTON);
+        r.setIngredient('S', Material.STICK);
+        recipeList.add(r);
+
         nsKey = new NamespacedKey(Lostprofessions.get(), "shovel");
+        Lostprofessions.get().getKeySet().add(nsKey);
         r = new ShapedRecipe(nsKey, shovel(Component.BLUEPRINT));
         r.shape(" M ", " S ", " S ");
         r.setIngredient('M', Material.IRON_INGOT);
@@ -199,6 +253,7 @@ public class LostProfessionItems implements Listener {
         recipeList.add(r);
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "hoe");
+        Lostprofessions.get().getKeySet().add(nsKey);
         r = new ShapedRecipe(nsKey, hoe(Component.BLUEPRINT));
         r.shape("NM ", " S ", " S ");
         r.setIngredient('M', Material.IRON_INGOT);
@@ -207,6 +262,7 @@ public class LostProfessionItems implements Listener {
         recipeList.add(r);
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "wcaxe");
+        Lostprofessions.get().getKeySet().add(nsKey);
         r = new ShapedRecipe(nsKey, woodcutteraxe(Component.BLUEPRINT));
         r.shape("NM ", "NS ", " S ");
         r.setIngredient('M', Material.IRON_INGOT);
@@ -504,6 +560,34 @@ public class LostProfessionItems implements Listener {
         ib.setType(Type.METAL);
         ib.setQuality(Quality.NATURAL);
         ib.setRarity(component.getRarity());
+        ib.applyTags();
+        ib.setDesc(null, "This is a small chunk of " + component.getName() + ". \n\n [*] This chunk weighs 0.2 kg");
+        ib.addApproval(null, Approval.PLUGIN);
+        return item;
+    }
+
+    public static ItemStack softMetalPiece(Component component) {
+        ItemStack item = new ItemStack(Material.ACACIA_BUTTON);
+        ItemBuilder ib = new ItemBuilder(item);
+        ib.setName(component.getName() + " Chunk");
+        ib.setType(Type.METAL);
+        ib.setQuality(Quality.NATURAL);
+        ib.setRarity(component.getRarity());
+        ib.setPlaceable(false);
+        ib.applyTags();
+        ib.setDesc(null, "This is a small chunk of " + component.getName() + ". \n\n [*] This chunk weighs 0.2 kg");
+        ib.addApproval(null, Approval.PLUGIN);
+        return item;
+    }
+
+    public static ItemStack hardMetalPiece(Component component) {
+        ItemStack item = new ItemStack(Material.DARK_OAK_BUTTON);
+        ItemBuilder ib = new ItemBuilder(item);
+        ib.setName(component.getName() + " Chunk");
+        ib.setType(Type.METAL);
+        ib.setQuality(Quality.NATURAL);
+        ib.setRarity(component.getRarity());
+        ib.setPlaceable(false);
         ib.applyTags();
         ib.setDesc(null, "This is a small chunk of " + component.getName() + ". \n\n [*] This chunk weighs 0.2 kg");
         ib.addApproval(null, Approval.PLUGIN);
