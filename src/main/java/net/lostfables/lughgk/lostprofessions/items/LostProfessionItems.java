@@ -173,7 +173,7 @@ public class LostProfessionItems implements Listener {
         slR.addIngredient(Material.IRON_NUGGET);
         recipeList.add(slR);
 
-        //Shaped recipes
+        //Shaped recipes - Light Armor
         nsKey = new NamespacedKey(Lostprofessions.get(), "cloth_coif");
         Lostprofessions.get().getKeySet().add(nsKey);
         r = new ShapedRecipe(nsKey, clothCoif());
@@ -216,6 +216,45 @@ public class LostProfessionItems implements Listener {
         r.shape("L L", "LLL", "LLL");
         r.setIngredient('L', Material.LEATHER);
         recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "quilted_chausses");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, quiltedChausses());
+        r.shape("WSW", "W W", "   ");
+        r.setIngredient('W', Material.WHITE_WOOL);
+        r.setIngredient('S', Material.STRING);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "leather_tassets");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, leatherTasset());
+        r.shape("LSL", "L L", "   ");
+        r.setIngredient('L', Material.LEATHER);
+        r.setIngredient('S', Material.STRING);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "braies");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, braies());
+        r.shape("SSS", "S S", "S S");
+        r.setIngredient('S', Material.STRING);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "leather_boots");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, leatherBoots());
+        r.shape("   ", "L L", "L L");
+        r.setIngredient('L', Material.LEATHER);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "shoes");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, shoes());
+        r.shape("   ", "   ", "L L");
+        r.setIngredient('L', Material.LEATHER);
+        recipeList.add(r);
+
+        //Shaped Recipes - Tools
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "pickaxe");
         Lostprofessions.get().getKeySet().add(nsKey);
@@ -270,6 +309,42 @@ public class LostProfessionItems implements Listener {
         r.setIngredient('S', Material.STICK);
         recipeList.add(r);
 
+        nsKey = new NamespacedKey(Lostprofessions.get(), "bucket");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, bucket());
+        r.shape("   ", "N N", " N ");
+        r.setIngredient('N', Material.IRON_NUGGET);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "soft_bucket");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, bucket());
+        r.shape("   ", "N N", " N ");
+        r.setIngredient('N', Material.ACACIA_BUTTON);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "hard_bucket");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, bucket());
+        r.shape("   ", "N N", " N ");
+        r.setIngredient('N', Material.DARK_OAK_BUTTON);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "bars");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, iron_bars());
+        r.shape("   ", "NNN", "NNN");
+        r.setIngredient('N', Material.IRON_INGOT);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "shears");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, iron_bars());
+        r.shape("  N", " N ", "   ");
+        r.setIngredient('N', Material.IRON_NUGGET);
+        recipeList.add(r);
+
+
         for(int x = 0; x < recipeList.size(); x++) {
             Lostprofessions.get().getServer().addRecipe(recipeList.get(x));
         }
@@ -279,8 +354,6 @@ public class LostProfessionItems implements Listener {
     }
 
     //Recipe handling
-
-
 
     public static void remove(Material m) {
         Iterator<Recipe> IR = Lostprofessions.get().getServer().recipeIterator();
@@ -304,6 +377,355 @@ public class LostProfessionItems implements Listener {
 
         return false;
     }
+    //Mineman Stuff
+
+    public static ItemStack bucket() {
+        ItemStack item = new ItemStack(Material.BUCKET);
+        ItemBuilder ib = new ItemBuilder(item);
+        ib.setRarity(Rarity.COMMON);
+        ib.setName("Bucket");
+        ib.setType(Type.TOOL);
+        ib.applyTags();
+        ib.setDesc(null, "A standard bucket, it can hold many things: Water Not Included.");
+        ib.addApproval(null, Approval.PLUGIN);
+        return item;
+    }
+
+    public static ItemStack iron_bars() {
+        ItemStack item = new ItemStack(Material.IRON_BARS);
+        ItemBuilder ib = new ItemBuilder(item);
+        ib.setRarity(Rarity.COMMON);
+        ib.setName("Bars");
+        ib.setType(Type.MISC);
+        ib.applyTags();
+        ib.setDesc(null, "A set of metal bars, good for keeping people out of places.");
+        ib.addApproval(null, Approval.PLUGIN);
+        return item;
+    }
+
+    //Weapons
+    public static ItemStack spear(Component component) {
+        ItemStack item = new ItemStack(Material.IRON_SWORD);
+        ItemMeta im = item.getItemMeta();
+        im.setUnbreakable(true);
+        item.setItemMeta(im);
+        ItemBuilder ib = new ItemBuilder(item);
+        ib.setName("Spear");
+        ib.setType(Type.HEAVY_WEAPON);
+        ib.setRarity(component.getRarity());
+        ib.applyTags();
+        ib.setDesc(null, "This spear has a shaft of wood that stands at 6 feet 2 inches tall, and is 1 inch in diameter, on top of which a sharpened, 5 inch " + component.getName() + " sharpened point is attached. Slightly below the spearpoint, an eight inch metal crossguard is placed. The spear itself weighs 5 pounds, making it more suited for close-ranged combat than throwing (although the latter is possible as well). The spear is also balanced fairly well, and can be wielded with one or two hands, although two hands will allow far greater control over the weapon as well as stronger strikes. ");
+        ib.addApproval(null, Approval.PLUGIN);
+
+        return item;
+    }
+
+    public static ItemStack falchion(Component component) {
+        ItemStack item = new ItemStack(Material.IRON_SWORD);
+        ItemMeta im = item.getItemMeta();
+        im.setUnbreakable(true);
+        item.setItemMeta(im);
+        ItemBuilder ib = new ItemBuilder(item);
+        ib.setName("Falchion");
+        ib.setType(Type.HEAVY_WEAPON);
+        ib.setRarity(component.getRarity());
+        ib.applyTags();
+        ib.setDesc(null, "This two handed double edged weapon has a " + component.getName() + " blade that measures 34 inches long, positioned on top of a wooden rod, which serves as a handle, that is 12 inches long itself. The blade itself is surprisingly thin, being only 0.2 inches thick, and ends in a curve, similar to that of an umbrella where other swords would have a point, which hangs over the main thrust of the blade. The falchion is particularly effective against padded gambeson as well as cloth due to its thin edge, allowing it to cut through those materials with ease. It is also a surprisingly light weapon, despite its size, weighing only 2.5 pounds. \n ");
+        ib.addApproval(null, Approval.PLUGIN);
+
+        return item;
+    }
+
+    public static ItemStack greatsword(Component component) {
+        ItemStack item = new ItemStack(Material.IRON_SWORD);
+        ItemMeta im = item.getItemMeta();
+        im.setUnbreakable(true);
+        item.setItemMeta(im);
+        ItemBuilder ib = new ItemBuilder(item);
+        ib.setName("Greatsword");
+        ib.setType(Type.HEAVY_WEAPON);
+        ib.setRarity(component.getRarity());
+        ib.applyTags();
+        ib.setDesc(null, "This two handed double edged weapon has a " + component.getName() + " blade that measures 42 inches in length, accompanied by a 7.5 inch " + component.getName() + " handle wrapped in leather, above which is a crossguard, also made of " + component.getName() + ". The blade is 2.5 inches wide at the base, before tapering to a point. The weapon is heavy, weighing 4.5 pounds, although it is fairly well balanced and its massive size allows it crushing blows.");
+        ib.addApproval(null, Approval.PLUGIN);
+
+        return item;
+    }
+
+    public static ItemStack greatclub(Component component) {
+        ItemStack item = new ItemStack(Material.IRON_SHOVEL);
+        ItemMeta im = item.getItemMeta();
+        im.setUnbreakable(true);
+        item.setItemMeta(im);
+        ItemBuilder ib = new ItemBuilder(item);
+        ib.setName("Greatclub");
+        ib.setType(Type.HEAVY_WEAPON);
+        ib.setRarity(component.getRarity());
+        ib.applyTags();
+        ib.setDesc(null, "This massive hunk of carved wood is considerably heavy, weighing in at 10 pounds. The weapon is divided into two parts, a handle, which measures 6 inches and around which a piece of leather is wrapped, and the club itself, a 2 and a half foot carved piece of wood that is 4.5 inches in diameter at its thickest, being slimmest at the handle, then bulking up gradually towards the top, and tapering off again at the top of the club. The weapon itself is poorly balanced and ungainly, meaning that any swing with it is likely to throw its user off balance should they miss, or even, in some cases, hit. Upon a hit, however, thanks to its weight, the club does considerable blunt damage.");
+        ib.addApproval(null, Approval.PLUGIN);
+
+        return item;
+    }
+
+    public static ItemStack greataxe(Component component) {
+        ItemStack item = new ItemStack(Material.IRON_AXE);
+        ItemMeta im = item.getItemMeta();
+        im.setUnbreakable(true);
+        item.setItemMeta(im);
+        ItemBuilder ib = new ItemBuilder(item);
+        ib.setName("Greataxe");
+        ib.setType(Type.HEAVY_WEAPON);
+        ib.setRarity(component.getRarity());
+        ib.applyTags();
+        ib.setDesc(null, "This two handed axe is double bladed, each axe blade being 8.7 inches in length, 13.8 in height and being made of " + component.getName() + ". The axe blades are attached on top of a five foot wooden shaft, at the top of which a small " + component.getName() + " spike is mounted. The weapon itself weighs 5 pounds, but is balanced fairly well, making it still surprisingly maneuverable.");
+        ib.addApproval(null, Approval.PLUGIN);
+
+        return item;
+    }
+
+    public static ItemStack longsword(Component component) {
+        ItemStack item = new ItemStack(Material.IRON_SWORD);
+        ItemMeta im = item.getItemMeta();
+        im.setUnbreakable(true);
+        item.setItemMeta(im);
+        ItemBuilder ib = new ItemBuilder(item);
+        ib.setName("Longsword");
+        ib.setType(Type.MEDIUM_WEAPON);
+        ib.setRarity(component.getRarity());
+        ib.applyTags();
+        ib.setDesc(null, "This sword has an unornamented, 32 inch long double edged " + component.getName() + " blade, at the bottom of which a 5 inch long wooden handle is attached, around which a piece of cloth is wrapped. The blade is 1.5 inches at the base, maintaining this width for the majority of its length before tapering off to a point. It weighs 2.7 pounds. The weapon can be wielded with one or two hands, two hands obviously allowing greater control and power behind the weapon's strikes.");
+        ib.addApproval(null, Approval.PLUGIN);
+
+        return item;
+    }
+
+    public static ItemStack shortspear(Component component) {
+        ItemStack item = new ItemStack(Material.IRON_SWORD);
+        ItemMeta im = item.getItemMeta();
+        im.setUnbreakable(true);
+        item.setItemMeta(im);
+        ItemBuilder ib = new ItemBuilder(item);
+        ib.setName("Shortspear");
+        ib.setType(Type.MEDIUM_WEAPON);
+        ib.setRarity(component.getRarity());
+        ib.applyTags();
+        ib.setDesc(null, "This shortspear has a shaft of oak wood that stands at 4 feet tall, atop which a sharpened " + component.getName() + " point that measures 4 inches tall is affixed. The shaft itself is slender, measuring only half an inch in diameter, the spear only weighing 2.5 pounds.This spear can be thrown easily due to its lightness, but still possess enough heft to be usable in close combat.");
+        ib.addApproval(null, Approval.PLUGIN);
+
+        return item;
+    }
+
+    public static ItemStack mace(Component component) {
+        ItemStack item = new ItemStack(Material.IRON_SHOVEL);
+        ItemMeta im = item.getItemMeta();
+        im.setUnbreakable(true);
+        item.setItemMeta(im);
+        ItemBuilder ib = new ItemBuilder(item);
+        ib.setName("Mace");
+        ib.setType(Type.MEDIUM_WEAPON);
+        ib.setRarity(component.getRarity());
+        ib.applyTags();
+        ib.setDesc(null, "This weapon is composed of two parts, an unornamented " + component.getName() + " handle that's 20 inches long and, on top of it, a slightly larger in diameter " + component.getName() + " rod that's 6 inches long, to which is attached 4 thin " + component.getName() + " flanges, whose shape resembles that of a profile of a valley. On top of the upper rod is attached a metal spike, and the weapon weighs 3 pounds. This weapon is meant to be one-handed, although wielding it with two hands is possible. It's effective against plate, relying on the impact of its strikes to hurt its victim without actually puncturing the garments they are wearing.");
+        ib.addApproval(null, Approval.PLUGIN);
+
+        return item;
+    }
+
+    public static ItemStack battleaxe(Component component) {
+        ItemStack item = new ItemStack(Material.IRON_AXE);
+        ItemMeta im = item.getItemMeta();
+        im.setUnbreakable(true);
+        item.setItemMeta(im);
+        ItemBuilder ib = new ItemBuilder(item);
+        ib.setName("Handaxe");
+        ib.setType(Type.MEDIUM_WEAPON);
+        ib.setRarity(component.getRarity());
+        ib.applyTags();
+        ib.setDesc(null, "This weapon is made of an unornamented wood handle, which measures 28 inches in length, at the top of which a " + component.getName() + " axe-head is attached. This axe-head is unornamented, and is 6.7 inches in length and 10 inches in height. The axe itself weighs 2.2 pounds, and is meant to be wielded in one hand. The axe can also be thrown, and can be wielded with two or one hands, although one is preferable. ");
+        ib.addApproval(null, Approval.PLUGIN);
+
+        return item;
+    }
+
+    public static ItemStack scimitar(Component component) {
+        ItemStack item = new ItemStack(Material.IRON_SWORD);
+        ItemMeta im = item.getItemMeta();
+        im.setUnbreakable(true);
+        item.setItemMeta(im);
+        ItemBuilder ib = new ItemBuilder(item);
+        ib.setName("Scimitar");
+        ib.setType(Type.MEDIUM_WEAPON);
+        ib.setRarity(component.getRarity());
+        ib.applyTags();
+        ib.setDesc(null, "This scimitar is a backwards curved, single-edged sword with an unsharpened back edge. The sword’s " + component.getName() + " blade is 30 inches in length but rather thin, causing the sword itself to weigh just 2 pounds. The handle measures 5 inches in length, and around it a piece of leather is wrapped. Above the handle is a crossguard, which curves upwards on the sword’s blunt edge, and downwards on its sharp one. The scimitar, thanks to its low weight, excels in slashing and cutting at its opponents, its thin edge allowing it to pierce gambeson and cloth easily. ");
+        ib.addApproval(null, Approval.PLUGIN);
+
+        return item;
+    }
+
+    public static ItemStack dagger(Component component) {
+        ItemStack item = new ItemStack(Material.IRON_SWORD);
+        ItemMeta im = item.getItemMeta();
+        im.setUnbreakable(true);
+        item.setItemMeta(im);
+        ItemBuilder ib = new ItemBuilder(item);
+        ib.setName("Dagger");
+        ib.setType(Type.LIGHT_WEAPON);
+        ib.setRarity(component.getRarity());
+        ib.applyTags();
+        ib.setDesc(null, "This dagger has a seven inch double-edged " + component.getName() + " blade, which tapers off to a point. Below the blade is a small, 4 inch long " + component.getName() + " crosspiece and a 4 inch long handle and pommel. This dagger can be thrown thanks to it weighing just 1 pound, while its main utility in close quarters combat is found in stabbing, given its blade’s small size. ");
+        ib.addApproval(null, Approval.PLUGIN);
+
+        return item;
+    }
+
+    public static ItemStack light_mace(Component component) {
+        ItemStack item = new ItemStack(Material.IRON_SHOVEL);
+        ItemMeta im = item.getItemMeta();
+        im.setUnbreakable(true);
+        item.setItemMeta(im);
+        ItemBuilder ib = new ItemBuilder(item);
+        ib.setName("Light Mace");
+        ib.setType(Type.LIGHT_WEAPON);
+        ib.setRarity(component.getRarity());
+        ib.applyTags();
+        ib.setDesc(null, "This mace consists of an unornamented, 12 inch long " + component.getName() + " handle, at the top of which a 3 inch in diameter " + component.getName() + " ball is attached. This ball is covered in half an inch long " + component.getName() + " spikes. The mace itself weighs 2 pounds. This weapon is meant to be wielded with one hand, and is effective against plate, relying on the impact of its strikes to hurt its victim without actually puncturing the garments they are wearing, although its spikes do help puncture its victims as well. ");
+        ib.addApproval(null, Approval.PLUGIN);
+
+        return item;
+    }
+
+    public static ItemStack rapier(Component component) {
+        ItemStack item = new ItemStack(Material.IRON_SWORD);
+        ItemMeta im = item.getItemMeta();
+        im.setUnbreakable(true);
+        item.setItemMeta(im);
+        ItemBuilder ib = new ItemBuilder(item);
+        ib.setName("Rapier");
+        ib.setType(Type.LIGHT_WEAPON);
+        ib.setRarity(component.getRarity());
+        ib.applyTags();
+        ib.setDesc(null, "This rapier has a 39 inch long, thin, 0.7 inch wide thin sharpened " + component.getName() + " blade, which tapers off into a sharpened point. Beneath it, a 4 inch long " + component.getName() + " handle is placed, around which a piece of leather is wrapped. Above the handle, there is a crospiece, which consists of several strands of metal forming the outline of a circle around the handle, at each cardinal point of the circle a strand of metal going back towards the handle itself. This rapier weighs 2.1 pounds, and is a light, somewhat-unwieldy one-handed sword, which is most effective when stabbing. Thanks to the blade being long but very thin it's not that strong, meaning that a good hit from a more bulky weapon has the potential to break it in half. ");
+        ib.addApproval(null, Approval.PLUGIN);
+
+        return item;
+    }
+
+    public static ItemStack sickle(Component component) {
+        ItemStack item = new ItemStack(Material.IRON_SWORD);
+        ItemMeta im = item.getItemMeta();
+        im.setUnbreakable(true);
+        item.setItemMeta(im);
+        ItemBuilder ib = new ItemBuilder(item);
+        ib.setName("Sickle");
+        ib.setType(Type.LIGHT_WEAPON);
+        ib.setRarity(component.getRarity());
+        ib.applyTags();
+        ib.setDesc(null, "This sickle has a 10 inch long, curved single-edged " + component.getName() + " blade, which starts off straight directly above the handle, then curves outward and then curves back, ending up flattening out at the 18 inch mark and reaching back past the handle and ending in a point. The handle itself is made of a 5 inch plain oak piece. The sickle is meant to be wielded with one hand. The sickle is proficient at slashing and cutting thanks to its low weight, and, thanks to its thin edge, at cutting through cloth and gambeson armour. It is also proficient at harvesting plants like wheat and cutting foliage, if its owner intends to use it for farming.  ");
+        ib.addApproval(null, Approval.PLUGIN);
+
+        return item;
+    }
+
+    //Shields
+
+    public static ItemStack buckler(Component component) {
+        ItemStack item = new ItemStack(Material.SHIELD);
+        ItemMeta im = item.getItemMeta();
+        im.setUnbreakable(true);
+        item.setItemMeta(im);
+        ItemBuilder ib = new ItemBuilder(item);
+        ib.setName("Buckler");
+        ib.setType(Type.LIGHT_ARMOR);
+        ib.setRarity(component.getRarity());
+        ib.applyTags();
+        ib.setDesc(null, "This very small metal shield is 12 inches in diameter, consisting of a half-sphere of hollow " + component.getName() + ", inside of which the 4 inch handle is placed. An outer circumference of flat " + component.getName() + " surrounds this half-sphere. The shield itself weighs only 2.4 pounds, making it more mobile and easy to maneuver than its larger, more heavy compatriots, accounting for its far smaller size. This shield can protect against arrows, or even bullets, which will cause the shield to dent and hurt the wearer’s arm due to their force, if it is placed in the path of them, as well as deflect most weaponry, although heavy hits from big weapons risks jarring and hurting the user’s buckler-holding arm.");
+        ib.addApproval(null, Approval.PLUGIN);
+
+        return item;
+    }
+
+    public static ItemStack round_shield() {
+        ItemStack item = new ItemStack(Material.SHIELD);
+        ItemMeta im = item.getItemMeta();
+        im.setUnbreakable(true);
+        item.setItemMeta(im);
+        ItemBuilder ib = new ItemBuilder(item);
+        ib.setName("Round Shield");
+        ib.setType(Type.LIGHT_ARMOR);
+        ib.setRarity(Rarity.COMMON);
+        ib.applyTags();
+        ib.setDesc(null, "This round shield is made up of two parts, an outer layer of tough, tanned hide and an inner layer of plywood, around which the hide is wrapped. Behind the shield a leather strap is placed, so that it may be attached to the wearer’s forearm or slung over their back. The shield is 20 inches in diameter, and weighs 3.8 pounds. This shield can protect against arrows well, them either bouncing off the hide or getting lodged in the wood underneath it. It also does well against the conventional hack and slash weapons, being particularly effective against blunt weapons thanks to the hide, but being more vulnerable to anything with an edge, especially axes, although these weapons do run the risk of getting stuck in the shield. ");
+        ib.addApproval(null, Approval.PLUGIN);
+
+        return item;
+    }
+
+    public static ItemStack heater_shield(Component component) {
+        ItemStack item = new ItemStack(Material.SHIELD);
+        ItemMeta im = item.getItemMeta();
+        im.setUnbreakable(true);
+        item.setItemMeta(im);
+        ItemBuilder ib = new ItemBuilder(item);
+        ib.setName("Heater Shield");
+        ib.setType(Type.MEDIUM_ARMOR);
+        ib.setRarity(component.getRarity());
+        ib.applyTags();
+        ib.setDesc(null, "This heater shield consists of two shapes, a rounded square on the top and a triangle beneath it. It is 22 inches across and 30 inches down, consisting of a layer of plywood which is overlaid with tanned leather, and subsequently braced with " + component.getName() + ". Behind the shield a leather strap is placed, so that it may be attached to the wearer’s forearm or slung over their back.This shield can protect against arrows well, them either bouncing off the hide or getting lodged in the wood underneath it. It also does well against the conventional hack and slash weapons, being particularly effective against blunt weapons thanks to the leather exterior, but being more vulnerable to anything with an edge, especially axes, although these weapons do run the risk of getting stuck in the shield, or bouncing off of its " + component.getName() + " reinforcement. ");
+        ib.addApproval(null, Approval.PLUGIN);
+
+        return item;
+    }
+
+    public static ItemStack kite_shield(Component component) {
+        ItemStack item = new ItemStack(Material.SHIELD);
+        ItemMeta im = item.getItemMeta();
+        im.setUnbreakable(true);
+        item.setItemMeta(im);
+        ItemBuilder ib = new ItemBuilder(item);
+        ib.setName("Kite Shield");
+        ib.setType(Type.MEDIUM_ARMOR);
+        ib.setRarity(component.getRarity());
+        ib.applyTags();
+        ib.setDesc(null, "This kite shield consists of a rounded top, which then narrows down to a point in its lower third, causing it to resemble its namesake. It is 26 inches across and 37 inches down, consisting of a layer of plywood which is overlaid with tanned leather, and subsequently braced with " + component.getName() + ". In the center of the upper part of the shield a 6 inch in diameter metal boss is placed. Behind the shield a leather strap is placed, so that it may be attached to the wearer’s forearm or slung over their back.This shield can protect against arrows well, them either bouncing off the hide or getting lodged in the wood underneath it. It also does well against the conventional hack and slash weapons, being particularly effective against blunt weapons thanks to the leather exterior, but being more vulnerable to anything with an edge, especially axes, although these weapons do run the risk of getting stuck in the shield, or bouncing off of its " + component.getName() + " reinforcement. ");
+        ib.addApproval(null, Approval.PLUGIN);
+
+        return item;
+    }
+
+    public static ItemStack wardoor_shield(Component component) {
+        ItemStack item = new ItemStack(Material.SHIELD);
+        ItemMeta im = item.getItemMeta();
+        im.setUnbreakable(true);
+        item.setItemMeta(im);
+        ItemBuilder ib = new ItemBuilder(item);
+        ib.setName("War Door Shield");
+        ib.setType(Type.HEAVY_ARMOR);
+        ib.setRarity(component.getRarity());
+        ib.applyTags();
+        ib.setDesc(null, "This enormous shield is shaped like a rectangle, with curved edges that bend towards the wearer. It is made of metal-reinforced plywood, on top of which a piece of tanned hide is placed. The shield’s dimensions are 30 inches across and 65 inches down, and, at its epicenter, a metal boss is placed.The shield weighs an enormous 29 pounds, making it near impossible to maneuver during combat or move quickly with. On the backside of the shield, a wood handle and leather straps are placed so that the shield might be held by the soldier by the handle or slung over their back with the straps.This shield can protect against arrows well, them either bouncing off the hide or getting lodged in the wood underneath it. It also does well against the conventional hack and slash weapons, being particularly effective against blunt weapons thanks to the leather exterior, but being more vulnerable to anything with an edge, especially axes, although these weapons do run the risk of getting stuck in the shield, or bouncing off of its " + component.getName() + " reinforcement. ");
+        ib.addApproval(null, Approval.PLUGIN);
+
+        return item;
+    }
+
+    public static ItemStack tower_shield(Component component) {
+        ItemStack item = new ItemStack(Material.SHIELD);
+        ItemMeta im = item.getItemMeta();
+        im.setUnbreakable(true);
+        item.setItemMeta(im);
+        ItemBuilder ib = new ItemBuilder(item);
+        ib.setName("Tower Shield");
+        ib.setType(Type.HEAVY_ARMOR);
+        ib.setRarity(component.getRarity());
+        ib.applyTags();
+        ib.setDesc(null, "This massive shield is shaped like a rectangle with curved edges that bend backwards towards the wielder. It is made of metal-reinforced plywood, on top of which a piece of tanned hide is placed. The shield’s dimensions are 30 inches across and 48 inches down, and, at its epicenter, a metal boss is placed.The shield weighs an enormous 22 pounds, making it very hard to maneuver during combat or move quickly with. On the backside of the shield, a wood handle and leather straps are placed so that it might be bound to the wearer’s forearm, or slung over their back.This shield can protect against arrows well, them either bouncing off the hide or getting lodged in the wood underneath it. It also does well against the conventional hack and slash weapons, being particularly effective against blunt weapons thanks to the leather exterior, but being more vulnerable to anything with an edge, especially axes, although these weapons do run the risk of getting stuck in the shield, or bouncing off of its " + component.getName() + " reinforcement. ");
+        ib.addApproval(null, Approval.PLUGIN);
+
+        return item;
+    }
+
 
     //Tools
 

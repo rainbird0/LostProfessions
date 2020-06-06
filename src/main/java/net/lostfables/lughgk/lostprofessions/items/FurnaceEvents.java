@@ -5,22 +5,18 @@ import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.chat.BaseComponent;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
+import org.bukkit.block.EnchantingTable;
 import org.bukkit.block.Furnace;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
+import org.bukkit.event.block.Action;
 import org.bukkit.event.inventory.FurnaceBurnEvent;
 import org.bukkit.event.inventory.FurnaceSmeltEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.FurnaceRecipe;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.Recipe;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 public class FurnaceEvents implements Listener {
 
@@ -30,24 +26,11 @@ public class FurnaceEvents implements Listener {
 
     @EventHandler
     public void furnaceInteractEvent(PlayerInteractEvent event) {
-        if(event.getClickedBlock().getState() instanceof Furnace && ((Furnace) event.getClickedBlock().getState()).getCookTime() != 0) {
-            ItemStack source = ((Furnace) event.getClickedBlock().getState()).getInventory().getSmelting();
-            ItemStack result = ((Furnace) event.getClickedBlock().getState()).getInventory().getResult();
-            FurnaceRecipe fR = null;
-            for(Recipe R : Lostprofessions.get().getServer().getRecipesFor(result)) {
-                if(R instanceof FurnaceRecipe) {
-                    fR = (FurnaceRecipe) R;
-                }
+        if(event.getClickedBlock().getState() instanceof EnchantingTable || (event.getClickedBlock() != null && event.getClickedBlock().getType() == Material.ANVIL)) {
+            if(event.getAction().equals(Action.RIGHT_CLICK_BLOCK)) {
+                event.setCancelled(true);
             }
 
-            if(fR == null) {
-                return;
-            }
-
-            int cookingTimeInSeconds = (fR.getCookingTime() / 20) - (((Furnace) event.getClickedBlock().getState()).getCookTime()/20);
-            int hour = (int) Math.floor(TimeUnit.SECONDS.toHours(cookingTimeInSeconds));
-            long min = (int) Math.floor(TimeUnit.SECONDS.toMinutes(cookingTimeInSeconds));
-            event.getPlayer().sendMessage(ChatColor.DARK_AQUA + "This " + ChatColor.WHITE + result.getItemMeta().getDisplayName() + ChatColor.DARK_AQUA + " has " + ChatColor.WHITE + hour +ChatColor.DARK_AQUA+":"+ChatColor.WHITE+(Math.floor(cookingTimeInSeconds)) + ChatColor.DARK_AQUA + " remaining");
         }
 
     }
