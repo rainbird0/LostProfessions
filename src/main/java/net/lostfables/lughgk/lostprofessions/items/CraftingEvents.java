@@ -120,13 +120,13 @@ public class CraftingEvents implements Listener {
             return;
         }
 
-        //METALINGOT
+        //INGOT
         if (e.getInventory().getResult().equals(LostProfessionItems.ironIngot())) {
             List<Component> metal = new ArrayList<>();
 
 
             for (ItemStack item : Arrays.asList(e.getInventory().getMatrix())) {
-                if (item != null && item.getType() == Material.IRON_NUGGET) {
+                if (item != null && (item.getType() == Material.IRON_NUGGET || item.getType() == Material.ACACIA_BUTTON || item.getType() == Material.DARK_OAK_BUTTON)) {
                     metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
                 }
             }

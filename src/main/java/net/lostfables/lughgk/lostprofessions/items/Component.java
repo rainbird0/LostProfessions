@@ -6,7 +6,7 @@ import net.md_5.bungee.api.ChatColor;
 import org.bukkit.inventory.ItemStack;
 
 public enum Component {
-    BLUEPRINT(ChatColor.STRIKETHROUGH + "Blueprint", Rarity.VCOMMON, Aura.MUNDANE, null),
+    BLUEPRINT(ChatColor.STRIKETHROUGH + "<MATERIAL>", Rarity.VCOMMON, Aura.MUNDANE, null),
     COPPER("Copper", Rarity.VCOMMON, Aura.MUNDANE, LostProfessionItems.copperIngot()),
     TIN("Tin", Rarity.VCOMMON, Aura.MUNDANE, LostProfessionItems.tinIngot()),
     IRON("Iron", Rarity.COMMON, Aura.MUNDANE, LostProfessionItems.ironIngot()),

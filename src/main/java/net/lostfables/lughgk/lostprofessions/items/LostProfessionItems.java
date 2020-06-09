@@ -72,9 +72,6 @@ public class LostProfessionItems implements Listener {
         remove(Material.DIAMOND_SHOVEL);
         remove(Material.ENCHANTING_TABLE);
 
-        remove(Material.SPECTRAL_ARROW);
-        remove(Material.BOW);
-        remove(Material.FISHING_ROD);
         remove(Material.TURTLE_HELMET);
 
         remove(Material.REDSTONE);
@@ -140,6 +137,14 @@ public class LostProfessionItems implements Listener {
 
 
         //Shapeless recipes
+        nsKey = new NamespacedKey(Lostprofessions.get(), "wool_string");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        ItemStack item = new ItemStack(Material.STRING);
+        item.setAmount(4);
+        slR = new ShapelessRecipe(nsKey, item);
+        slR.addIngredient(Material.WHITE_WOOL);
+        recipeList.add(slR);
+
         nsKey = new NamespacedKey(Lostprofessions.get(), "metal_chunk");
         Lostprofessions.get().getKeySet().add(nsKey);
         slR = new ShapelessRecipe(nsKey, metalPiece(Component.BLUEPRINT));
@@ -164,7 +169,7 @@ public class LostProfessionItems implements Listener {
         slR.addIngredient(Material.GOLD_INGOT);
         recipeList.add(slR);
 
-        nsKey = new NamespacedKey(Lostprofessions.get(), "iron_ingot");
+        nsKey = new NamespacedKey(Lostprofessions.get(), "ingot");
         Lostprofessions.get().getKeySet().add(nsKey);
         slR = new ShapelessRecipe(nsKey, ironIngot());
         slR.addIngredient(Material.IRON_NUGGET);
@@ -172,6 +177,26 @@ public class LostProfessionItems implements Listener {
         slR.addIngredient(Material.IRON_NUGGET);
         slR.addIngredient(Material.IRON_NUGGET);
         slR.addIngredient(Material.IRON_NUGGET);
+        recipeList.add(slR);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "soft_ingot");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        slR = new ShapelessRecipe(nsKey, ironIngot());
+        slR.addIngredient(Material.ACACIA_BUTTON);
+        slR.addIngredient(Material.ACACIA_BUTTON);
+        slR.addIngredient(Material.ACACIA_BUTTON);
+        slR.addIngredient(Material.ACACIA_BUTTON);
+        slR.addIngredient(Material.ACACIA_BUTTON);
+        recipeList.add(slR);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "hard_ingot");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        slR = new ShapelessRecipe(nsKey, ironIngot());
+        slR.addIngredient(Material.DARK_OAK_BUTTON);
+        slR.addIngredient(Material.DARK_OAK_BUTTON);
+        slR.addIngredient(Material.DARK_OAK_BUTTON);
+        slR.addIngredient(Material.DARK_OAK_BUTTON);
+        slR.addIngredient(Material.DARK_OAK_BUTTON);
         recipeList.add(slR);
 
         //Shaped recipes - Light Armor
@@ -668,7 +693,7 @@ public class LostProfessionItems implements Listener {
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "spear");
         Lostprofessions.get().getKeySet().add(nsKey);
-        r = new ShapedRecipe(nsKey, shortspear(Component.BLUEPRINT));
+        r = new ShapedRecipe(nsKey, spear(Component.BLUEPRINT));
         r.shape("  N", " S ", "S  ");
         r.setIngredient('N', Material.IRON_INGOT);
         r.setIngredient('S', Material.STICK);
@@ -676,7 +701,7 @@ public class LostProfessionItems implements Listener {
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "softspear");
         Lostprofessions.get().getKeySet().add(nsKey);
-        r = new ShapedRecipe(nsKey, shortspear(Component.BLUEPRINT));
+        r = new ShapedRecipe(nsKey, spear(Component.BLUEPRINT));
         r.shape("  N", " S ", "S  ");
         r.setIngredient('N', Material.BRICK);
         r.setIngredient('S', Material.STICK);
@@ -684,13 +709,21 @@ public class LostProfessionItems implements Listener {
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "hardspear");
         Lostprofessions.get().getKeySet().add(nsKey);
-        r = new ShapedRecipe(nsKey, shortspear(Component.BLUEPRINT));
+        r = new ShapedRecipe(nsKey, spear(Component.BLUEPRINT));
         r.shape("  N", " S ", "S  ");
         r.setIngredient('N', Material.NETHER_BRICK);
         r.setIngredient('S', Material.STICK);
         recipeList.add(r);
 
         //Shaped Recipes - Tools
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "saddle");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, new ItemStack(Material.SADDLE));
+        r.shape("NNN", "NSN", "   ");
+        r.setIngredient('N', Material.LEATHER);
+        r.setIngredient('S', Material.STRING);
+        recipeList.add(r);
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "pickaxe");
         Lostprofessions.get().getKeySet().add(nsKey);
@@ -1829,7 +1862,7 @@ public class LostProfessionItems implements Listener {
     }
 
     public static ItemStack cobaltIngot() {
-        ItemStack item = new ItemStack(Material.LAPIS_LAZULI);
+        ItemStack item = new ItemStack(Material.NETHER_BRICK);
         ItemBuilder ib = new ItemBuilder(item);
         ib.setName("Cobalt Ingot");
         ib.setType(Type.METAL);

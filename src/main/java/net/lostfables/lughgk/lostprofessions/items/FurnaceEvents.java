@@ -5,8 +5,10 @@ import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.chat.BaseComponent;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
+import org.bukkit.Sound;
 import org.bukkit.block.EnchantingTable;
 import org.bukkit.block.Furnace;
+import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
@@ -26,10 +28,14 @@ public class FurnaceEvents implements Listener {
 
     @EventHandler
     public void furnaceInteractEvent(PlayerInteractEvent event) {
-        if(event.getClickedBlock().getState() instanceof EnchantingTable || (event.getClickedBlock() != null && event.getClickedBlock().getType() == Material.ANVIL)) {
-            if(event.getAction().equals(Action.RIGHT_CLICK_BLOCK)) {
-                event.setCancelled(true);
+        try {
+            if (event.getClickedBlock().getState() instanceof EnchantingTable || (event.getClickedBlock() != null && event.getClickedBlock().getType() == Material.ANVIL)) {
+                if (event.getAction().equals(Action.RIGHT_CLICK_BLOCK)) {
+                    event.setCancelled(true);
+                }
+
             }
+        } catch(NullPointerException ignored) {
 
         }
 
@@ -128,6 +134,9 @@ public class FurnaceEvents implements Listener {
             if (LostProfessionItems.checkItem(e.getSource(), "Iron Ore", "Metal")) {
                 item = LostProfessionItems.ironIngot();
                 e.setResult(item);
+                for(Player p : e.getBlock().getLocation().getNearbyPlayers(10)) {
+                    p.playSound(e.getBlock().getLocation(), Sound.BLOCK_LAVA_EXTINGUISH, 1, 1);
+                }
                 return;
             }
             e.setCancelled(true);
@@ -135,6 +144,9 @@ public class FurnaceEvents implements Listener {
         } else if(e.getSource().getType() == Material.COAL_ORE) {
             if (LostProfessionItems.checkItem(e.getSource(), "Tungsten Ore", "Metal")) {
                 e.setResult(LostProfessionItems.tungstenIngot());
+                for(Player p : e.getBlock().getLocation().getNearbyPlayers(10)) {
+                    p.playSound(e.getBlock().getLocation(), Sound.BLOCK_LAVA_EXTINGUISH, 1, 1);
+                }
                 return;
             }
             e.setCancelled(true);
@@ -142,6 +154,9 @@ public class FurnaceEvents implements Listener {
         } else if(e.getSource().getType() == Material.DIORITE) {
             if (LostProfessionItems.checkItem(e.getSource(), "Silver Ore", "Metal")) {
                 e.setResult(LostProfessionItems.silverIngot());
+                for(Player p : e.getBlock().getLocation().getNearbyPlayers(10)) {
+                    p.playSound(e.getBlock().getLocation(), Sound.BLOCK_LAVA_EXTINGUISH, 1, 1);
+                }
                 return;
             }
             e.setCancelled(true);
@@ -149,6 +164,9 @@ public class FurnaceEvents implements Listener {
         } else if(e.getSource().getType() == Material.GOLD_ORE) {
             if (LostProfessionItems.checkItem(e.getSource(), "Gold Ore", "Metal")) {
                 e.setResult(LostProfessionItems.goldIngot());
+                for(Player p : e.getBlock().getLocation().getNearbyPlayers(10)) {
+                    p.playSound(e.getBlock().getLocation(), Sound.BLOCK_LAVA_EXTINGUISH, 1, 1);
+                }
                 return;
             }
             e.setCancelled(true);
@@ -156,6 +174,9 @@ public class FurnaceEvents implements Listener {
         } else if(e.getSource().getType() == Material.MAGMA_BLOCK) {
             if (LostProfessionItems.checkItem(e.getSource(), "Meteoric Metal Ore", "Metal")) {
                 e.setResult(LostProfessionItems.meteoricMetalIngot());
+                for(Player p : e.getBlock().getLocation().getNearbyPlayers(10)) {
+                    p.playSound(e.getBlock().getLocation(), Sound.BLOCK_LAVA_EXTINGUISH, 1, 1);
+                }
                 return;
             }
             e.setCancelled(true);
@@ -163,6 +184,9 @@ public class FurnaceEvents implements Listener {
         } else if(e.getSource().getType() == Material.IRON_BLOCK) {
             if (LostProfessionItems.checkItem(e.getSource(), "Platinum Ore", "Metal")) {
                 e.setResult(LostProfessionItems.platinumIngot());
+                for(Player p : e.getBlock().getLocation().getNearbyPlayers(10)) {
+                    p.playSound(e.getBlock().getLocation(), Sound.BLOCK_LAVA_EXTINGUISH, 1, 1);
+                }
                 return;
             }
             e.setCancelled(true);
@@ -170,6 +194,9 @@ public class FurnaceEvents implements Listener {
         } else if(e.getSource().getType() == Material.LAPIS_ORE) {
             if (LostProfessionItems.checkItem(e.getSource(), "Cobalt Ore", "Metal")) {
                 e.setResult(LostProfessionItems.cobaltIngot());
+                for(Player p : e.getBlock().getLocation().getNearbyPlayers(10)) {
+                    p.playSound(e.getBlock().getLocation(), Sound.BLOCK_LAVA_EXTINGUISH, 1, 1);
+                }
                 return;
             }
             e.setCancelled(true);
@@ -177,6 +204,9 @@ public class FurnaceEvents implements Listener {
         } else if(e.getSource().getType() == Material.REDSTONE_ORE) {
             if (LostProfessionItems.checkItem(e.getSource(), "Calamite Ore", "Metal")) {
                 e.setResult(LostProfessionItems.calamiteIngot());
+                for(Player p : e.getBlock().getLocation().getNearbyPlayers(10)) {
+                    p.playSound(e.getBlock().getLocation(), Sound.BLOCK_LAVA_EXTINGUISH, 1, 1);
+                }
                 return;
             }
             e.setCancelled(true);
@@ -184,6 +214,9 @@ public class FurnaceEvents implements Listener {
         } else if(e.getSource().getType() == Material.SMOOTH_RED_SANDSTONE) {
             if (LostProfessionItems.checkItem(e.getSource(), "Palladium Ore", "Metal")) {
                 e.setResult(LostProfessionItems.palladiumIngot());
+                for(Player p : e.getBlock().getLocation().getNearbyPlayers(10)) {
+                    p.playSound(e.getBlock().getLocation(), Sound.BLOCK_LAVA_EXTINGUISH, 1, 1);
+                }
                 return;
             }
             e.setCancelled(true);
@@ -191,6 +224,9 @@ public class FurnaceEvents implements Listener {
         } else if(e.getSource().getType() == Material.PURPLE_GLAZED_TERRACOTTA) {
             if (LostProfessionItems.checkItem(e.getSource(), "Lither Ore", "Metal")) {
                 e.setResult(LostProfessionItems.litherCoal());
+                for(Player p : e.getBlock().getLocation().getNearbyPlayers(10)) {
+                    p.playSound(e.getBlock().getLocation(), Sound.BLOCK_LAVA_EXTINGUISH, 1, 1);
+                }
                 return;
             }
             e.setCancelled(true);
@@ -198,6 +234,9 @@ public class FurnaceEvents implements Listener {
         } else if(e.getSource().getType() == Material.SMOOTH_QUARTZ) {
             if (LostProfessionItems.checkItem(e.getSource(), "Tin Ore", "Metal")) {
                 e.setResult(LostProfessionItems.tinIngot());
+                for(Player p : e.getBlock().getLocation().getNearbyPlayers(10)) {
+                    p.playSound(e.getBlock().getLocation(), Sound.BLOCK_LAVA_EXTINGUISH, 1, 1);
+                }
                 return;
             }
             e.setCancelled(true);
@@ -205,6 +244,9 @@ public class FurnaceEvents implements Listener {
         } else if(e.getSource().getType() == Material.PRISMARINE) {
             if (LostProfessionItems.checkItem(e.getSource(), "Luminide Ore", "Metal")) {
                 e.setResult(LostProfessionItems.luminideIngot());
+                for(Player p : e.getBlock().getLocation().getNearbyPlayers(10)) {
+                    p.playSound(e.getBlock().getLocation(), Sound.BLOCK_LAVA_EXTINGUISH, 1, 1);
+                }
                 return;
             }
             e.setCancelled(true);
@@ -212,10 +254,17 @@ public class FurnaceEvents implements Listener {
         } else if(e.getSource().getType() == Material.ORANGE_TERRACOTTA) {
             if (LostProfessionItems.checkItem(e.getSource(), "Copper Ore", "Metal")) {
                 e.setResult(LostProfessionItems.copperIngot());
+                for(Player p : e.getBlock().getLocation().getNearbyPlayers(10)) {
+                    p.playSound(e.getBlock().getLocation(), Sound.BLOCK_LAVA_EXTINGUISH, 1, 1);
+                }
                 return;
             }
             e.setCancelled(true);
             return;
+        }
+
+        for(Player p : e.getBlock().getLocation().getNearbyPlayers(10)) {
+            p.playSound(e.getBlock().getLocation(), Sound.BLOCK_LAVA_EXTINGUISH, 1, 1);
         }
 
     }
