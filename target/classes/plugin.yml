@@ -1,0 +1,11 @@
+name: Lostprofessions
+version: 1.16.0.1
+main: net.lostfables.lughgk.lostprofessions.Lostprofessions
+api-version: 1.13
+authors: [LughGK, Korvic]
+description: A small profession system
+website: lostfables.net
+depend: [Tythan, ItemEdit]
+commands:
+  loreitems:
+    description: Lore items basecommand

@@ -6,12 +6,12 @@
 
     <groupId>net.lostfables.lughgk</groupId>
     <artifactId>lostprofessions</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.16.0.1</version>
     <packaging>jar</packaging>
 
     <name>Lostprofessions</name>
 
-    <description>A small profession system</description>
+    <description>A small temporary profession system</description>
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -71,18 +71,18 @@
         <dependency>
             <groupId>net.lordofthecraft</groupId>
             <artifactId>ItemEdit</artifactId>
-            <version>1.13.2-R0.1</version>
+            <version>1.16.0.2</version>
         </dependency>
         <dependency>
             <groupId>com.destroystokyo.paper</groupId>
             <artifactId>paper-api</artifactId>
-            <version>1.13.2-R0.1-SNAPSHOT</version>
+            <version>1.16.1-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>co.lotc</groupId>
             <artifactId>tythan-bukkit</artifactId>
-            <version>0.7.2</version>
+            <version>0.7.6</version>
         </dependency>
     </dependencies>
 </project>
