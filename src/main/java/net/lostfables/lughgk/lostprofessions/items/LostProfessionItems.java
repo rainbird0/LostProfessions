@@ -1756,7 +1756,7 @@ public class LostProfessionItems implements Listener {
         im.setDisplayName(ChatColor.GREEN + "Gold Piece");
         List<String> loreString = new ArrayList<>();
         loreString.add(ChatColor.translateAlternateColorCodes('&', "&7[&2Uncommon &7| &bModerate &7| &8Mundane &7| &8Currency&7]"));
-        loreString.add(ChatColor.translateAlternateColorCodes('&',"&7&oA single Gold Peice. A Gold Peice is the"));
+        loreString.add(ChatColor.translateAlternateColorCodes('&',"&7&oA single Gold Piece. A Gold Piece is the"));
         loreString.add(ChatColor.translateAlternateColorCodes('&',"&7&ostandard money used in the old world."));
         loreString.add(ChatColor.translateAlternateColorCodes('&',"&8&oCreated by a Plugin"));
         im.setLore(loreString);
