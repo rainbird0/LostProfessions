@@ -914,7 +914,7 @@ public class LostProfessionItems implements Listener {
         ib.setName("Shears");
         ib.setType(Type.TOOL);
         ib.applyTags();
-        ib.setDesc(null, "A set of shears, good for acquiring wool and plant goods.");
+        ib.setDesc("A set of shears, good for acquiring wool and plant goods.");
         ib.addApproval(null, Approval.PLUGIN);
         return item;
     }
@@ -926,7 +926,7 @@ public class LostProfessionItems implements Listener {
         ib.setName("Bucket");
         ib.setType(Type.TOOL);
         ib.applyTags();
-        ib.setDesc(null, "A standard bucket, it can hold many things: Water Not Included.");
+        ib.setDesc("A standard bucket, it can hold many things: Water Not Included.");
         ib.addApproval(null, Approval.PLUGIN);
         return item;
     }
@@ -938,7 +938,7 @@ public class LostProfessionItems implements Listener {
         ib.setName("Bars");
         ib.setType(Type.MISC);
         ib.applyTags();
-        ib.setDesc(null, "A set of metal bars, good for keeping people out of places.");
+        ib.setDesc("A set of metal bars, good for keeping people out of places.");
         ib.addApproval(null, Approval.PLUGIN);
         return item;
     }
@@ -954,7 +954,7 @@ public class LostProfessionItems implements Listener {
         ib.setType(Type.HEAVY_WEAPON);
         ib.setRarity(component.getRarity());
         ib.applyTags();
-        ib.setDesc(null, "This spear has a shaft of wood that stands at 6 feet 2 inches tall, and is 1 inch in diameter, on top of which a sharpened, 5 inch " + component.getName() + " sharpened point is attached. Slightly below the spearpoint, an eight inch metal crossguard is placed. The spear itself weighs 5 pounds, making it more suited for close-ranged combat than throwing (although the latter is possible as well). The spear is also balanced fairly well, and can be wielded with one or two hands, although two hands will allow far greater control over the weapon as well as stronger strikes. ");
+        ib.setDesc("This spear has a shaft of wood that stands at 6 feet 2 inches tall, and is 1 inch in diameter, on top of which a sharpened, 5 inch " + component.getName() + " sharpened point is attached. Slightly below the spearpoint, an eight inch metal crossguard is placed. The spear itself weighs 5 pounds, making it more suited for close-ranged combat than throwing (although the latter is possible as well). The spear is also balanced fairly well, and can be wielded with one or two hands, although two hands will allow far greater control over the weapon as well as stronger strikes. ");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -970,7 +970,7 @@ public class LostProfessionItems implements Listener {
         ib.setType(Type.HEAVY_WEAPON);
         ib.setRarity(component.getRarity());
         ib.applyTags();
-        ib.setDesc(null, "This two handed double edged weapon has a " + component.getName() + " blade that measures 34 inches long, positioned on top of a wooden rod, which serves as a handle, that is 12 inches long itself. The blade itself is surprisingly thin, being only 0.2 inches thick, and ends in a curve, similar to that of an umbrella where other swords would have a point, which hangs over the main thrust of the blade. The falchion is particularly effective against padded gambeson as well as cloth due to its thin edge, allowing it to cut through those materials with ease. It is also a surprisingly light weapon, despite its size, weighing only 2.5 pounds. \n ");
+        ib.setDesc("This two handed double edged weapon has a " + component.getName() + " blade that measures 34 inches long, positioned on top of a wooden rod, which serves as a handle, that is 12 inches long itself. The blade itself is surprisingly thin, being only 0.2 inches thick, and ends in a curve, similar to that of an umbrella where other swords would have a point, which hangs over the main thrust of the blade. The falchion is particularly effective against padded gambeson as well as cloth due to its thin edge, allowing it to cut through those materials with ease. It is also a surprisingly light weapon, despite its size, weighing only 2.5 pounds. \n ");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -986,7 +986,7 @@ public class LostProfessionItems implements Listener {
         ib.setType(Type.HEAVY_WEAPON);
         ib.setRarity(component.getRarity());
         ib.applyTags();
-        ib.setDesc(null, "This two handed double edged weapon has a " + component.getName() + " blade that measures 42 inches in length, accompanied by a 7.5 inch " + component.getName() + " handle wrapped in leather, above which is a crossguard, also made of " + component.getName() + ". The blade is 2.5 inches wide at the base, before tapering to a point. The weapon is heavy, weighing 4.5 pounds, although it is fairly well balanced and its massive size allows it crushing blows.");
+        ib.setDesc("This two handed double edged weapon has a " + component.getName() + " blade that measures 42 inches in length, accompanied by a 7.5 inch " + component.getName() + " handle wrapped in leather, above which is a crossguard, also made of " + component.getName() + ". The blade is 2.5 inches wide at the base, before tapering to a point. The weapon is heavy, weighing 4.5 pounds, although it is fairly well balanced and its massive size allows it crushing blows.");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1002,7 +1002,7 @@ public class LostProfessionItems implements Listener {
         ib.setType(Type.HEAVY_WEAPON);
         ib.setRarity(component.getRarity());
         ib.applyTags();
-        ib.setDesc(null, "This massive hunk of carved wood is considerably heavy, weighing in at 10 pounds. The weapon is divided into two parts, a handle, which measures 6 inches and around which a piece of leather is wrapped, and the club itself, a 2 and a half foot carved piece of wood that is 4.5 inches in diameter at its thickest, being slimmest at the handle, then bulking up gradually towards the top, and tapering off again at the top of the club. The weapon itself is poorly balanced and ungainly, meaning that any swing with it is likely to throw its user off balance should they miss, or even, in some cases, hit. Upon a hit, however, thanks to its weight, the club does considerable blunt damage.");
+        ib.setDesc("This massive hunk of carved wood is considerably heavy, weighing in at 10 pounds. The weapon is divided into two parts, a handle, which measures 6 inches and around which a piece of leather is wrapped, and the club itself, a 2 and a half foot carved piece of wood that is 4.5 inches in diameter at its thickest, being slimmest at the handle, then bulking up gradually towards the top, and tapering off again at the top of the club. The weapon itself is poorly balanced and ungainly, meaning that any swing with it is likely to throw its user off balance should they miss, or even, in some cases, hit. Upon a hit, however, thanks to its weight, the club does considerable blunt damage.");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1018,7 +1018,7 @@ public class LostProfessionItems implements Listener {
         ib.setType(Type.HEAVY_WEAPON);
         ib.setRarity(component.getRarity());
         ib.applyTags();
-        ib.setDesc(null, "This two handed axe is double bladed, each axe blade being 8.7 inches in length, 13.8 in height and being made of " + component.getName() + ". The axe blades are attached on top of a five foot wooden shaft, at the top of which a small " + component.getName() + " spike is mounted. The weapon itself weighs 5 pounds, but is balanced fairly well, making it still surprisingly maneuverable.");
+        ib.setDesc("This two handed axe is double bladed, each axe blade being 8.7 inches in length, 13.8 in height and being made of " + component.getName() + ". The axe blades are attached on top of a five foot wooden shaft, at the top of which a small " + component.getName() + " spike is mounted. The weapon itself weighs 5 pounds, but is balanced fairly well, making it still surprisingly maneuverable.");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1034,7 +1034,7 @@ public class LostProfessionItems implements Listener {
         ib.setType(Type.MEDIUM_WEAPON);
         ib.setRarity(component.getRarity());
         ib.applyTags();
-        ib.setDesc(null, "This sword has an unornamented, 32 inch long double edged " + component.getName() + " blade, at the bottom of which a 5 inch long wooden handle is attached, around which a piece of cloth is wrapped. The blade is 1.5 inches at the base, maintaining this width for the majority of its length before tapering off to a point. It weighs 2.7 pounds. The weapon can be wielded with one or two hands, two hands obviously allowing greater control and power behind the weapon's strikes.");
+        ib.setDesc("This sword has an unornamented, 32 inch long double edged " + component.getName() + " blade, at the bottom of which a 5 inch long wooden handle is attached, around which a piece of cloth is wrapped. The blade is 1.5 inches at the base, maintaining this width for the majority of its length before tapering off to a point. It weighs 2.7 pounds. The weapon can be wielded with one or two hands, two hands obviously allowing greater control and power behind the weapon's strikes.");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1050,7 +1050,7 @@ public class LostProfessionItems implements Listener {
         ib.setType(Type.MEDIUM_WEAPON);
         ib.setRarity(component.getRarity());
         ib.applyTags();
-        ib.setDesc(null, "This shortspear has a shaft of oak wood that stands at 4 feet tall, atop which a sharpened " + component.getName() + " point that measures 4 inches tall is affixed. The shaft itself is slender, measuring only half an inch in diameter, the spear only weighing 2.5 pounds.This spear can be thrown easily due to its lightness, but still possess enough heft to be usable in close combat.");
+        ib.setDesc("This shortspear has a shaft of oak wood that stands at 4 feet tall, atop which a sharpened " + component.getName() + " point that measures 4 inches tall is affixed. The shaft itself is slender, measuring only half an inch in diameter, the spear only weighing 2.5 pounds.This spear can be thrown easily due to its lightness, but still possess enough heft to be usable in close combat.");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1066,7 +1066,7 @@ public class LostProfessionItems implements Listener {
         ib.setType(Type.MEDIUM_WEAPON);
         ib.setRarity(component.getRarity());
         ib.applyTags();
-        ib.setDesc(null, "This weapon is composed of two parts, an unornamented " + component.getName() + " handle that's 20 inches long and, on top of it, a slightly larger in diameter " + component.getName() + " rod that's 6 inches long, to which is attached 4 thin " + component.getName() + " flanges, whose shape resembles that of a profile of a valley. On top of the upper rod is attached a metal spike, and the weapon weighs 3 pounds. This weapon is meant to be one-handed, although wielding it with two hands is possible. It's effective against plate, relying on the impact of its strikes to hurt its victim without actually puncturing the garments they are wearing.");
+        ib.setDesc("This weapon is composed of two parts, an unornamented " + component.getName() + " handle that's 20 inches long and, on top of it, a slightly larger in diameter " + component.getName() + " rod that's 6 inches long, to which is attached 4 thin " + component.getName() + " flanges, whose shape resembles that of a profile of a valley. On top of the upper rod is attached a metal spike, and the weapon weighs 3 pounds. This weapon is meant to be one-handed, although wielding it with two hands is possible. It's effective against plate, relying on the impact of its strikes to hurt its victim without actually puncturing the garments they are wearing.");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1082,7 +1082,7 @@ public class LostProfessionItems implements Listener {
         ib.setType(Type.MEDIUM_WEAPON);
         ib.setRarity(component.getRarity());
         ib.applyTags();
-        ib.setDesc(null, "This weapon is made of an unornamented wood handle, which measures 28 inches in length, at the top of which a " + component.getName() + " axe-head is attached. This axe-head is unornamented, and is 6.7 inches in length and 10 inches in height. The axe itself weighs 2.2 pounds, and is meant to be wielded in one hand. The axe can also be thrown, and can be wielded with two or one hands, although one is preferable. ");
+        ib.setDesc("This weapon is made of an unornamented wood handle, which measures 28 inches in length, at the top of which a " + component.getName() + " axe-head is attached. This axe-head is unornamented, and is 6.7 inches in length and 10 inches in height. The axe itself weighs 2.2 pounds, and is meant to be wielded in one hand. The axe can also be thrown, and can be wielded with two or one hands, although one is preferable. ");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1098,7 +1098,7 @@ public class LostProfessionItems implements Listener {
         ib.setType(Type.MEDIUM_WEAPON);
         ib.setRarity(component.getRarity());
         ib.applyTags();
-        ib.setDesc(null, "This scimitar is a backwards curved, single-edged sword with an unsharpened back edge. The sword’s " + component.getName() + " blade is 30 inches in length but rather thin, causing the sword itself to weigh just 2 pounds. The handle measures 5 inches in length, and around it a piece of leather is wrapped. Above the handle is a crossguard, which curves upwards on the sword’s blunt edge, and downwards on its sharp one. The scimitar, thanks to its low weight, excels in slashing and cutting at its opponents, its thin edge allowing it to pierce gambeson and cloth easily. ");
+        ib.setDesc("This scimitar is a backwards curved, single-edged sword with an unsharpened back edge. The sword’s " + component.getName() + " blade is 30 inches in length but rather thin, causing the sword itself to weigh just 2 pounds. The handle measures 5 inches in length, and around it a piece of leather is wrapped. Above the handle is a crossguard, which curves upwards on the sword’s blunt edge, and downwards on its sharp one. The scimitar, thanks to its low weight, excels in slashing and cutting at its opponents, its thin edge allowing it to pierce gambeson and cloth easily. ");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1114,7 +1114,7 @@ public class LostProfessionItems implements Listener {
         ib.setType(Type.LIGHT_WEAPON);
         ib.setRarity(component.getRarity());
         ib.applyTags();
-        ib.setDesc(null, "This dagger has a seven inch double-edged " + component.getName() + " blade, which tapers off to a point. Below the blade is a small, 4 inch long " + component.getName() + " crosspiece and a 4 inch long handle and pommel. This dagger can be thrown thanks to it weighing just 1 pound, while its main utility in close quarters combat is found in stabbing, given its blade’s small size. ");
+        ib.setDesc("This dagger has a seven inch double-edged " + component.getName() + " blade, which tapers off to a point. Below the blade is a small, 4 inch long " + component.getName() + " crosspiece and a 4 inch long handle and pommel. This dagger can be thrown thanks to it weighing just 1 pound, while its main utility in close quarters combat is found in stabbing, given its blade’s small size. ");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1130,7 +1130,7 @@ public class LostProfessionItems implements Listener {
         ib.setType(Type.LIGHT_WEAPON);
         ib.setRarity(component.getRarity());
         ib.applyTags();
-        ib.setDesc(null, "This mace consists of an unornamented, 12 inch long " + component.getName() + " handle, at the top of which a 3 inch in diameter " + component.getName() + " ball is attached. This ball is covered in half an inch long " + component.getName() + " spikes. The mace itself weighs 2 pounds. This weapon is meant to be wielded with one hand, and is effective against plate, relying on the impact of its strikes to hurt its victim without actually puncturing the garments they are wearing, although its spikes do help puncture its victims as well. ");
+        ib.setDesc("This mace consists of an unornamented, 12 inch long " + component.getName() + " handle, at the top of which a 3 inch in diameter " + component.getName() + " ball is attached. This ball is covered in half an inch long " + component.getName() + " spikes. The mace itself weighs 2 pounds. This weapon is meant to be wielded with one hand, and is effective against plate, relying on the impact of its strikes to hurt its victim without actually puncturing the garments they are wearing, although its spikes do help puncture its victims as well. ");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1146,7 +1146,7 @@ public class LostProfessionItems implements Listener {
         ib.setType(Type.LIGHT_WEAPON);
         ib.setRarity(component.getRarity());
         ib.applyTags();
-        ib.setDesc(null, "This rapier has a 39 inch long, thin, 0.7 inch wide thin sharpened " + component.getName() + " blade, which tapers off into a sharpened point. Beneath it, a 4 inch long " + component.getName() + " handle is placed, around which a piece of leather is wrapped. Above the handle, there is a crospiece, which consists of several strands of metal forming the outline of a circle around the handle, at each cardinal point of the circle a strand of metal going back towards the handle itself. This rapier weighs 2.1 pounds, and is a light, somewhat-unwieldy one-handed sword, which is most effective when stabbing. Thanks to the blade being long but very thin it's not that strong, meaning that a good hit from a more bulky weapon has the potential to break it in half. ");
+        ib.setDesc("This rapier has a 39 inch long, thin, 0.7 inch wide thin sharpened " + component.getName() + " blade, which tapers off into a sharpened point. Beneath it, a 4 inch long " + component.getName() + " handle is placed, around which a piece of leather is wrapped. Above the handle, there is a crospiece, which consists of several strands of metal forming the outline of a circle around the handle, at each cardinal point of the circle a strand of metal going back towards the handle itself. This rapier weighs 2.1 pounds, and is a light, somewhat-unwieldy one-handed sword, which is most effective when stabbing. Thanks to the blade being long but very thin it's not that strong, meaning that a good hit from a more bulky weapon has the potential to break it in half. ");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1162,7 +1162,7 @@ public class LostProfessionItems implements Listener {
         ib.setType(Type.LIGHT_WEAPON);
         ib.setRarity(component.getRarity());
         ib.applyTags();
-        ib.setDesc(null, "This sickle has a 10 inch long, curved single-edged " + component.getName() + " blade, which starts off straight directly above the handle, then curves outward and then curves back, ending up flattening out at the 18 inch mark and reaching back past the handle and ending in a point. The handle itself is made of a 5 inch plain oak piece. The sickle is meant to be wielded with one hand. The sickle is proficient at slashing and cutting thanks to its low weight, and, thanks to its thin edge, at cutting through cloth and gambeson armour. It is also proficient at harvesting plants like wheat and cutting foliage, if its owner intends to use it for farming.  ");
+        ib.setDesc("This sickle has a 10 inch long, curved single-edged " + component.getName() + " blade, which starts off straight directly above the handle, then curves outward and then curves back, ending up flattening out at the 18 inch mark and reaching back past the handle and ending in a point. The handle itself is made of a 5 inch plain oak piece. The sickle is meant to be wielded with one hand. The sickle is proficient at slashing and cutting thanks to its low weight, and, thanks to its thin edge, at cutting through cloth and gambeson armour. It is also proficient at harvesting plants like wheat and cutting foliage, if its owner intends to use it for farming.  ");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1180,7 +1180,7 @@ public class LostProfessionItems implements Listener {
         ib.setType(Type.LIGHT_ARMOR);
         ib.setRarity(component.getRarity());
         ib.applyTags();
-        ib.setDesc(null, "This very small metal shield is 12 inches in diameter, consisting of a half-sphere of hollow " + component.getName() + ", inside of which the 4 inch handle is placed. An outer circumference of flat " + component.getName() + " surrounds this half-sphere. The shield itself weighs only 2.4 pounds, making it more mobile and easy to maneuver than its larger, more heavy compatriots, accounting for its far smaller size. This shield can protect against arrows, or even bullets, which will cause the shield to dent and hurt the wearer’s arm due to their force, if it is placed in the path of them, as well as deflect most weaponry, although heavy hits from big weapons risks jarring and hurting the user’s buckler-holding arm.");
+        ib.setDesc("This very small metal shield is 12 inches in diameter, consisting of a half-sphere of hollow " + component.getName() + ", inside of which the 4 inch handle is placed. An outer circumference of flat " + component.getName() + " surrounds this half-sphere. The shield itself weighs only 2.4 pounds, making it more mobile and easy to maneuver than its larger, more heavy compatriots, accounting for its far smaller size. This shield can protect against arrows, or even bullets, which will cause the shield to dent and hurt the wearer’s arm due to their force, if it is placed in the path of them, as well as deflect most weaponry, although heavy hits from big weapons risks jarring and hurting the user’s buckler-holding arm.");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1196,7 +1196,7 @@ public class LostProfessionItems implements Listener {
         ib.setType(Type.LIGHT_ARMOR);
         ib.setRarity(Rarity.COMMON);
         ib.applyTags();
-        ib.setDesc(null, "This round shield is made up of two parts, an outer layer of tough, tanned hide and an inner layer of plywood, around which the hide is wrapped. Behind the shield a leather strap is placed, so that it may be attached to the wearer’s forearm or slung over their back. The shield is 20 inches in diameter, and weighs 3.8 pounds. This shield can protect against arrows well, them either bouncing off the hide or getting lodged in the wood underneath it. It also does well against the conventional hack and slash weapons, being particularly effective against blunt weapons thanks to the hide, but being more vulnerable to anything with an edge, especially axes, although these weapons do run the risk of getting stuck in the shield. ");
+        ib.setDesc("This round shield is made up of two parts, an outer layer of tough, tanned hide and an inner layer of plywood, around which the hide is wrapped. Behind the shield a leather strap is placed, so that it may be attached to the wearer’s forearm or slung over their back. The shield is 20 inches in diameter, and weighs 3.8 pounds. This shield can protect against arrows well, them either bouncing off the hide or getting lodged in the wood underneath it. It also does well against the conventional hack and slash weapons, being particularly effective against blunt weapons thanks to the hide, but being more vulnerable to anything with an edge, especially axes, although these weapons do run the risk of getting stuck in the shield. ");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1212,7 +1212,7 @@ public class LostProfessionItems implements Listener {
         ib.setType(Type.MEDIUM_ARMOR);
         ib.setRarity(component.getRarity());
         ib.applyTags();
-        ib.setDesc(null, "This heater shield consists of two shapes, a rounded square on the top and a triangle beneath it. It is 22 inches across and 30 inches down, consisting of a layer of plywood which is overlaid with tanned leather, and subsequently braced with " + component.getName() + ". Behind the shield a leather strap is placed, so that it may be attached to the wearer’s forearm or slung over their back.This shield can protect against arrows well, them either bouncing off the hide or getting lodged in the wood underneath it. It also does well against the conventional hack and slash weapons, being particularly effective against blunt weapons thanks to the leather exterior, but being more vulnerable to anything with an edge, especially axes, although these weapons do run the risk of getting stuck in the shield, or bouncing off of its " + component.getName() + " reinforcement. ");
+        ib.setDesc("This heater shield consists of two shapes, a rounded square on the top and a triangle beneath it. It is 22 inches across and 30 inches down, consisting of a layer of plywood which is overlaid with tanned leather, and subsequently braced with " + component.getName() + ". Behind the shield a leather strap is placed, so that it may be attached to the wearer’s forearm or slung over their back.This shield can protect against arrows well, them either bouncing off the hide or getting lodged in the wood underneath it. It also does well against the conventional hack and slash weapons, being particularly effective against blunt weapons thanks to the leather exterior, but being more vulnerable to anything with an edge, especially axes, although these weapons do run the risk of getting stuck in the shield, or bouncing off of its " + component.getName() + " reinforcement. ");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1228,7 +1228,7 @@ public class LostProfessionItems implements Listener {
         ib.setType(Type.MEDIUM_ARMOR);
         ib.setRarity(component.getRarity());
         ib.applyTags();
-        ib.setDesc(null, "This kite shield consists of a rounded top, which then narrows down to a point in its lower third, causing it to resemble its namesake. It is 26 inches across and 37 inches down, consisting of a layer of plywood which is overlaid with tanned leather, and subsequently braced with " + component.getName() + ". In the center of the upper part of the shield a 6 inch in diameter metal boss is placed. Behind the shield a leather strap is placed, so that it may be attached to the wearer’s forearm or slung over their back.This shield can protect against arrows well, them either bouncing off the hide or getting lodged in the wood underneath it. It also does well against the conventional hack and slash weapons, being particularly effective against blunt weapons thanks to the leather exterior, but being more vulnerable to anything with an edge, especially axes, although these weapons do run the risk of getting stuck in the shield, or bouncing off of its " + component.getName() + " reinforcement. ");
+        ib.setDesc("This kite shield consists of a rounded top, which then narrows down to a point in its lower third, causing it to resemble its namesake. It is 26 inches across and 37 inches down, consisting of a layer of plywood which is overlaid with tanned leather, and subsequently braced with " + component.getName() + ". In the center of the upper part of the shield a 6 inch in diameter metal boss is placed. Behind the shield a leather strap is placed, so that it may be attached to the wearer’s forearm or slung over their back.This shield can protect against arrows well, them either bouncing off the hide or getting lodged in the wood underneath it. It also does well against the conventional hack and slash weapons, being particularly effective against blunt weapons thanks to the leather exterior, but being more vulnerable to anything with an edge, especially axes, although these weapons do run the risk of getting stuck in the shield, or bouncing off of its " + component.getName() + " reinforcement. ");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1244,7 +1244,7 @@ public class LostProfessionItems implements Listener {
         ib.setType(Type.HEAVY_ARMOR);
         ib.setRarity(component.getRarity());
         ib.applyTags();
-        ib.setDesc(null, "This enormous shield is shaped like a rectangle, with curved edges that bend towards the wearer. It is made of metal-reinforced plywood, on top of which a piece of tanned hide is placed. The shield’s dimensions are 30 inches across and 65 inches down, and, at its epicenter, a metal boss is placed.The shield weighs an enormous 29 pounds, making it near impossible to maneuver during combat or move quickly with. On the backside of the shield, a wood handle and leather straps are placed so that the shield might be held by the soldier by the handle or slung over their back with the straps.This shield can protect against arrows well, them either bouncing off the hide or getting lodged in the wood underneath it. It also does well against the conventional hack and slash weapons, being particularly effective against blunt weapons thanks to the leather exterior, but being more vulnerable to anything with an edge, especially axes, although these weapons do run the risk of getting stuck in the shield, or bouncing off of its " + component.getName() + " reinforcement. ");
+        ib.setDesc("This enormous shield is shaped like a rectangle, with curved edges that bend towards the wearer. It is made of metal-reinforced plywood, on top of which a piece of tanned hide is placed. The shield’s dimensions are 30 inches across and 65 inches down, and, at its epicenter, a metal boss is placed.The shield weighs an enormous 29 pounds, making it near impossible to maneuver during combat or move quickly with. On the backside of the shield, a wood handle and leather straps are placed so that the shield might be held by the soldier by the handle or slung over their back with the straps.This shield can protect against arrows well, them either bouncing off the hide or getting lodged in the wood underneath it. It also does well against the conventional hack and slash weapons, being particularly effective against blunt weapons thanks to the leather exterior, but being more vulnerable to anything with an edge, especially axes, although these weapons do run the risk of getting stuck in the shield, or bouncing off of its " + component.getName() + " reinforcement. ");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1260,7 +1260,7 @@ public class LostProfessionItems implements Listener {
         ib.setType(Type.HEAVY_ARMOR);
         ib.setRarity(component.getRarity());
         ib.applyTags();
-        ib.setDesc(null, "This massive shield is shaped like a rectangle with curved edges that bend backwards towards the wielder. It is made of metal-reinforced plywood, on top of which a piece of tanned hide is placed. The shield’s dimensions are 30 inches across and 48 inches down, and, at its epicenter, a metal boss is placed.The shield weighs an enormous 22 pounds, making it very hard to maneuver during combat or move quickly with. On the backside of the shield, a wood handle and leather straps are placed so that it might be bound to the wearer’s forearm, or slung over their back.This shield can protect against arrows well, them either bouncing off the hide or getting lodged in the wood underneath it. It also does well against the conventional hack and slash weapons, being particularly effective against blunt weapons thanks to the leather exterior, but being more vulnerable to anything with an edge, especially axes, although these weapons do run the risk of getting stuck in the shield, or bouncing off of its " + component.getName() + " reinforcement. ");
+        ib.setDesc("This massive shield is shaped like a rectangle with curved edges that bend backwards towards the wielder. It is made of metal-reinforced plywood, on top of which a piece of tanned hide is placed. The shield’s dimensions are 30 inches across and 48 inches down, and, at its epicenter, a metal boss is placed.The shield weighs an enormous 22 pounds, making it very hard to maneuver during combat or move quickly with. On the backside of the shield, a wood handle and leather straps are placed so that it might be bound to the wearer’s forearm, or slung over their back.This shield can protect against arrows well, them either bouncing off the hide or getting lodged in the wood underneath it. It also does well against the conventional hack and slash weapons, being particularly effective against blunt weapons thanks to the leather exterior, but being more vulnerable to anything with an edge, especially axes, although these weapons do run the risk of getting stuck in the shield, or bouncing off of its " + component.getName() + " reinforcement. ");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1279,7 +1279,7 @@ public class LostProfessionItems implements Listener {
         ib.setType(Type.TOOL);
         ib.setRarity(component.getRarity());
         ib.applyTags();
-        ib.setDesc(null, "This pickaxe consists of a 36 inch wooden handle to which an 18 inch long " + component.getName() + " pickaxe head is attached. This tool weighs 2.5 pounds, and is primarily used to chip at and break stone or claim the ore contained within it.");
+        ib.setDesc("This pickaxe consists of a 36 inch wooden handle to which an 18 inch long " + component.getName() + " pickaxe head is attached. This tool weighs 2.5 pounds, and is primarily used to chip at and break stone or claim the ore contained within it.");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1295,7 +1295,7 @@ public class LostProfessionItems implements Listener {
         ib.setType(Type.TOOL);
         ib.setRarity(component.getRarity());
         ib.applyTags();
-        ib.setDesc(null, "This shovel consists of a 37 inch long wooden handle, to which a " + component.getName() + " 10 inch across 7 inch tall shovelhead is attached. It weighs 4.5 pounds. This tool is mainly used to dig at dirt, soil, or similar substances.");
+        ib.setDesc("This shovel consists of a 37 inch long wooden handle, to which a " + component.getName() + " 10 inch across 7 inch tall shovelhead is attached. It weighs 4.5 pounds. This tool is mainly used to dig at dirt, soil, or similar substances.");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1311,7 +1311,7 @@ public class LostProfessionItems implements Listener {
         ib.setType(Type.TOOL);
         ib.setRarity(component.getRarity());
         ib.applyTags();
-        ib.setDesc(null, "This hoe consists of a 60 inch wooden handle, to which a " + component.getName() + " draw head is attached, being 2 inches in width and 5 inches in length. It weighs 3.5 pounds, and is primarily used to dig up soil and create trenches that seeds will be placed in during preparing a field for farming.");
+        ib.setDesc("This hoe consists of a 60 inch wooden handle, to which a " + component.getName() + " draw head is attached, being 2 inches in width and 5 inches in length. It weighs 3.5 pounds, and is primarily used to dig up soil and create trenches that seeds will be placed in during preparing a field for farming.");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1327,7 +1327,7 @@ public class LostProfessionItems implements Listener {
         ib.setType(Type.TOOL);
         ib.setRarity(component.getRarity());
         ib.applyTags();
-        ib.setDesc(null, "This tool is made of an unornamented wooden handle, which measures 31 inches in length, at the top of which a " + component.getName() + " axe-head is attached. This axe-head is unornamented, and is 8.7 inches in length and 13.5 inches in height. The axe itself weighs 3.5 pounds, and is used to cut down trees or split logs.");
+        ib.setDesc("This tool is made of an unornamented wooden handle, which measures 31 inches in length, at the top of which a " + component.getName() + " axe-head is attached. This axe-head is unornamented, and is 8.7 inches in length and 13.5 inches in height. The axe itself weighs 3.5 pounds, and is used to cut down trees or split logs.");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1346,7 +1346,7 @@ public class LostProfessionItems implements Listener {
         ib.setName("Quilted Cloth Coif");
         ib.setType(Type.LIGHT_ARMOR);
         ib.applyTags();
-        ib.setDesc(null, "This coif is a close fitting cap made from quilted linen that is worn by both men and women that covers the top, back, and sides of the head.");
+        ib.setDesc("This coif is a close fitting cap made from quilted linen that is worn by both men and women that covers the top, back, and sides of the head.");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1362,7 +1362,7 @@ public class LostProfessionItems implements Listener {
         ib.setName("Leather Helm");
         ib.setType(Type.LIGHT_ARMOR);
         ib.applyTags();
-        ib.setDesc(null, "This helm is made entirely from layered leather that fits snugly to the scalp of its wearer. It has a strap that loops around the wearer's jaw to keep it in place.");
+        ib.setDesc("This helm is made entirely from layered leather that fits snugly to the scalp of its wearer. It has a strap that loops around the wearer's jaw to keep it in place.");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1378,7 +1378,7 @@ public class LostProfessionItems implements Listener {
         ib.setName("Hood");
         ib.setType(Type.LIGHT_ARMOR);
         ib.applyTags();
-        ib.setDesc(null, "This hood is made from cloth, and covers the top, back, sides, and forehead of the wearer’s head when worn. The hood is primarily designed to shield its wearer from the harshness of the elements, and may be used to protect the user's face from rain, wind, and snow, amongst other things. ");
+        ib.setDesc("This hood is made from cloth, and covers the top, back, sides, and forehead of the wearer’s head when worn. The hood is primarily designed to shield its wearer from the harshness of the elements, and may be used to protect the user's face from rain, wind, and snow, amongst other things. ");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1395,7 +1395,7 @@ public class LostProfessionItems implements Listener {
         ib.setName("Gambeson");
         ib.setType(Type.LIGHT_ARMOR);
         ib.applyTags();
-        ib.setDesc(null, "This padded jacket of gambeson covers the wearer’s arms and chest, made of layers of various forms of cloth, cotton, wool, and linen. It can be worn by itself or underneath armour, and is capable of stopping arrows from bows on the lower end of the draw weight spectrum, as well as direct hits from lighter weapons or maces.");
+        ib.setDesc("This padded jacket of gambeson covers the wearer’s arms and chest, made of layers of various forms of cloth, cotton, wool, and linen. It can be worn by itself or underneath armour, and is capable of stopping arrows from bows on the lower end of the draw weight spectrum, as well as direct hits from lighter weapons or maces.");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1412,7 +1412,7 @@ public class LostProfessionItems implements Listener {
         ib.setName("Robes");
         ib.setType(Type.LIGHT_ARMOR);
         ib.applyTags();
-        ib.setDesc(null, "This set of cloth robes is very light, and, when worn, cover the wearer’s chest, arms, and legs. They have no straps, and are put on by taking the robes and placing it over the wearer’s head. Almost anything can pierce this garment, and it offers virtually no protection.");
+        ib.setDesc("This set of cloth robes is very light, and, when worn, cover the wearer’s chest, arms, and legs. They have no straps, and are put on by taking the robes and placing it over the wearer’s head. Almost anything can pierce this garment, and it offers virtually no protection.");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1428,7 +1428,7 @@ public class LostProfessionItems implements Listener {
         ib.setName("Harness");
         ib.setType(Type.LIGHT_ARMOR);
         ib.applyTags();
-        ib.setDesc(null, "This piece of armor has a tanned leather chest piece that protects both the back and front of the wearer’s chest, which can be tightened or loosened by tugging at a leather strap placed behind the chestpiece. Leather arm pads are bound with string along the outer part of the wearer’s arms curving with them, leaving only the inner part of his arm unprotected. This string may be tightened or loosened to ensure that the pads fit. ");
+        ib.setDesc("This piece of armor has a tanned leather chest piece that protects both the back and front of the wearer’s chest, which can be tightened or loosened by tugging at a leather strap placed behind the chestpiece. Leather arm pads are bound with string along the outer part of the wearer’s arms curving with them, leaving only the inner part of his arm unprotected. This string may be tightened or loosened to ensure that the pads fit. ");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1444,7 +1444,7 @@ public class LostProfessionItems implements Listener {
         ib.setName("Quilted Chausses");
         ib.setType(Type.LIGHT_ARMOR);
         ib.applyTags();
-        ib.setDesc(null, "These Quilted Chausses are made of layers of various types of cloth, cotton, wool, and linen. They extend from the waist to the ankle, completely covering everything in between those places. It can be worn by itself or underneath armour, and is capable of stopping arrows from bows on the lower end of the draw weight spectrum, as well as hits from lighter weapons or maces, and can dampen the harm that stronger weapons do. ");
+        ib.setDesc("These Quilted Chausses are made of layers of various types of cloth, cotton, wool, and linen. They extend from the waist to the ankle, completely covering everything in between those places. It can be worn by itself or underneath armour, and is capable of stopping arrows from bows on the lower end of the draw weight spectrum, as well as hits from lighter weapons or maces, and can dampen the harm that stronger weapons do. ");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1459,7 +1459,7 @@ public class LostProfessionItems implements Listener {
         ib.setName("Leather Tassets");
         ib.setType(Type.LIGHT_ARMOR);
         ib.applyTags();
-        ib.setDesc(null, "This piece of armor is made of tanned leather armor pads which are bound with string along the wearer’s legs and curving with them, leaving only the inner thigh and inner calf unprotected. This string may be tightened or loosened to ensure that the pads fit. ");
+        ib.setDesc("This piece of armor is made of tanned leather armor pads which are bound with string along the wearer’s legs and curving with them, leaving only the inner thigh and inner calf unprotected. This string may be tightened or loosened to ensure that the pads fit. ");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1475,7 +1475,7 @@ public class LostProfessionItems implements Listener {
         ib.setName("Braies");
         ib.setType(Type.LIGHT_ARMOR);
         ib.applyTags();
-        ib.setDesc(null, "This linen garment is shaped like a pair of pants, and is sometimes worn as underwear. It offers no protection whatsoever against any credible attack, and is very light.");
+        ib.setDesc("This linen garment is shaped like a pair of pants, and is sometimes worn as underwear. It offers no protection whatsoever against any credible attack, and is very light.");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1491,7 +1491,7 @@ public class LostProfessionItems implements Listener {
         ib.setName("Leather Boots");
         ib.setType(Type.LIGHT_ARMOR);
         ib.applyTags();
-        ib.setDesc(null, "This pair of boots are made from tanned leather, which is stitched together with string. ");
+        ib.setDesc("This pair of boots are made from tanned leather, which is stitched together with string. ");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1507,7 +1507,7 @@ public class LostProfessionItems implements Listener {
         ib.setName("Shoes");
         ib.setType(Type.LIGHT_ARMOR);
         ib.applyTags();
-        ib.setDesc(null, "This pair of leather shoes are made from plain leather, which is stitched together with string. ");
+        ib.setDesc("This pair of leather shoes are made from plain leather, which is stitched together with string. ");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1524,7 +1524,7 @@ public class LostProfessionItems implements Listener {
         ib.setName("Reinforced Boots");
         ib.setType(Type.MEDIUM_ARMOR);
         ib.applyTags();
-        ib.setDesc(null, "This pair of boots are made from tanned leather, which is stitched together with string. It is also reinforced, on the sole, heel, and tip of the boot predominantly, with " + component.getName() + ", making it easier to traverse rough terrain in exchange for slowing the wearer down slightly. The reinforcements also add power to the wearer’s kicks.");
+        ib.setDesc("This pair of boots are made from tanned leather, which is stitched together with string. It is also reinforced, on the sole, heel, and tip of the boot predominantly, with " + component.getName() + ", making it easier to traverse rough terrain in exchange for slowing the wearer down slightly. The reinforcements also add power to the wearer’s kicks.");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1540,7 +1540,7 @@ public class LostProfessionItems implements Listener {
         ib.setRarity(component.getRarity());
         ib.setType(Type.MEDIUM_ARMOR);
         ib.applyTags();
-        ib.setDesc(null, "This helmet consists of a 1.5mm " + component.getName() + ", rounded top, which covers the wearer’s head entirely down to their forehead, at which point it stops, and a " + component.getName() + " nose guard, which is a piece of rectangular " + component.getName() + " that extends down from the top of the helmet to protect their nose. The top and nosguard can deflect arrows, as well as weapons that rely on their edge to do damage unless said weapons are wielded by an incredibly strong person. They are more vulnerable to blunt weapons, which cause dents in the armor’s " + component.getName() + " that can similarly hurt their wearer. This helmet is generally worn in conjunction with a chainmail coif.");
+        ib.setDesc("This helmet consists of a 1.5mm " + component.getName() + ", rounded top, which covers the wearer’s head entirely down to their forehead, at which point it stops, and a " + component.getName() + " nose guard, which is a piece of rectangular " + component.getName() + " that extends down from the top of the helmet to protect their nose. The top and nosguard can deflect arrows, as well as weapons that rely on their edge to do damage unless said weapons are wielded by an incredibly strong person. They are more vulnerable to blunt weapons, which cause dents in the armor’s " + component.getName() + " that can similarly hurt their wearer. This helmet is generally worn in conjunction with a chainmail coif.");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1556,7 +1556,7 @@ public class LostProfessionItems implements Listener {
         ib.setRarity(component.getRarity());
         ib.setType(Type.MEDIUM_ARMOR);
         ib.applyTags();
-        ib.setDesc(null, "This piece of armor is, for all intensive purposes, a hood made of " + component.getName() + " chainmail. It covers the wearer’s throat, forehead, and back and side of head completely. The chainmail links of the armour is designed to protect against and can resist slashing and stabbing weapons, and its non-rigid nature makes it less vulnerable against blunt weapons. This piece of apparel can be worn underneath or in conjunction with many types of head armour. ");
+        ib.setDesc("This piece of armor is, for all intensive purposes, a hood made of " + component.getName() + " chainmail. It covers the wearer’s throat, forehead, and back and side of head completely. The chainmail links of the armour is designed to protect against and can resist slashing and stabbing weapons, and its non-rigid nature makes it less vulnerable against blunt weapons. This piece of apparel can be worn underneath or in conjunction with many types of head armour. ");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1572,7 +1572,7 @@ public class LostProfessionItems implements Listener {
         ib.setRarity(component.getRarity());
         ib.setType(Type.MEDIUM_ARMOR);
         ib.applyTags();
-        ib.setDesc(null, "This helmet is made of 1.5mm " + component.getName() + ", which is forged in such a way that it covers the back and sides of the wearer’s head, as well as most of the front, leaving a long, connected gap over where the eyes, nose, and mouth of the helmet’s wearer is. The wearer’s throat is also left unprotected. This helmet can deflect arrows, as well as weapons that rely on their edge to do damage, but is more vulnerable to blunt weapons. ");
+        ib.setDesc("This helmet is made of 1.5mm " + component.getName() + ", which is forged in such a way that it covers the back and sides of the wearer’s head, as well as most of the front, leaving a long, connected gap over where the eyes, nose, and mouth of the helmet’s wearer is. The wearer’s throat is also left unprotected. This helmet can deflect arrows, as well as weapons that rely on their edge to do damage, but is more vulnerable to blunt weapons. ");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1589,7 +1589,7 @@ public class LostProfessionItems implements Listener {
         ib.setRarity(component.getRarity());
         ib.setType(Type.MEDIUM_ARMOR);
         ib.applyTags();
-        ib.setDesc(null, "This body-armour is made of two parts, a tanned leather cover akin to an armless apron, which covers the front, back, and side of the wearer’s chest, as well as their upper thighs, dipping to cover them much like a skirt would. On top of this leather many tiny " + component.getName() + " squares are attached, reinforcing and strengthening it. This form of construction makes the Brigandine less vulnerable against blunt weapons, although by stabbing through the 2mm cracks in between the " + component.getName() + " boxes one can bypass them completely and only face the tanned leather undergarment. Apart from that, the " + component.getName() + " boxes are quite efficient at repelling both cutting and stabbing strikes. ");
+        ib.setDesc("This body-armour is made of two parts, a tanned leather cover akin to an armless apron, which covers the front, back, and side of the wearer’s chest, as well as their upper thighs, dipping to cover them much like a skirt would. On top of this leather many tiny " + component.getName() + " squares are attached, reinforcing and strengthening it. This form of construction makes the Brigandine less vulnerable against blunt weapons, although by stabbing through the 2mm cracks in between the " + component.getName() + " boxes one can bypass them completely and only face the tanned leather undergarment. Apart from that, the " + component.getName() + " boxes are quite efficient at repelling both cutting and stabbing strikes. ");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1605,7 +1605,7 @@ public class LostProfessionItems implements Listener {
         ib.setRarity(component.getRarity());
         ib.setType(Type.MEDIUM_ARMOR);
         ib.applyTags();
-        ib.setDesc(null, "This Hauberk is made of " + component.getName() + " chainmail, and covers the wearer’s chest and arms completely. From the chest, two sheets of chainmail fall, protecting the wearer’s upper thighs with the exception of their inner thigh. This armour can be worn by itself, or underneath other armors. The chainmail links of this armour are designed to protect against and can resist slashing and stabbing weapons, and its non-rigid nature makes it less vulnerable against blunt weapons. This piece of apparel can be worn underneath or in conjunction with many types of leg armor. ");
+        ib.setDesc("This Hauberk is made of " + component.getName() + " chainmail, and covers the wearer’s chest and arms completely. From the chest, two sheets of chainmail fall, protecting the wearer’s upper thighs with the exception of their inner thigh. This armour can be worn by itself, or underneath other armors. The chainmail links of this armour are designed to protect against and can resist slashing and stabbing weapons, and its non-rigid nature makes it less vulnerable against blunt weapons. This piece of apparel can be worn underneath or in conjunction with many types of leg armor. ");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1621,7 +1621,7 @@ public class LostProfessionItems implements Listener {
         ib.setRarity(component.getRarity());
         ib.setType(Type.MEDIUM_ARMOR);
         ib.applyTags();
-        ib.setDesc(null, "These maille chausses are made of interlinked " + component.getName() + " chainmail. They extend from the waist to the ankle, completely covering everything in between those places. It can be worn by itself or underneath armour. The chainmail links of this armour are designed to protect against and can resist slashing and stabbing weapons, and its non-rigid nature makes it less vulnerable against blunt weapons. This piece of apparel can be worn underneath or in conjunction with many types of leg armor. ");
+        ib.setDesc("These maille chausses are made of interlinked " + component.getName() + " chainmail. They extend from the waist to the ankle, completely covering everything in between those places. It can be worn by itself or underneath armour. The chainmail links of this armour are designed to protect against and can resist slashing and stabbing weapons, and its non-rigid nature makes it less vulnerable against blunt weapons. This piece of apparel can be worn underneath or in conjunction with many types of leg armor. ");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1637,7 +1637,7 @@ public class LostProfessionItems implements Listener {
         ib.setRarity(component.getRarity());
         ib.setType(Type.MEDIUM_ARMOR);
         ib.applyTags();
-        ib.setDesc(null, " This piece of plate armor is made of 1.55mm " + component.getName() + ", and, when worn, covers all sides of the user’s thigh, ending right above the knee so that it does not significantly impede its wearer’s movement, which it does to a smaller extent. This cuisse can deflect arrows, as well as weapons that rely on their edge to do damage unless said weapons are wielded by an incredibly strong person.They are more vulnerable to blunt weapons which cause dents in the cuisse’s " + component.getName() + " that can similarly hurt its wearer.");
+        ib.setDesc(" This piece of plate armor is made of 1.55mm " + component.getName() + ", and, when worn, covers all sides of the user’s thigh, ending right above the knee so that it does not significantly impede its wearer’s movement, which it does to a smaller extent. This cuisse can deflect arrows, as well as weapons that rely on their edge to do damage unless said weapons are wielded by an incredibly strong person.They are more vulnerable to blunt weapons which cause dents in the cuisse’s " + component.getName() + " that can similarly hurt its wearer.");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1653,7 +1653,7 @@ public class LostProfessionItems implements Listener {
         ib.setRarity(component.getRarity());
         ib.setType(Type.HEAVY_ARMOR);
         ib.applyTags();
-        ib.setDesc(null, "This close helm is made of two parts, a 1.5mm " + component.getName() + " frame that covers all of the wearer’s face apart from the parts covered by the visor, as well as the wearer’s neck and everything 3.5 inches from the neck on the wearer’s chest as a gorget. The visor can be opened to the side when needed. It covers the wearer’s eyes, nose, and mouth, a 2.5mm " + component.getName() + " slit being placed horizontally at the wearer’s eye level. The small size of the slit causes the helmet’s wearer to have impaired vision if the visor is covering their face. This close helm can deflect arrows, as well as weapons that rely on their edge to do damage. They are more vulnerable to blunt weapons which cause dents in the close helm’s " + component.getName() + ".");
+        ib.setDesc("This close helm is made of two parts, a 1.5mm " + component.getName() + " frame that covers all of the wearer’s face apart from the parts covered by the visor, as well as the wearer’s neck and everything 3.5 inches from the neck on the wearer’s chest as a gorget. The visor can be opened to the side when needed. It covers the wearer’s eyes, nose, and mouth, a 2.5mm " + component.getName() + " slit being placed horizontally at the wearer’s eye level. The small size of the slit causes the helmet’s wearer to have impaired vision if the visor is covering their face. This close helm can deflect arrows, as well as weapons that rely on their edge to do damage. They are more vulnerable to blunt weapons which cause dents in the close helm’s " + component.getName() + ".");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1669,7 +1669,7 @@ public class LostProfessionItems implements Listener {
         ib.setRarity(component.getRarity());
         ib.setType(Type.HEAVY_ARMOR);
         ib.applyTags();
-        ib.setDesc(null, "This piece of armor is made of 1.5mm " + component.getName() + ", and consists of two layers, one of gambeson, and then one of plate armor. The layer of gambeson covers the wearer’s entire body and arms, and, on top of it, the plate armor is placed, covering the user’s arms and chest. The only part of the upper layer that is not made of plate is the area covering the user’s joints, where layers of chainmail are placed on top of the gambeson in replacement for the plate, forming a vulnerability in the armour. The wearer’s movement is impeded in this armour, but it can deflect arrows, as well as weapons that rely on their edge to do damage. The plate chest is more vulnerable to blunt weapons, which can cause dents in the plate’s " + component.getName() + ".");
+        ib.setDesc("This piece of armor is made of 1.5mm " + component.getName() + ", and consists of two layers, one of gambeson, and then one of plate armor. The layer of gambeson covers the wearer’s entire body and arms, and, on top of it, the plate armor is placed, covering the user’s arms and chest. The only part of the upper layer that is not made of plate is the area covering the user’s joints, where layers of chainmail are placed on top of the gambeson in replacement for the plate, forming a vulnerability in the armour. The wearer’s movement is impeded in this armour, but it can deflect arrows, as well as weapons that rely on their edge to do damage. The plate chest is more vulnerable to blunt weapons, which can cause dents in the plate’s " + component.getName() + ".");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1685,7 +1685,7 @@ public class LostProfessionItems implements Listener {
         ib.setRarity(component.getRarity());
         ib.setType(Type.HEAVY_ARMOR);
         ib.applyTags();
-        ib.setDesc(null, " These full plate legs are made of two layers, one of mail and one of 1.5mm " + component.getName() + ". Both layers extend from the waist to the leg, with the exception of the wearer’s joints, where the upper layer is replaced with chainmail and the lower with gambeson, forming a weak spot. To the sides of the wearer’s upper thigh, two curved " + component.getName() + " protectors are placed, hanging over their upper thigh and protecting it from strikes from the top, leaving the inner thigh exposed. The wearer’s movement is impeded in this armour, but it can deflect arrows, as well as weapons that rely on their edge to do damage. These plate legs are more vulnerable to blunt weapons, which can cause dents in the plate’s " + component.getName() + ".");
+        ib.setDesc(" These full plate legs are made of two layers, one of mail and one of 1.5mm " + component.getName() + ". Both layers extend from the waist to the leg, with the exception of the wearer’s joints, where the upper layer is replaced with chainmail and the lower with gambeson, forming a weak spot. To the sides of the wearer’s upper thigh, two curved " + component.getName() + " protectors are placed, hanging over their upper thigh and protecting it from strikes from the top, leaving the inner thigh exposed. The wearer’s movement is impeded in this armour, but it can deflect arrows, as well as weapons that rely on their edge to do damage. These plate legs are more vulnerable to blunt weapons, which can cause dents in the plate’s " + component.getName() + ".");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1701,7 +1701,7 @@ public class LostProfessionItems implements Listener {
         ib.setRarity(component.getRarity());
         ib.setType(Type.HEAVY_ARMOR);
         ib.applyTags();
-        ib.setDesc(null, "These plate boots are made of 1.5mm " + component.getName() + ", and cover the wearer’s shins and foot. They consist of two layers, one of gambeson and one of plate, which follows the contours of the wearer’s body closely, with the exception of the ankle joint, where the outer layer of " + component.getName() + " is replaced with chainmail. These boots can deflect arrows, as well as weapons that rely on their edge to do damage, unless said weapons are wielded by an incredibly strong person.These boots are more vulnerable to blunt weapons, which can cause dents in the boot’s " + component.getName() + " that can similarly hurt their wearer.");
+        ib.setDesc("These plate boots are made of 1.5mm " + component.getName() + ", and cover the wearer’s shins and foot. They consist of two layers, one of gambeson and one of plate, which follows the contours of the wearer’s body closely, with the exception of the ankle joint, where the outer layer of " + component.getName() + " is replaced with chainmail. These boots can deflect arrows, as well as weapons that rely on their edge to do damage, unless said weapons are wielded by an incredibly strong person.These boots are more vulnerable to blunt weapons, which can cause dents in the boot’s " + component.getName() + " that can similarly hurt their wearer.");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1716,7 +1716,7 @@ public class LostProfessionItems implements Listener {
         ib.setQuality(Quality.NATURAL);
         ib.setRarity(component.getRarity());
         ib.applyTags();
-        ib.setDesc(null, "This is a small chunk of " + component.getName() + ". \n\n [*] This chunk weighs 0.2 kg");
+        ib.setDesc("This is a small chunk of " + component.getName() + ". \n\n [*] This chunk weighs 0.2 kg");
         ib.addApproval(null, Approval.PLUGIN);
         return item;
     }
@@ -1730,7 +1730,7 @@ public class LostProfessionItems implements Listener {
         ib.setRarity(component.getRarity());
         ib.setPlaceable(false);
         ib.applyTags();
-        ib.setDesc(null, "This is a small chunk of " + component.getName() + ". \n\n [*] This chunk weighs 0.2 kg");
+        ib.setDesc("This is a small chunk of " + component.getName() + ". \n\n [*] This chunk weighs 0.2 kg");
         ib.addApproval(null, Approval.PLUGIN);
         return item;
     }
@@ -1744,7 +1744,7 @@ public class LostProfessionItems implements Listener {
         ib.setRarity(component.getRarity());
         ib.setPlaceable(false);
         ib.applyTags();
-        ib.setDesc(null, "This is a small chunk of " + component.getName() + ". \n\n [*] This chunk weighs 0.2 kg");
+        ib.setDesc("This is a small chunk of " + component.getName() + ". \n\n [*] This chunk weighs 0.2 kg");
         ib.addApproval(null, Approval.PLUGIN);
         return item;
     }
@@ -1772,7 +1772,7 @@ public class LostProfessionItems implements Listener {
         ib.setQuality(Quality.NATURAL);
         ib.setRarity(Rarity.COMMON);
         ib.applyTags();
-        ib.setDesc(null, "This is a uniform ingot of iron. Iron is gray and has a dull metallic sheen. \n\n [*] This ingot weighs 1 kg");
+        ib.setDesc("This is a uniform ingot of iron. Iron is gray and has a dull metallic sheen. \n\n [*] This ingot weighs 1 kg");
         ib.addApproval(null, Approval.PLUGIN);
         return item;
     }
@@ -1785,7 +1785,7 @@ public class LostProfessionItems implements Listener {
         ib.setQuality(Quality.NATURAL);
         ib.setRarity(Rarity.VCOMMON);
         ib.applyTags();
-        ib.setDesc(null, "Tin is very similar to silver in appearance, though because of its hardness it ends up with a lumpy texture. \n\n [*] This ingot weighs 1 kg");
+        ib.setDesc("Tin is very similar to silver in appearance, though because of its hardness it ends up with a lumpy texture. \n\n [*] This ingot weighs 1 kg");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1799,7 +1799,7 @@ public class LostProfessionItems implements Listener {
         ib.setQuality(Quality.NATURAL);
         ib.setRarity(Rarity.UNCOMMON);
         ib.applyTags();
-        ib.setDesc(null, "Silver is a brilliant shining metal that has a color the same as its name. It's polished and chromatic. \n\n [*] This ingot weighs 1 kg");
+        ib.setDesc("Silver is a brilliant shining metal that has a color the same as its name. It's polished and chromatic. \n\n [*] This ingot weighs 1 kg");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1813,7 +1813,7 @@ public class LostProfessionItems implements Listener {
         ib.setQuality(Quality.NATURAL);
         ib.setRarity(Rarity.UNCOMMON);
         ib.applyTags();
-        ib.setDesc(null, "Gold is one of the shiniest and most flamboyant metals in existence. Its appearance screams value.  \n\n [*] This ingot weighs 1 kg");
+        ib.setDesc("Gold is one of the shiniest and most flamboyant metals in existence. Its appearance screams value.  \n\n [*] This ingot weighs 1 kg");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1827,7 +1827,7 @@ public class LostProfessionItems implements Listener {
         ib.setQuality(Quality.NATURAL);
         ib.setRarity(Rarity.UNCOMMON);
         ib.applyTags();
-        ib.setDesc(null, "Tungsten is jet-black in appearance with a beautifully stark luster. \n\n [*] This ingot weighs 1 kg");
+        ib.setDesc("Tungsten is jet-black in appearance with a beautifully stark luster. \n\n [*] This ingot weighs 1 kg");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1841,7 +1841,7 @@ public class LostProfessionItems implements Listener {
         ib.setQuality(Quality.NATURAL);
         ib.setRarity(Rarity.RARE);
         ib.applyTags();
-        ib.setDesc(null, "Meteorite is a mostly black metal with pulsing red striations that tear through it like a hot knife on butter. \n\n [*] This ingot weighs 1 kg");
+        ib.setDesc("Meteorite is a mostly black metal with pulsing red striations that tear through it like a hot knife on butter. \n\n [*] This ingot weighs 1 kg");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1855,7 +1855,7 @@ public class LostProfessionItems implements Listener {
         ib.setQuality(Quality.NATURAL);
         ib.setRarity(Rarity.RARE);
         ib.applyTags();
-        ib.setDesc(null, "Platinum is almost identical to silver in every way. There is one difference, it has a slight blue-ish hue. \n\n [*] This ingot weighs 1 kg");
+        ib.setDesc("Platinum is almost identical to silver in every way. There is one difference, it has a slight blue-ish hue. \n\n [*] This ingot weighs 1 kg");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1870,7 +1870,7 @@ public class LostProfessionItems implements Listener {
         ib.setRarity(Rarity.WONDROUS);
         ib.setAura(Aura.ABYSSAL, 0);
         ib.applyTags();
-        ib.setDesc(null, "Cobalt is a dark-blue metal that has very little sheen. It has a slight magnetic pull when brought near other metals. \n\n [*] This ingot weighs 1 kg");
+        ib.setDesc("Cobalt is a dark-blue metal that has very little sheen. It has a slight magnetic pull when brought near other metals. \n\n [*] This ingot weighs 1 kg");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1885,7 +1885,7 @@ public class LostProfessionItems implements Listener {
         ib.setRarity(Rarity.WONDROUS);
         ib.setAura(Aura.ARCANE, 0);
         ib.applyTags();
-        ib.setDesc(null, "Calamite is a stark red, pulsating lustrous metal that whispers hate and malice in the ear of anyone who holds it. \n\n [*] This ingot weighs 1 kg");
+        ib.setDesc("Calamite is a stark red, pulsating lustrous metal that whispers hate and malice in the ear of anyone who holds it. \n\n [*] This ingot weighs 1 kg");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1900,7 +1900,7 @@ public class LostProfessionItems implements Listener {
         ib.setRarity(Rarity.WONDROUS);
         ib.setAura(Aura.DRACONIC, 1);
         ib.applyTags();
-        ib.setDesc(null, "Palladium is a yellow-ish orange metal similar to copper. However when this metal is near the distant roar and blast of Lacerta breathing flames can be heard. \n\n [*] This ingot weighs 1 kg");
+        ib.setDesc("Palladium is a yellow-ish orange metal similar to copper. However when this metal is near the distant roar and blast of Lacerta breathing flames can be heard. \n\n [*] This ingot weighs 1 kg");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1915,7 +1915,7 @@ public class LostProfessionItems implements Listener {
         ib.setRarity(Rarity.WONDROUS);
         ib.setAura(Aura.WEBBED, 0);
         ib.applyTags();
-        ib.setDesc(null, "Lither Coal is made from ancient fallen branches of the World Tree turned to peat, then to coal. \n\n [*] This coal chunk weighs 1 kg");
+        ib.setDesc("Lither Coal is made from ancient fallen branches of the World Tree turned to peat, then to coal. \n\n [*] This coal chunk weighs 1 kg");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1930,7 +1930,7 @@ public class LostProfessionItems implements Listener {
         ib.setRarity(Rarity.RARE);
         ib.setAura(Aura.MUNDANE, 1);
         ib.applyTags();
-        ib.setDesc(null, "Luminide is the same as iron except for at night. Its true vibrant grayish-blue color and glowing bright luster is revealed under moonlight. \n\n [*] This ingot weighs 1 kg");
+        ib.setDesc("Luminide is the same as iron except for at night. Its true vibrant grayish-blue color and glowing bright luster is revealed under moonlight. \n\n [*] This ingot weighs 1 kg");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
@@ -1944,7 +1944,7 @@ public class LostProfessionItems implements Listener {
         ib.setQuality(Quality.NATURAL);
         ib.setRarity(Rarity.VCOMMON);
         ib.applyTags();
-        ib.setDesc(null, "Copper is an orange, lustrous metal. It is smooth and uniform. \n\n [*] This ingot weighs 1 kg");
+        ib.setDesc("Copper is an orange, lustrous metal. It is smooth and uniform. \n\n [*] This ingot weighs 1 kg");
         ib.addApproval(null, Approval.PLUGIN);
 
         return item;
