@@ -7,14 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f8271c4-f1de-4a31-a745-6950338bbd14" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__co_lotc_tythan_bukkit_0_7_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__co_lotc_tythan_bukkit_0_7_9.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__co_lotc_tythan_common_0_7_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__co_lotc_tythan_common_0_7_9.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lostprofessions.iml" beforeDir="false" afterPath="$PROJECT_DIR$/lostprofessions.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/lostfables/lughgk/lostprofessions/items/LostProfessionItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/lostfables/lughgk/lostprofessions/items/LostProfessionItems.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Lostprofessions-1.16.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Lostprofessions-1.16.0.2.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/Lostprofessions-1.16.0.2.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/net/lostfables/lughgk/lostprofessions/items/LostProfessionItems.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/lostfables/lughgk/lostprofessions/items/LostProfessionItems.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/plugin.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -289,9 +284,9 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="760" y="274" key="SettingsEditor/0.0.2560.1400/-1920.349.1920.1040@0.0.2560.1400" timestamp="1591393260071" />
-    <state x="976" y="437" width="737" height="596" key="find.popup" timestamp="1598273420596">
+    <state x="976" y="437" width="737" height="596" key="find.popup" timestamp="1598275246582">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="976" y="437" width="737" height="596" key="find.popup/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1598273420596" />
+    <state x="976" y="437" width="737" height="596" key="find.popup/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1598275246582" />
   </component>
 </project>
