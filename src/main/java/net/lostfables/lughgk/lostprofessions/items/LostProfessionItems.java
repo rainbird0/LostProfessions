@@ -76,6 +76,8 @@ public class LostProfessionItems implements Listener {
 
         remove(Material.REDSTONE);
         remove(Material.LAPIS_LAZULI);
+        remove(Material.ENDER_CHEST);
+        remove(Material.RESPAWN_ANCHOR);
 
         List<Recipe> recipeList = new ArrayList<>();
         NamespacedKey nsKey;
