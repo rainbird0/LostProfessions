@@ -6,7 +6,7 @@
 
     <groupId>net.lostfables.lughgk</groupId>
     <artifactId>lostprofessions</artifactId>
-    <version>1.16.2.2</version>
+    <version>1.16.2.3</version>
     <packaging>jar</packaging>
 
     <name>Lostprofessions</name>
