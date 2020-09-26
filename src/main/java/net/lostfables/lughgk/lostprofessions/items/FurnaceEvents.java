@@ -119,7 +119,6 @@ public class FurnaceEvents implements Listener {
                 e.setCancelled(true);
             }
         }
-
     }
 
     @EventHandler(priority= EventPriority.HIGH)

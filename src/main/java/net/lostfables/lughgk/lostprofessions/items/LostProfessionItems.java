@@ -85,54 +85,67 @@ public class LostProfessionItems implements Listener {
         nsKey = new NamespacedKey(Lostprofessions.get(), "ironore_smelt");
         Lostprofessions.get().getKeySet().add(nsKey);
         recipeList.add(new FurnaceRecipe(nsKey, ironIngot(), Material.IRON_ORE, 0, 6000));
+        recipeList.add(new BlastingRecipe(nsKey, ironIngot(), Material.IRON_ORE, 0, 4000));
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "goldore_smelt");
         Lostprofessions.get().getKeySet().add(nsKey);
         recipeList.add(new FurnaceRecipe(nsKey, goldIngot(), Material.GOLD_ORE, 0, 6000));
+        recipeList.add(new BlastingRecipe(nsKey, goldIngot(), Material.GOLD_ORE, 0, 4000));
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "lapisore_smelt");
         Lostprofessions.get().getKeySet().add(nsKey);
         recipeList.add(new FurnaceRecipe(nsKey, cobaltIngot(), Material.LAPIS_ORE, 0, 6000));
+        recipeList.add(new BlastingRecipe(nsKey, cobaltIngot(), Material.LAPIS_ORE, 0, 4000));
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "redstoneore_smelt");
         Lostprofessions.get().getKeySet().add(nsKey);
         recipeList.add(new FurnaceRecipe(nsKey, calamiteIngot(), Material.REDSTONE_ORE, 0, 6000));
+        recipeList.add(new BlastingRecipe(nsKey, calamiteIngot(), Material.REDSTONE_ORE, 0, 4000));
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "diorite_smelt");
         Lostprofessions.get().getKeySet().add(nsKey);
         recipeList.add(new FurnaceRecipe(nsKey, silverIngot(), Material.DIORITE, 0, 6000));
+        recipeList.add(new BlastingRecipe(nsKey, silverIngot(), Material.DIORITE, 0, 4000));
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "coal_ore_smelt");
         Lostprofessions.get().getKeySet().add(nsKey);
         recipeList.add(new FurnaceRecipe(nsKey, tungstenIngot(), Material.COAL_ORE, 0, 6000));
+        recipeList.add(new BlastingRecipe(nsKey, tungstenIngot(), Material.COAL_ORE, 0, 4000));
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "iron_block_smelt");
         Lostprofessions.get().getKeySet().add(nsKey);
         recipeList.add(new FurnaceRecipe(nsKey, platinumIngot(), Material.IRON_BLOCK, 0, 6000));
+        recipeList.add(new BlastingRecipe(nsKey, platinumIngot(), Material.IRON_BLOCK, 0, 4000));
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "prismarine_smelt");
         Lostprofessions.get().getKeySet().add(nsKey);
         recipeList.add(new FurnaceRecipe(nsKey, luminideIngot(), Material.PRISMARINE, 0, 6000));
+        recipeList.add(new BlastingRecipe(nsKey, luminideIngot(), Material.PRISMARINE, 0, 4000));
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "magmablock_smelt");
         Lostprofessions.get().getKeySet().add(nsKey);
         recipeList.add(new FurnaceRecipe(nsKey, meteoricMetalIngot(), Material.MAGMA_BLOCK, 0, 6000));
+        recipeList.add(new BlastingRecipe(nsKey, meteoricMetalIngot(), Material.MAGMA_BLOCK, 0, 4000));
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "orangeterracota_smelt");
         Lostprofessions.get().getKeySet().add(nsKey);
         recipeList.add(new FurnaceRecipe(nsKey, copperIngot(), Material.ORANGE_TERRACOTTA, 0, 6000));
+        recipeList.add(new BlastingRecipe(nsKey, copperIngot(), Material.ORANGE_TERRACOTTA, 0, 4000));
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "purple_glazed_terracota_smelt");
         Lostprofessions.get().getKeySet().add(nsKey);
         recipeList.add(new FurnaceRecipe(nsKey, litherCoal(), Material.PURPLE_GLAZED_TERRACOTTA, 0, 6000));
+        recipeList.add(new BlastingRecipe(nsKey, litherCoal(), Material.PURPLE_GLAZED_TERRACOTTA, 0, 4000));
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "smoothredsandstone_smelt");
         Lostprofessions.get().getKeySet().add(nsKey);
         recipeList.add(new FurnaceRecipe(nsKey, palladiumIngot(), Material.SMOOTH_RED_SANDSTONE, 0, 6000));
+        recipeList.add(new BlastingRecipe(nsKey, palladiumIngot(), Material.SMOOTH_RED_SANDSTONE, 0, 4000));
 
         nsKey = new NamespacedKey(Lostprofessions.get(), "smoothquartz_smelt");
         Lostprofessions.get().getKeySet().add(nsKey);
         recipeList.add(new FurnaceRecipe(nsKey, tinIngot(), Material.SMOOTH_QUARTZ, 0, 6000));
+        recipeList.add(new BlastingRecipe(nsKey, tinIngot(), Material.SMOOTH_QUARTZ, 0, 4000));
 
 
         //Shapeless recipes
