@@ -6,7 +6,7 @@ import net.md_5.bungee.api.chat.BaseComponent;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.Sound;
-import org.bukkit.block.EnchantingTable;
+import org.bukkit.block.Block;
 import org.bukkit.block.Furnace;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -19,26 +19,31 @@ import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.FurnaceRecipe;
 import org.bukkit.inventory.ItemStack;
 
+import java.util.EnumSet;
+
 
 public class FurnaceEvents implements Listener {
+
+    private static EnumSet<Material> blockedInteractions = EnumSet.of(Material.ENCHANTING_TABLE);
+    static {
+        blockedInteractions.add(Material.ANVIL);
+        blockedInteractions.add(Material.GRINDSTONE);
+        blockedInteractions.add(Material.SMITHING_TABLE);
+        blockedInteractions.add(Material.CAMPFIRE);
+        blockedInteractions.add(Material.SOUL_CAMPFIRE);
+    }
 
     public FurnaceEvents() {
         Lostprofessions.get().getServer().getPluginManager().registerEvents(this, Lostprofessions.get());
     }
 
     @EventHandler
-    public void furnaceInteractEvent(PlayerInteractEvent event) {
-        try {
-            if (event.getClickedBlock() != null && (event.getClickedBlock().getState() instanceof EnchantingTable || event.getClickedBlock().getType() == Material.ANVIL)) {
-                if (event.getAction().equals(Action.RIGHT_CLICK_BLOCK)) {
-                    event.setCancelled(true);
-                }
-
-            }
-        } catch(NullPointerException ignored) {
-
+    public void blockAlternateCrafts(PlayerInteractEvent event) {
+        if (event.getAction().equals(Action.RIGHT_CLICK_BLOCK) &&
+            event.getClickedBlock() != null &&
+            blockedInteractions.contains(event.getClickedBlock().getType())) {
+            event.setCancelled(true);
         }
-
     }
 
     @EventHandler(priority= EventPriority.HIGH)
