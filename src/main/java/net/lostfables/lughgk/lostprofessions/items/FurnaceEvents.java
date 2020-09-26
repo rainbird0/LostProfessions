@@ -45,84 +45,73 @@ public class FurnaceEvents implements Listener {
     public void customBurnEvent(FurnaceBurnEvent e) {
         ItemStack source = ((Furnace) e.getBlock().getState()).getInventory().getSmelting();
         ItemStack fuel = ((Furnace) e.getBlock().getState()).getInventory().getFuel();
-        if(source.getType() == Material.IRON_ORE) {
-            if (LostProfessionItems.checkItem(source, "Iron Ore", "Metal")) {
-                return;
+        if (source != null) {
+            if (source.getType() == Material.IRON_ORE) {
+                if (LostProfessionItems.checkItem(source, "Iron Ore", "Metal")) {
+                    return;
+                }
+                e.setCancelled(true);
+            } else if (source.getType() == Material.COAL_ORE) {
+                if (LostProfessionItems.checkItem(source, "Tungsten Ore", "Metal")) {
+                    return;
+                }
+                e.setCancelled(true);
+            } else if (source.getType() == Material.DIORITE) {
+                if (LostProfessionItems.checkItem(source, "Silver Ore", "Metal")) {
+                    return;
+                }
+                e.setCancelled(true);
+            } else if (source.getType() == Material.GOLD_ORE) {
+                if (LostProfessionItems.checkItem(source, "Gold Ore", "Metal")) {
+                    return;
+                }
+                e.setCancelled(true);
+            } else if (source.getType() == Material.MAGMA_BLOCK) {
+                if (LostProfessionItems.checkItem(source, "Meteoric Metal Ore", "Metal")) {
+                    return;
+                }
+                e.setCancelled(true);
+            } else if (source.getType() == Material.IRON_BLOCK) {
+                if (LostProfessionItems.checkItem(source, "Platinum Ore", "Metal")) {
+                    return;
+                }
+                e.setCancelled(true);
+            } else if (source.getType() == Material.LAPIS_ORE) {
+                if (LostProfessionItems.checkItem(source, "Cobalt Ore", "Metal")) {
+                    return;
+                }
+                e.setCancelled(true);
+            } else if (source.getType() == Material.REDSTONE_ORE) {
+                if (LostProfessionItems.checkItem(source, "Calamite Ore", "Metal")) {
+                    return;
+                }
+                e.setCancelled(true);
+            } else if (source.getType() == Material.SMOOTH_RED_SANDSTONE) {
+                if (LostProfessionItems.checkItem(source, "Palladium Ore", "Metal")) {
+                    return;
+                }
+                e.setCancelled(true);
+            } else if (source.getType() == Material.PURPLE_GLAZED_TERRACOTTA) {
+                if (LostProfessionItems.checkItem(source, "Lither Ore", "Metal")) {
+                    return;
+                }
+                e.setCancelled(true);
+            } else if (source.getType() == Material.SMOOTH_QUARTZ) {
+                if (LostProfessionItems.checkItem(source, "Tin Ore", "Metal")) {
+                    return;
+                }
+                e.setCancelled(true);
+            } else if (source.getType() == Material.PRISMARINE) {
+                if (LostProfessionItems.checkItem(source, "Luminide Ore", "Metal")) {
+                    return;
+                }
+                e.setCancelled(true);
+            } else if (source.getType() == Material.ORANGE_TERRACOTTA) {
+                if (LostProfessionItems.checkItem(source, "Copper Ore", "Metal")) {
+                    return;
+                }
+                e.setCancelled(true);
             }
-            e.setCancelled(true);
-            return;
-        } else if(source.getType() == Material.COAL_ORE) {
-            if (LostProfessionItems.checkItem(source, "Tungsten Ore", "Metal")) {
-                return;
-            }
-            e.setCancelled(true);
-            return;
-        } else if(source.getType() == Material.DIORITE) {
-            if (LostProfessionItems.checkItem(source, "Silver Ore", "Metal")) {
-                return;
-            }
-            e.setCancelled(true);
-            return;
-        } else if(source.getType() == Material.GOLD_ORE) {
-            if (LostProfessionItems.checkItem(source, "Gold Ore", "Metal")) {
-                return;
-            }
-            e.setCancelled(true);
-            return;
-        } else if(source.getType() == Material.MAGMA_BLOCK) {
-            if (LostProfessionItems.checkItem(source, "Meteoric Metal Ore", "Metal")) {
-                return;
-            }
-            e.setCancelled(true);
-            return;
-        } else if(source.getType() == Material.IRON_BLOCK) {
-            if (LostProfessionItems.checkItem(source, "Platinum Ore", "Metal")) {
-                return;
-            }
-            e.setCancelled(true);
-            return;
-        } else if(source.getType() == Material.LAPIS_ORE) {
-            if (LostProfessionItems.checkItem(source, "Cobalt Ore", "Metal")) {
-                return;
-            }
-            e.setCancelled(true);
-            return;
-        } else if(source.getType() == Material.REDSTONE_ORE) {
-            if (LostProfessionItems.checkItem(source, "Calamite Ore", "Metal")) {
-                return;
-            }
-            e.setCancelled(true);
-            return;
-        } else if(source.getType() == Material.SMOOTH_RED_SANDSTONE) {
-            if (LostProfessionItems.checkItem(source, "Palladium Ore", "Metal")) {
-                return;
-            }
-            e.setCancelled(true);
-            return;
-        } else if(source.getType() == Material.PURPLE_GLAZED_TERRACOTTA) {
-            if (LostProfessionItems.checkItem(source, "Lither Ore", "Metal")) {
-                return;
-            }
-            e.setCancelled(true);
-            return;
-        } else if(source.getType() == Material.SMOOTH_QUARTZ) {
-            if (LostProfessionItems.checkItem(source, "Tin Ore", "Metal")) {
-                return;
-            }
-            e.setCancelled(true);
-            return;
-        } else if(source.getType() == Material.PRISMARINE) {
-            if (LostProfessionItems.checkItem(source, "Luminide Ore", "Metal")) {
-                return;
-            }
-            e.setCancelled(true);
-            return;
-        } else if(source.getType() == Material.ORANGE_TERRACOTTA) {
-            if (LostProfessionItems.checkItem(source, "Copper Ore", "Metal")) {
-                return;
-            }
-            e.setCancelled(true);
-            return;
         }
 
     }
