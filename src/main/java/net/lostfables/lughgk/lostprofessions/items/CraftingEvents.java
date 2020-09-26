@@ -203,6 +203,32 @@ public class CraftingEvents implements Listener {
                 return;
             }
 
+            //COMPASS
+            if (e.getInventory().getResult().equals(LostProfessionItems.compass(Component.BLUEPRINT))) {
+                List<Component> metal = new ArrayList<>();
+
+                for (ItemStack item : e.getInventory().getMatrix()) {
+                    if (item != null && (item.getType() == Material.IRON_NUGGET || item.getType() == Material.ACACIA_BUTTON || item.getType() == Material.DARK_OAK_BUTTON || item.getType() == Material.IRON_INGOT || item.getType() == Material.BRICK || item.getType() == Material.NETHER_BRICK)) {
+                        metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
+                    }
+                }
+
+                if (metal.contains(Component.BLUEPRINT) || metal.contains(null)) {
+                    e.getInventory().setResult(null);
+                    return;
+                }
+
+                for (int i = 1; i < metal.size(); i++) {
+                    if (!metal.get(i).equals(metal.get(i - 1))) {
+                        e.getInventory().setResult(null);
+                        return;
+                    }
+                }
+
+                e.getInventory().setResult(LostProfessionItems.compass(metal.get(0)));
+                return;
+            }
+
             //SHEARS
             if (e.getInventory().getResult().equals(LostProfessionItems.shears())) {
                 List<Component> metal = new ArrayList<>();

@@ -8,6 +8,8 @@
   <component name="ChangeListManager">
     <list default="true" id="de205d1d-dca3-4b3e-9adc-247d6e8af1b0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/lostfables/lughgk/lostprofessions/items/CraftingEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/lostfables/lughgk/lostprofessions/items/CraftingEvents.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/lostfables/lughgk/lostprofessions/items/LostProfessionItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/lostfables/lughgk/lostprofessions/items/LostProfessionItems.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -131,7 +133,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="8f8271c4-f1de-4a31-a745-6950338bbd14" name="Default Changelist" comment="" />
+      <changelist id="de205d1d-dca3-4b3e-9adc-247d6e8af1b0" name="Default Changelist" comment="" />
       <created>1588722821684</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -233,9 +235,9 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="992" y="415" key="MultipleFileMergeDialog/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1601086426825" />
-    <state x="976" y="437" width="737" height="596" key="find.popup" timestamp="1598275246582">
+    <state x="976" y="437" width="737" height="596" key="find.popup" timestamp="1601159507478">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="976" y="437" width="737" height="596" key="find.popup/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1598275246582" />
+    <state x="976" y="437" width="737" height="596" key="find.popup/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1601159507478" />
   </component>
 </project>

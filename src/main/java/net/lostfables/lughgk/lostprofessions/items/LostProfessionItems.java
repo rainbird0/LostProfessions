@@ -1226,6 +1226,17 @@ public class LostProfessionItems implements Listener {
 
 
     //Tools
+    public static ItemStack compass(Component component) {
+        ItemStack item = new ItemStack(Material.COMPASS);
+        ItemMeta im = item.getItemMeta();
+        ItemBuilder ib = new ItemBuilder(item);
+        ib.setName(component.getName() + " Compass");
+        ib.setType(Type.TOOL);
+        ib.setRarity(component.getRarity());
+        ib.applyTags();
+        ib.setDesc("This " + component.getName().toLowerCase() + " compass fits comfortably in the palm of your hand, generally pointing North unless bound to a lodestone. One may use this tool to determine the direction one is facing for simpler navigation.");
+        return item;
+    }
 
     public static ItemStack pickaxe(Component component) {
         ItemStack item = new ItemStack(Material.IRON_PICKAXE);
