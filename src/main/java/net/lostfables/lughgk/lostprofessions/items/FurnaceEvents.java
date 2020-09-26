@@ -28,23 +28,8 @@ import java.util.EnumSet;
 
 public class FurnaceEvents implements Listener {
 
-    private static EnumSet<InventoryType> blockedInteractions = EnumSet.of(InventoryType.ENCHANTING);
-    static {
-        blockedInteractions.add(InventoryType.ANVIL);
-        blockedInteractions.add(InventoryType.SMITHING);
-        blockedInteractions.add(InventoryType.GRINDSTONE);
-    }
-
     public FurnaceEvents() {
         Lostprofessions.get().getServer().getPluginManager().registerEvents(this, Lostprofessions.get());
-    }
-
-    @EventHandler
-    public void blockAlternateCrafts(InventoryOpenEvent event) {
-        if (blockedInteractions.contains(event.getInventory().getType()) &&
-            !(event.getInventory().getHolder() instanceof Menu)) {
-            event.setCancelled(true);
-        }
     }
 
     @EventHandler(priority= EventPriority.HIGH)

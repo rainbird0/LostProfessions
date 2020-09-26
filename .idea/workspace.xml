@@ -8,10 +8,8 @@
   <component name="ChangeListManager">
     <list default="true" id="de205d1d-dca3-4b3e-9adc-247d6e8af1b0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/lostfables/lughgk/lostprofessions/items/CraftingEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/lostfables/lughgk/lostprofessions/items/CraftingEvents.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/lostfables/lughgk/lostprofessions/items/FurnaceEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/lostfables/lughgk/lostprofessions/items/FurnaceEvents.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/lostfables/lughgk/lostprofessions/items/LostProfessionItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/lostfables/lughgk/lostprofessions/items/LostProfessionItems.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/lostfables/lughgk/lostprofessions/items/LostProfessionItems.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/lostfables/lughgk/lostprofessions/items/LostProfessionItems.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

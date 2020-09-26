@@ -1,22 +1,76 @@
 package net.lostfables.lughgk.lostprofessions.items;
 
+import co.lotc.core.bukkit.menu.Menu;
 import net.lostfables.lughgk.lostprofessions.Lostprofessions;
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
+import org.bukkit.entity.HumanEntity;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
+import org.bukkit.event.inventory.InventoryOpenEvent;
+import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.event.inventory.PrepareItemCraftEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.InventoryView;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.EnumSet;
 import java.util.List;
 
 public class CraftingEvents implements Listener {
 
+    private static EnumSet<InventoryType> blockedInteractions = EnumSet.of(InventoryType.ENCHANTING);
+    static {
+        blockedInteractions.add(InventoryType.ANVIL);
+        blockedInteractions.add(InventoryType.SMITHING);
+        blockedInteractions.add(InventoryType.GRINDSTONE);
+    }
+
     public CraftingEvents() {
         Lostprofessions.get().getServer().getPluginManager().registerEvents(this, Lostprofessions.get());
+    }
+
+    @EventHandler
+    public void blockAlternateCrafts(InventoryOpenEvent event) {
+        if (blockedInteractions.contains(event.getInventory().getType()) &&
+            !(event.getInventory().getHolder() instanceof Menu)) {
+            event.setCancelled(true);
+
+            InventoryView transaction = new InventoryView() {
+                HumanEntity player = event.getPlayer();
+                Inventory top = Bukkit.createInventory(player, InventoryType.CRAFTING);
+                Inventory bottom = player.getInventory();
+                @Override
+                public Inventory getTopInventory() {
+                    return top;
+                }
+
+                @Override
+                public Inventory getBottomInventory() {
+                    return bottom;
+                }
+
+                @Override
+                public HumanEntity getPlayer() {
+                    return player;
+                }
+
+                @Override
+                public InventoryType getType() {
+                    return InventoryType.CRAFTING;
+                }
+
+                @Override
+                public String getTitle() {
+                    return "Crafting";
+                }
+            };
+            Lostprofessions.get().getServer().getPluginManager().callEvent(new InventoryOpenEvent(transaction));
+        }
     }
 
     @EventHandler(ignoreCancelled = true)
