@@ -29,7 +29,7 @@ public class FurnaceEvents implements Listener {
     @EventHandler
     public void furnaceInteractEvent(PlayerInteractEvent event) {
         try {
-            if (event.getClickedBlock().getState() instanceof EnchantingTable || (event.getClickedBlock() != null && event.getClickedBlock().getType() == Material.ANVIL)) {
+            if (event.getClickedBlock() != null && (event.getClickedBlock().getState() instanceof EnchantingTable || event.getClickedBlock().getType() == Material.ANVIL)) {
                 if (event.getAction().equals(Action.RIGHT_CLICK_BLOCK)) {
                     event.setCancelled(true);
                 }
