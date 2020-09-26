@@ -58,7 +58,6 @@ public class LostProfessionItems implements Listener {
         remove(Material.GOLDEN_SWORD);
         remove(Material.GOLDEN_HOE);
         remove(Material.GOLDEN_SHOVEL);
-        remove(Material.CLOCK);
 
         remove(Material.DIAMOND_BOOTS);
         remove(Material.DIAMOND_CHESTPLATE);
@@ -74,8 +73,6 @@ public class LostProfessionItems implements Listener {
 
         remove(Material.TURTLE_HELMET);
 
-        remove(Material.REDSTONE);
-        remove(Material.LAPIS_LAZULI);
         remove(Material.ENDER_CHEST);
         remove(Material.RESPAWN_ANCHOR);
 
