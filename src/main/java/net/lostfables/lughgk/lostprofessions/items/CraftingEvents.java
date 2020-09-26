@@ -39,37 +39,7 @@ public class CraftingEvents implements Listener {
         if (blockedInteractions.contains(event.getInventory().getType()) &&
             !(event.getInventory().getHolder() instanceof Menu)) {
             event.setCancelled(true);
-
-            InventoryView transaction = new InventoryView() {
-                HumanEntity player = event.getPlayer();
-                Inventory top = Bukkit.createInventory(player, InventoryType.CRAFTING);
-                Inventory bottom = player.getInventory();
-                @Override
-                public Inventory getTopInventory() {
-                    return top;
-                }
-
-                @Override
-                public Inventory getBottomInventory() {
-                    return bottom;
-                }
-
-                @Override
-                public HumanEntity getPlayer() {
-                    return player;
-                }
-
-                @Override
-                public InventoryType getType() {
-                    return InventoryType.CRAFTING;
-                }
-
-                @Override
-                public String getTitle() {
-                    return "Crafting";
-                }
-            };
-            Lostprofessions.get().getServer().getPluginManager().callEvent(new InventoryOpenEvent(transaction));
+            event.getPlayer().openWorkbench(event.getPlayer().getLocation(), true);
         }
     }
 
