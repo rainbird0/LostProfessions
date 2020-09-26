@@ -27,6 +27,8 @@ public class FurnaceEvents implements Listener {
     private static EnumSet<Material> blockedInteractions = EnumSet.of(Material.ENCHANTING_TABLE);
     static {
         blockedInteractions.add(Material.ANVIL);
+        blockedInteractions.add(Material.CHIPPED_ANVIL);
+        blockedInteractions.add(Material.DAMAGED_ANVIL);
         blockedInteractions.add(Material.GRINDSTONE);
         blockedInteractions.add(Material.SMITHING_TABLE);
         blockedInteractions.add(Material.CAMPFIRE);
