@@ -45,8 +45,8 @@ public final class Lostprofessions extends JavaPlugin {
             SQLControl.mysqlSetup();
             updateCurrentItems();
             Commands.build(getCommand("loreitems"), () -> new LoreItemCommands(this));
-        }catch (Exception e) {
-
+        } catch (Exception e) {
+            e.printStackTrace();
         }
 
         //Recipes
@@ -56,8 +56,6 @@ public final class Lostprofessions extends JavaPlugin {
         new FurnaceEvents();
 
         getLogger().info(namespacedKeySet.size() + " custom recipes have been loaded.");
-
-
     }
 
     @Override
@@ -79,9 +77,7 @@ public final class Lostprofessions extends JavaPlugin {
             setCurrentItemIDs(id);
 
             for(int index = 1; index < getCurrentItemIDs(); index++) {
-                if(items.get(index) != null) {
-                    //do nothing
-                } else {
+                if(items.get(index) == null) {
                     items.put(index, new ItemStack(Material.AIR));
                     statement = getConnection().prepareStatement("INSERT INTO " + getTable().get(0) + " (ID,ITEM) VALUES (?,?)");
                     statement.setInt(1, index);
@@ -101,7 +97,7 @@ public final class Lostprofessions extends JavaPlugin {
 
     @Deprecated
     public void setCurrentItemIDs(int currentItemIDs) {
-        this.currentItemIDs = currentItemIDs;
+        Lostprofessions.currentItemIDs = currentItemIDs;
     }
 
     @Deprecated
@@ -118,7 +114,7 @@ public final class Lostprofessions extends JavaPlugin {
     }
 
     public void setConnection(Connection connection) {
-        this.connection = connection;
+        Lostprofessions.connection = connection;
     }
 
     public String getHost() {
@@ -126,7 +122,7 @@ public final class Lostprofessions extends JavaPlugin {
     }
 
     public void setHost(String host) {
-        this.host = host;
+        Lostprofessions.host = host;
     }
 
     public String getDatabase() {
@@ -134,7 +130,7 @@ public final class Lostprofessions extends JavaPlugin {
     }
 
     public void setDatabase(String database) {
-        this.database = database;
+        Lostprofessions.database = database;
     }
 
     public String getUsername() {
@@ -142,7 +138,7 @@ public final class Lostprofessions extends JavaPlugin {
     }
 
     public void setUsername(String username) {
-        this.username = username;
+        Lostprofessions.username = username;
     }
 
     public String getPassword() {
@@ -150,7 +146,7 @@ public final class Lostprofessions extends JavaPlugin {
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        Lostprofessions.password = password;
     }
 
     public List<String> getTable() {
@@ -158,7 +154,7 @@ public final class Lostprofessions extends JavaPlugin {
     }
 
     public void setTable(List<String> table) {
-        this.table = table;
+        Lostprofessions.table = table;
     }
 
     public int getPort() {
@@ -166,7 +162,7 @@ public final class Lostprofessions extends JavaPlugin {
     }
 
     public void setPort(int port) {
-        this.port = port;
+        Lostprofessions.port = port;
     }
 
     public MySQLController getSQLControl() {
