@@ -7,7 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f8271c4-f1de-4a31-a745-6950338bbd14" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Lostprofessions-1.16.2.3.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/Lostprofessions-1.16.2.3.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/net/lostfables/lughgk/lostprofessions/items/LostProfessionItems.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/lostfables/lughgk/lostprofessions/items/LostProfessionItems.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
