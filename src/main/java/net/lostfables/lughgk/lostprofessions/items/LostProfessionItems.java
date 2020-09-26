@@ -860,6 +860,30 @@ public class LostProfessionItems implements Listener {
         r.setIngredient('N', Material.IRON_INGOT);
         recipeList.add(r);
 
+        nsKey = new NamespacedKey(Lostprofessions.get(), "compass");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, compass(Component.BLUEPRINT));
+        r.shape(" N ", "NRN", " N ");
+        r.setIngredient('N', Material.IRON_NUGGET);
+        r.setIngredient('R', Material.REDSTONE);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "hard_compass");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, compass(Component.BLUEPRINT));
+        r.shape(" N ", "NRN", " N ");
+        r.setIngredient('N', Material.DARK_OAK_BUTTON);
+        r.setIngredient('R', Material.REDSTONE);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "soft_compass");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, compass(Component.BLUEPRINT));
+        r.shape(" N ", "NRN", " N ");
+        r.setIngredient('N', Material.ACACIA_BUTTON);
+        r.setIngredient('R', Material.REDSTONE);
+        recipeList.add(r);
+
         nsKey = new NamespacedKey(Lostprofessions.get(), "shears");
         Lostprofessions.get().getKeySet().add(nsKey);
         r = new ShapedRecipe(nsKey, shears());
