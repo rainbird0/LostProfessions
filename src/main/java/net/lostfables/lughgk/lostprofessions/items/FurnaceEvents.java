@@ -1,5 +1,6 @@
 package net.lostfables.lughgk.lostprofessions.items;
 
+import co.lotc.core.bukkit.menu.Menu;
 import net.lostfables.lughgk.lostprofessions.Lostprofessions;
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.chat.BaseComponent;
@@ -15,8 +16,11 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.inventory.FurnaceBurnEvent;
 import org.bukkit.event.inventory.FurnaceSmeltEvent;
+import org.bukkit.event.inventory.InventoryOpenEvent;
+import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.FurnaceRecipe;
+import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.EnumSet;
@@ -24,15 +28,11 @@ import java.util.EnumSet;
 
 public class FurnaceEvents implements Listener {
 
-    private static EnumSet<Material> blockedInteractions = EnumSet.of(Material.ENCHANTING_TABLE);
+    private static EnumSet<InventoryType> blockedInteractions = EnumSet.of(InventoryType.ENCHANTING);
     static {
-        blockedInteractions.add(Material.ANVIL);
-        blockedInteractions.add(Material.CHIPPED_ANVIL);
-        blockedInteractions.add(Material.DAMAGED_ANVIL);
-        blockedInteractions.add(Material.GRINDSTONE);
-        blockedInteractions.add(Material.SMITHING_TABLE);
-        blockedInteractions.add(Material.CAMPFIRE);
-        blockedInteractions.add(Material.SOUL_CAMPFIRE);
+        blockedInteractions.add(InventoryType.ANVIL);
+        blockedInteractions.add(InventoryType.SMITHING);
+        blockedInteractions.add(InventoryType.GRINDSTONE);
     }
 
     public FurnaceEvents() {
@@ -40,10 +40,9 @@ public class FurnaceEvents implements Listener {
     }
 
     @EventHandler
-    public void blockAlternateCrafts(PlayerInteractEvent event) {
-        if (event.getAction().equals(Action.RIGHT_CLICK_BLOCK) &&
-            event.getClickedBlock() != null &&
-            blockedInteractions.contains(event.getClickedBlock().getType())) {
+    public void blockAlternateCrafts(InventoryOpenEvent event) {
+        if (blockedInteractions.contains(event.getInventory().getType()) &&
+            !(event.getInventory().getHolder() instanceof Menu)) {
             event.setCancelled(true);
         }
     }
