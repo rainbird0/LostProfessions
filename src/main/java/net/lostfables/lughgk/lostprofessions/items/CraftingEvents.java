@@ -21,7 +21,7 @@ public class CraftingEvents implements Listener {
 
     @EventHandler(ignoreCancelled = true)
     public void onJoinEvent(PlayerJoinEvent event) {
-        event.getPlayer().discoverRecipes(Lostprofessions.get().getKeySet());
+        event.getPlayer().discoverRecipes(Lostprofessions.getKeySet());
     }
 
     @EventHandler(priority= EventPriority.HIGH)
@@ -34,7 +34,7 @@ public class CraftingEvents implements Listener {
             List<Component> metal = new ArrayList<>();
 
 
-            for (ItemStack item : Arrays.asList(e.getInventory().getMatrix())) {
+            for (ItemStack item : e.getInventory().getMatrix()) {
                 if (item != null && item.getType() == Material.IRON_INGOT) {
                     metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
                 }
@@ -65,7 +65,7 @@ public class CraftingEvents implements Listener {
             List<Component> metal = new ArrayList<>();
 
 
-            for (ItemStack item : Arrays.asList(e.getInventory().getMatrix())) {
+            for (ItemStack item : e.getInventory().getMatrix()) {
                 if (item != null && item.getType() == Material.BRICK) {
                     metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
                 }
@@ -95,7 +95,7 @@ public class CraftingEvents implements Listener {
             List<Component> metal = new ArrayList<>();
 
 
-            for (ItemStack item : Arrays.asList(e.getInventory().getMatrix())) {
+            for (ItemStack item : e.getInventory().getMatrix()) {
                 if (item != null && item.getType() == Material.NETHER_BRICK) {
                     metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
                 }
@@ -125,7 +125,7 @@ public class CraftingEvents implements Listener {
             List<Component> metal = new ArrayList<>();
 
 
-            for (ItemStack item : Arrays.asList(e.getInventory().getMatrix())) {
+            for (ItemStack item : e.getInventory().getMatrix()) {
                 if (item != null && item.getType() == Material.IRON_NUGGET) {
                     metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
                 }
@@ -153,7 +153,7 @@ public class CraftingEvents implements Listener {
                 List<Component> metal = new ArrayList<>();
 
 
-                for (ItemStack item : Arrays.asList(e.getInventory().getMatrix())) {
+                for (ItemStack item : e.getInventory().getMatrix()) {
                     if (item != null && (item.getType() == Material.IRON_NUGGET || item.getType() == Material.ACACIA_BUTTON || item.getType() == Material.DARK_OAK_BUTTON)) {
                         metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
                     }
@@ -180,7 +180,7 @@ public class CraftingEvents implements Listener {
                 List<Component> metal = new ArrayList<>();
 
 
-                for (ItemStack item : Arrays.asList(e.getInventory().getMatrix())) {
+                for (ItemStack item : e.getInventory().getMatrix()) {
                     if (item != null && (item.getType() == Material.IRON_INGOT)) {
                         metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
                     }
@@ -208,7 +208,7 @@ public class CraftingEvents implements Listener {
                 List<Component> metal = new ArrayList<>();
 
 
-                for (ItemStack item : Arrays.asList(e.getInventory().getMatrix())) {
+                for (ItemStack item : e.getInventory().getMatrix()) {
                     if (item != null && (item.getType() == Material.IRON_NUGGET || item.getType() == Material.ACACIA_BUTTON)) {
                         metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
                     }
@@ -236,7 +236,7 @@ public class CraftingEvents implements Listener {
                 List<Component> metal = new ArrayList<>();
 
 
-                for (ItemStack item : Arrays.asList(e.getInventory().getMatrix())) {
+                for (ItemStack item : e.getInventory().getMatrix()) {
                     if (item != null && (item.getType() == Material.IRON_INGOT || item.getType() == Material.BRICK || item.getType() == Material.NETHER_BRICK)) {
                         metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
                     }
@@ -263,7 +263,7 @@ public class CraftingEvents implements Listener {
         if (e.getInventory().getResult().equals(LostProfessionItems.pickaxe(Component.BLUEPRINT))) {
             List<Component> metal = new ArrayList<>();
 
-            for (ItemStack item : Arrays.asList(e.getInventory().getMatrix())) {
+            for (ItemStack item : e.getInventory().getMatrix()) {
                 if (item != null && (item.getType() == Material.IRON_NUGGET || item.getType() == Material.ACACIA_BUTTON || item.getType() == Material.DARK_OAK_BUTTON || item.getType() == Material.IRON_INGOT || item.getType() == Material.BRICK || item.getType() == Material.NETHER_BRICK)) {
                     metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
                 }
@@ -289,7 +289,7 @@ public class CraftingEvents implements Listener {
         if (e.getInventory().getResult() != null && e.getInventory().getResult().equals(LostProfessionItems.hoe(Component.BLUEPRINT))) {
             List<Component> metal = new ArrayList<>();
 
-            for (ItemStack item : Arrays.asList(e.getInventory().getMatrix())) {
+            for (ItemStack item : e.getInventory().getMatrix()) {
                 if (item != null && (item.getType() == Material.IRON_NUGGET || item.getType() == Material.ACACIA_BUTTON || item.getType() == Material.DARK_OAK_BUTTON || item.getType() == Material.IRON_INGOT || item.getType() == Material.BRICK || item.getType() == Material.NETHER_BRICK)) {
                     metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
                 }
@@ -315,7 +315,7 @@ public class CraftingEvents implements Listener {
         if (e.getInventory().getResult().equals(LostProfessionItems.woodcutteraxe(Component.BLUEPRINT))) {
             List<Component> metal = new ArrayList<>();
 
-            for (ItemStack item : Arrays.asList(e.getInventory().getMatrix())) {
+            for (ItemStack item : e.getInventory().getMatrix()) {
                 if (item != null && (item.getType() == Material.IRON_NUGGET || item.getType() == Material.ACACIA_BUTTON || item.getType() == Material.DARK_OAK_BUTTON || item.getType() == Material.IRON_INGOT || item.getType() == Material.BRICK || item.getType() == Material.NETHER_BRICK)) {
                     metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
                 }
@@ -341,7 +341,7 @@ public class CraftingEvents implements Listener {
             if (e.getInventory().getResult().equals(LostProfessionItems.reinforced_boots(Component.BLUEPRINT))) {
                 List<Component> metal = new ArrayList<>();
 
-                for (ItemStack item : Arrays.asList(e.getInventory().getMatrix())) {
+                for (ItemStack item : e.getInventory().getMatrix()) {
                     if (item != null && (item.getType() == Material.IRON_NUGGET || item.getType() == Material.ACACIA_BUTTON || item.getType() == Material.DARK_OAK_BUTTON)) {
                         metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
                     }
@@ -367,7 +367,7 @@ public class CraftingEvents implements Listener {
             if (e.getInventory().getResult().equals(LostProfessionItems.nasal_helm(Component.BLUEPRINT))) {
                 List<Component> metal = new ArrayList<>();
 
-                for (ItemStack item : Arrays.asList(e.getInventory().getMatrix())) {
+                for (ItemStack item : e.getInventory().getMatrix()) {
                     if (item != null && (item.getType() == Material.IRON_NUGGET || item.getType() == Material.ACACIA_BUTTON || item.getType() == Material.DARK_OAK_BUTTON || item.getType() == Material.IRON_INGOT || item.getType() == Material.BRICK || item.getType() == Material.NETHER_BRICK)) {
                         metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
                     }
@@ -393,7 +393,7 @@ public class CraftingEvents implements Listener {
             if (e.getInventory().getResult().equals(LostProfessionItems.maille_coif(Component.BLUEPRINT))) {
                 List<Component> metal = new ArrayList<>();
 
-                for (ItemStack item : Arrays.asList(e.getInventory().getMatrix())) {
+                for (ItemStack item : e.getInventory().getMatrix()) {
                     if (item != null && (item.getType() == Material.IRON_NUGGET || item.getType() == Material.ACACIA_BUTTON || item.getType() == Material.DARK_OAK_BUTTON)) {
                         metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
                     }
@@ -419,7 +419,7 @@ public class CraftingEvents implements Listener {
             if (e.getInventory().getResult().equals(LostProfessionItems.barbute(Component.BLUEPRINT))) {
                 List<Component> metal = new ArrayList<>();
 
-                for (ItemStack item : Arrays.asList(e.getInventory().getMatrix())) {
+                for (ItemStack item : e.getInventory().getMatrix()) {
                     if (item != null && (item.getType() == Material.IRON_NUGGET || item.getType() == Material.ACACIA_BUTTON || item.getType() == Material.DARK_OAK_BUTTON || item.getType() == Material.IRON_INGOT || item.getType() == Material.BRICK || item.getType() == Material.NETHER_BRICK)) {
                         metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
                     }
@@ -445,7 +445,7 @@ public class CraftingEvents implements Listener {
             if (e.getInventory().getResult().equals(LostProfessionItems.brigandine(Component.BLUEPRINT))) {
                 List<Component> metal = new ArrayList<>();
 
-                for (ItemStack item : Arrays.asList(e.getInventory().getMatrix())) {
+                for (ItemStack item : e.getInventory().getMatrix()) {
                     if (item != null && (item.getType() == Material.IRON_NUGGET || item.getType() == Material.ACACIA_BUTTON || item.getType() == Material.DARK_OAK_BUTTON)) {
                         metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
                     }
@@ -471,7 +471,7 @@ public class CraftingEvents implements Listener {
             if (e.getInventory().getResult().equals(LostProfessionItems.hauberk(Component.BLUEPRINT))) {
                 List<Component> metal = new ArrayList<>();
 
-                for (ItemStack item : Arrays.asList(e.getInventory().getMatrix())) {
+                for (ItemStack item : e.getInventory().getMatrix()) {
                     if (item != null && (item.getType() == Material.IRON_NUGGET || item.getType() == Material.ACACIA_BUTTON || item.getType() == Material.DARK_OAK_BUTTON)) {
                         metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
                     }
@@ -497,7 +497,7 @@ public class CraftingEvents implements Listener {
             if (e.getInventory().getResult().equals(LostProfessionItems.maille_chausses(Component.BLUEPRINT))) {
                 List<Component> metal = new ArrayList<>();
 
-                for (ItemStack item : Arrays.asList(e.getInventory().getMatrix())) {
+                for (ItemStack item : e.getInventory().getMatrix()) {
                     if (item != null && (item.getType() == Material.IRON_NUGGET || item.getType() == Material.ACACIA_BUTTON || item.getType() == Material.DARK_OAK_BUTTON)) {
                         metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
                     }
@@ -523,7 +523,7 @@ public class CraftingEvents implements Listener {
             if (e.getInventory().getResult().equals(LostProfessionItems.cuisse(Component.BLUEPRINT))) {
                 List<Component> metal = new ArrayList<>();
 
-                for (ItemStack item : Arrays.asList(e.getInventory().getMatrix())) {
+                for (ItemStack item : e.getInventory().getMatrix()) {
                     if (item != null && (item.getType() == Material.IRON_NUGGET || item.getType() == Material.ACACIA_BUTTON || item.getType() == Material.DARK_OAK_BUTTON || item.getType() == Material.IRON_INGOT || item.getType() == Material.BRICK || item.getType() == Material.NETHER_BRICK)) {
                         metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
                     }
@@ -551,7 +551,7 @@ public class CraftingEvents implements Listener {
                 List<Component> metal = new ArrayList<>();
 
 
-                for (ItemStack item : Arrays.asList(e.getInventory().getMatrix())) {
+                for (ItemStack item : e.getInventory().getMatrix()) {
                     if (item != null && (item.getType() == Material.IRON_INGOT || item.getType() == Material.BRICK || item.getType() == Material.NETHER_BRICK)) {
                         metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
                     }
@@ -579,7 +579,7 @@ public class CraftingEvents implements Listener {
                 List<Component> metal = new ArrayList<>();
 
 
-                for (ItemStack item : Arrays.asList(e.getInventory().getMatrix())) {
+                for (ItemStack item : e.getInventory().getMatrix()) {
                     if (item != null && (item.getType() == Material.IRON_INGOT || item.getType() == Material.BRICK || item.getType() == Material.NETHER_BRICK)) {
                         metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
                     }
@@ -607,7 +607,7 @@ public class CraftingEvents implements Listener {
                 List<Component> metal = new ArrayList<>();
 
 
-                for (ItemStack item : Arrays.asList(e.getInventory().getMatrix())) {
+                for (ItemStack item : e.getInventory().getMatrix()) {
                     if (item != null && (item.getType() == Material.IRON_INGOT || item.getType() == Material.BRICK || item.getType() == Material.NETHER_BRICK)) {
                         metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
                     }
@@ -635,7 +635,7 @@ public class CraftingEvents implements Listener {
                 List<Component> metal = new ArrayList<>();
 
 
-                for (ItemStack item : Arrays.asList(e.getInventory().getMatrix())) {
+                for (ItemStack item : e.getInventory().getMatrix()) {
                     if (item != null && (item.getType() == Material.IRON_INGOT || item.getType() == Material.BRICK || item.getType() == Material.NETHER_BRICK)) {
                         metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
                     }
@@ -663,7 +663,7 @@ public class CraftingEvents implements Listener {
                 List<Component> metal = new ArrayList<>();
 
 
-                for (ItemStack item : Arrays.asList(e.getInventory().getMatrix())) {
+                for (ItemStack item : e.getInventory().getMatrix()) {
                     if (item != null && (item.getType() == Material.IRON_NUGGET || item.getType() == Material.ACACIA_BUTTON || item.getType() == Material.DARK_OAK_BUTTON)) {
                         metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
                     }
@@ -691,7 +691,7 @@ public class CraftingEvents implements Listener {
                 List<Component> metal = new ArrayList<>();
 
 
-                for (ItemStack item : Arrays.asList(e.getInventory().getMatrix())) {
+                for (ItemStack item : e.getInventory().getMatrix()) {
                     if (item != null && (item.getType() == Material.IRON_NUGGET || item.getType() == Material.ACACIA_BUTTON || item.getType() == Material.DARK_OAK_BUTTON || item.getType() == Material.IRON_INGOT || item.getType() == Material.BRICK || item.getType() == Material.NETHER_BRICK)) {
                         metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
                     }
@@ -719,7 +719,7 @@ public class CraftingEvents implements Listener {
                 List<Component> metal = new ArrayList<>();
 
 
-                for (ItemStack item : Arrays.asList(e.getInventory().getMatrix())) {
+                for (ItemStack item : e.getInventory().getMatrix()) {
                     if (item != null && (item.getType() == Material.IRON_NUGGET || item.getType() == Material.ACACIA_BUTTON || item.getType() == Material.DARK_OAK_BUTTON)) {
                         metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
                     }
@@ -747,7 +747,7 @@ public class CraftingEvents implements Listener {
                 List<Component> metal = new ArrayList<>();
 
 
-                for (ItemStack item : Arrays.asList(e.getInventory().getMatrix())) {
+                for (ItemStack item : e.getInventory().getMatrix()) {
                     if (item != null && (item.getType() == Material.IRON_INGOT || item.getType() == Material.BRICK || item.getType() == Material.NETHER_BRICK)) {
                         metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
                     }
@@ -775,7 +775,7 @@ public class CraftingEvents implements Listener {
                 List<Component> metal = new ArrayList<>();
 
 
-                for (ItemStack item : Arrays.asList(e.getInventory().getMatrix())) {
+                for (ItemStack item : e.getInventory().getMatrix()) {
                     if (item != null && (item.getType() == Material.IRON_NUGGET || item.getType() == Material.ACACIA_BUTTON || item.getType() == Material.DARK_OAK_BUTTON)) {
                         metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
                     }
@@ -794,7 +794,6 @@ public class CraftingEvents implements Listener {
                 }
 
                 e.getInventory().setResult(LostProfessionItems.heater_shield(metal.get(0)));
-                return;
             }
         }
     }

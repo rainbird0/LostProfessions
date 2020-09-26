@@ -6,10 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f8271c4-f1de-4a31-a745-6950338bbd14" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/target/Lostprofessions-1.16.2.3.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/Lostprofessions-1.16.2.3.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/lostfables/lughgk/lostprofessions/items/LostProfessionItems.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/lostfables/lughgk/lostprofessions/items/LostProfessionItems.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+    <list default="true" id="de205d1d-dca3-4b3e-9adc-247d6e8af1b0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/lostfables/lughgk/lostprofessions/items/LostProfessionItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/lostfables/lughgk/lostprofessions/items/LostProfessionItems.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,67 +221,18 @@
     <option name="LAST_COMMIT_MESSAGE" value="new recipes" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1040" y="433" key="#com.intellij.ide.util.MemberChooser" timestamp="1591397962356">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="1040" y="433" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1400/-1920.349.1920.1040@0.0.2560.1400" timestamp="1591397962356" />
     <state x="1128" y="588" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1596103458053">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1128" y="588" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1596103458053" />
-    <state x="1010" y="447" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590742443553">
+    <state x="248" y="121" key="MergeDialog" timestamp="1601086425642">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1010" y="447" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400/-1920.349.1920.1040@0.0.2560.1400" timestamp="1590742443553" />
-    <state x="721" y="294" key="CommitChangelistDialog2" timestamp="1591446105500">
+    <state x="248" y="121" key="MergeDialog/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1601086425642" />
+    <state x="992" y="415" key="MultipleFileMergeDialog" timestamp="1601086426825">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="-1379" y="567" key="CommitChangelistDialog2/0.0.2560.1400/-1920.349.1920.1040@-1920.349.1920.1040" timestamp="1591236022617" />
-    <state x="721" y="294" key="CommitChangelistDialog2/0.0.2560.1400/-1920.349.1920.1040@0.0.2560.1400" timestamp="1591446105500" />
-    <state width="2517" height="358" key="GridCell.Tab.0.bottom" timestamp="1591461235081">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="1234" height="358" key="GridCell.Tab.0.bottom/0.0.2560.1400/-1920.349.1920.1040@-1920.349.1920.1040" timestamp="1591395519425" />
-    <state width="2517" height="358" key="GridCell.Tab.0.bottom/0.0.2560.1400/-1920.349.1920.1040@0.0.2560.1400" timestamp="1591461235081" />
-    <state width="2517" height="358" key="GridCell.Tab.0.center" timestamp="1591461235081">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="1234" height="358" key="GridCell.Tab.0.center/0.0.2560.1400/-1920.349.1920.1040@-1920.349.1920.1040" timestamp="1591395519425" />
-    <state width="2517" height="358" key="GridCell.Tab.0.center/0.0.2560.1400/-1920.349.1920.1040@0.0.2560.1400" timestamp="1591461235081" />
-    <state width="2517" height="358" key="GridCell.Tab.0.left" timestamp="1591461235081">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="1234" height="358" key="GridCell.Tab.0.left/0.0.2560.1400/-1920.349.1920.1040@-1920.349.1920.1040" timestamp="1591395519425" />
-    <state width="2517" height="358" key="GridCell.Tab.0.left/0.0.2560.1400/-1920.349.1920.1040@0.0.2560.1400" timestamp="1591461235081" />
-    <state width="2517" height="358" key="GridCell.Tab.0.right" timestamp="1591461235081">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="1234" height="358" key="GridCell.Tab.0.right/0.0.2560.1400/-1920.349.1920.1040@-1920.349.1920.1040" timestamp="1591395519425" />
-    <state width="2517" height="358" key="GridCell.Tab.0.right/0.0.2560.1400/-1920.349.1920.1040@0.0.2560.1400" timestamp="1591461235081" />
-    <state width="2517" height="492" key="GridCell.Tab.1.bottom" timestamp="1591393581412">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="938" height="348" key="GridCell.Tab.1.bottom/0.0.2560.1400/-1920.349.1920.1040@-1920.349.1920.1040" timestamp="1591227966361" />
-    <state width="2517" height="492" key="GridCell.Tab.1.bottom/0.0.2560.1400/-1920.349.1920.1040@0.0.2560.1400" timestamp="1591393581412" />
-    <state width="2517" height="492" key="GridCell.Tab.1.center" timestamp="1591393581412">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="938" height="348" key="GridCell.Tab.1.center/0.0.2560.1400/-1920.349.1920.1040@-1920.349.1920.1040" timestamp="1591227966361" />
-    <state width="2517" height="492" key="GridCell.Tab.1.center/0.0.2560.1400/-1920.349.1920.1040@0.0.2560.1400" timestamp="1591393581412" />
-    <state width="2517" height="492" key="GridCell.Tab.1.left" timestamp="1591393581412">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="938" height="348" key="GridCell.Tab.1.left/0.0.2560.1400/-1920.349.1920.1040@-1920.349.1920.1040" timestamp="1591227966361" />
-    <state width="2517" height="492" key="GridCell.Tab.1.left/0.0.2560.1400/-1920.349.1920.1040@0.0.2560.1400" timestamp="1591393581412" />
-    <state width="2517" height="492" key="GridCell.Tab.1.right" timestamp="1591393581412">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="938" height="348" key="GridCell.Tab.1.right/0.0.2560.1400/-1920.349.1920.1040@-1920.349.1920.1040" timestamp="1591227966361" />
-    <state width="2517" height="492" key="GridCell.Tab.1.right/0.0.2560.1400/-1920.349.1920.1040@0.0.2560.1400" timestamp="1591393581412" />
-    <state x="760" y="274" key="SettingsEditor" timestamp="1591393260071">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="760" y="274" key="SettingsEditor/0.0.2560.1400/-1920.349.1920.1040@0.0.2560.1400" timestamp="1591393260071" />
+    <state x="992" y="415" key="MultipleFileMergeDialog/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1601086426825" />
     <state x="976" y="437" width="737" height="596" key="find.popup" timestamp="1598275246582">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
