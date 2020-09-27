@@ -52,14 +52,13 @@ public class CraftingEvents implements Listener {
     public void customCrafting(PrepareItemCraftEvent e) {
         if (e.getInventory().getResult() != null) {
             // ANTI-BRICKS
-            {
-                Material itemType = e.getInventory().getResult().getType();
-                if (itemType.equals(Material.BRICKS) || itemType.equals(Material.NETHER_BRICKS)) {
-                    for (ItemStack item : e.getInventory().getMatrix()) {
-                        if (item != null && item.getItemMeta().getLore() != null &&
-                            item.getItemMeta().getLore().get(0).contains("Metal")) {
-                            e.getInventory().setResult(null);
-                        }
+            if (e.getInventory().getResult().getType().equals(Material.BRICKS) ||
+                e.getInventory().getResult().getType().equals(Material.NETHER_BRICKS)) {
+                for (ItemStack item : e.getInventory().getMatrix()) {
+                    if (item != null && item.getItemMeta().getLore() != null &&
+                        item.getItemMeta().getLore().get(0).contains("Metal")) {
+                        e.getInventory().setResult(null);
+                        return;
                     }
                 }
             }
