@@ -42,6 +42,7 @@ public class LostProfessionItems implements Listener {
         remove(Material.IRON_HOE);
         remove(Material.IRON_SHOVEL);
         remove(Material.COMPASS);
+        remove(Material.CLOCK);
         remove(Material.SHIELD);
         remove(Material.SHEARS);
         remove(Material.ANVIL);
@@ -894,6 +895,30 @@ public class LostProfessionItems implements Listener {
         r.setIngredient('R', Material.REDSTONE);
         recipeList.add(r);
 
+        nsKey = new NamespacedKey(Lostprofessions.get(), "clock");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, clock(Component.BLUEPRINT));
+        r.shape("NNN", " R ", " N ");
+        r.setIngredient('N', Material.IRON_NUGGET);
+        r.setIngredient('R', Material.REDSTONE);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "hard_clock");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, clock(Component.BLUEPRINT));
+        r.shape("NNN", " R ", " N ");
+        r.setIngredient('N', Material.DARK_OAK_BUTTON);
+        r.setIngredient('R', Material.REDSTONE);
+        recipeList.add(r);
+
+        nsKey = new NamespacedKey(Lostprofessions.get(), "soft_clock");
+        Lostprofessions.get().getKeySet().add(nsKey);
+        r = new ShapedRecipe(nsKey, clock(Component.BLUEPRINT));
+        r.shape("NNN", " R ", " N ");
+        r.setIngredient('N', Material.ACACIA_BUTTON);
+        r.setIngredient('R', Material.REDSTONE);
+        recipeList.add(r);
+
         nsKey = new NamespacedKey(Lostprofessions.get(), "shears");
         Lostprofessions.get().getKeySet().add(nsKey);
         r = new ShapedRecipe(nsKey, shears());
@@ -1269,6 +1294,18 @@ public class LostProfessionItems implements Listener {
         ib.setRarity(component.getRarity());
         ib.applyTags();
         ib.setDesc("This " + component.getName().toLowerCase() + " compass fits comfortably in the palm of your hand, generally pointing North unless bound to a lodestone. One may use this tool to determine the direction one is facing for simpler navigation.");
+        return item;
+    }
+
+    public static ItemStack clock(Component component) {
+        ItemStack item = new ItemStack(Material.CLOCK);
+        ItemMeta im = item.getItemMeta();
+        ItemBuilder ib = new ItemBuilder(item);
+        ib.setName(component.getName() + " Clock");
+        ib.setType(Type.TOOL);
+        ib.setRarity(component.getRarity());
+        ib.applyTags();
+        ib.setDesc("This " + component.getName().toLowerCase() + " clock has several basic gears and cogs within it for telling the time. It operates on a standard Anoman timescale.");
         return item;
     }
 
