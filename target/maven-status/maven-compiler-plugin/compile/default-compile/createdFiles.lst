@@ -8,5 +8,4 @@ net\lostfables\lughgk\lostprofessions\items\Component.class
 net\lostfables\lughgk\lostprofessions\items\LostProfessionItems.class
 net\lostfables\lughgk\lostprofessions\itemManagement\LoreItemCommands.class
 net\lostfables\lughgk\lostprofessions\Lostprofessions.class
-net\lostfables\lughgk\lostprofessions\items\CraftingEvents$1.class
 net\lostfables\lughgk\lostprofessions\items\FurnaceEvents.class

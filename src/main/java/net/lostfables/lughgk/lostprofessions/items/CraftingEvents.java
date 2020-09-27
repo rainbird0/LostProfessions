@@ -51,126 +51,138 @@ public class CraftingEvents implements Listener {
     @EventHandler(priority= EventPriority.HIGH)
     public void customCrafting(PrepareItemCraftEvent e) {
         if (e.getInventory().getResult() != null) {
-
-        //METALPIECE
-        if (e.getInventory().getResult().equals(LostProfessionItems.metalPiece(Component.BLUEPRINT))) {
-
-            List<Component> metal = new ArrayList<>();
-
-
-            for (ItemStack item : e.getInventory().getMatrix()) {
-                if (item != null && item.getType() == Material.IRON_INGOT) {
-                    metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
+            // ANTI-BRICKS
+            {
+                Material itemType = e.getInventory().getResult().getType();
+                if (itemType.equals(Material.BRICKS) || itemType.equals(Material.NETHER_BRICKS)) {
+                    for (ItemStack item : e.getInventory().getMatrix()) {
+                        if (item != null && item.getItemMeta().getLore() != null &&
+                            item.getItemMeta().getLore().get(0).contains("Metal")) {
+                            e.getInventory().setResult(null);
+                        }
+                    }
                 }
             }
 
-            if (metal.contains(Component.BLUEPRINT)) {
-                e.getInventory().setResult(null);
-                return;
-            }
+            // METALPIECE
+            if (e.getInventory().getResult().equals(LostProfessionItems.metalPiece(Component.BLUEPRINT))) {
+
+                List<Component> metal = new ArrayList<>();
 
 
-            for (int i = 1; i < metal.size(); i++) {
-                if (!metal.get(i).equals(metal.get(i - 1))) {
-                    System.out.println(metal.get(i).equals(metal.get(i - 1)));
+                for (ItemStack item : e.getInventory().getMatrix()) {
+                    if (item != null && item.getType() == Material.IRON_INGOT) {
+                        metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
+                    }
+                }
+
+                if (metal.contains(Component.BLUEPRINT)) {
                     e.getInventory().setResult(null);
                     return;
                 }
-            }
-
-            ItemStack item = LostProfessionItems.metalPiece(metal.get(0));
-            item.setAmount(5);
-            e.getInventory().setResult(item);
-            return;
-        }
-
-        if (e.getInventory().getResult().equals(LostProfessionItems.softMetalPiece(Component.BLUEPRINT))) {
-
-            List<Component> metal = new ArrayList<>();
 
 
-            for (ItemStack item : e.getInventory().getMatrix()) {
-                if (item != null && item.getType() == Material.BRICK) {
-                    metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
+                for (int i = 1; i < metal.size(); i++) {
+                    if (!metal.get(i).equals(metal.get(i - 1))) {
+                        System.out.println(metal.get(i).equals(metal.get(i - 1)));
+                        e.getInventory().setResult(null);
+                        return;
+                    }
                 }
-            }
 
-            if (metal.contains(Component.BLUEPRINT)) {
-                e.getInventory().setResult(null);
+                ItemStack item = LostProfessionItems.metalPiece(metal.get(0));
+                item.setAmount(5);
+                e.getInventory().setResult(item);
                 return;
             }
 
-            for (int i = 1; i < metal.size(); i++) {
-                if (!metal.get(i).equals(metal.get(i - 1))) {
-                    System.out.println(metal.get(i).equals(metal.get(i - 1)));
+            if (e.getInventory().getResult().equals(LostProfessionItems.softMetalPiece(Component.BLUEPRINT))) {
+
+                List<Component> metal = new ArrayList<>();
+
+
+                for (ItemStack item : e.getInventory().getMatrix()) {
+                    if (item != null && item.getType() == Material.BRICK) {
+                        metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
+                    }
+                }
+
+                if (metal.contains(Component.BLUEPRINT)) {
                     e.getInventory().setResult(null);
                     return;
                 }
-            }
 
-            ItemStack item = LostProfessionItems.softMetalPiece(metal.get(0));
-            item.setAmount(5);
-            e.getInventory().setResult(item);
-            return;
-        }
-
-        if (e.getInventory().getResult().equals(LostProfessionItems.hardMetalPiece(Component.BLUEPRINT))) {
-
-            List<Component> metal = new ArrayList<>();
-
-
-            for (ItemStack item : e.getInventory().getMatrix()) {
-                if (item != null && item.getType() == Material.NETHER_BRICK) {
-                    metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
+                for (int i = 1; i < metal.size(); i++) {
+                    if (!metal.get(i).equals(metal.get(i - 1))) {
+                        System.out.println(metal.get(i).equals(metal.get(i - 1)));
+                        e.getInventory().setResult(null);
+                        return;
+                    }
                 }
-            }
 
-            if (metal.contains(Component.BLUEPRINT)) {
-                e.getInventory().setResult(null);
+                ItemStack item = LostProfessionItems.softMetalPiece(metal.get(0));
+                item.setAmount(5);
+                e.getInventory().setResult(item);
                 return;
             }
 
-            for (int i = 1; i < metal.size(); i++) {
-                if (!metal.get(i).equals(metal.get(i - 1))) {
-                    System.out.println(metal.get(i).equals(metal.get(i - 1)));
+            if (e.getInventory().getResult().equals(LostProfessionItems.hardMetalPiece(Component.BLUEPRINT))) {
+
+                List<Component> metal = new ArrayList<>();
+
+
+                for (ItemStack item : e.getInventory().getMatrix()) {
+                    if (item != null && item.getType() == Material.NETHER_BRICK) {
+                        metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
+                    }
+                }
+
+                if (metal.contains(Component.BLUEPRINT)) {
                     e.getInventory().setResult(null);
                     return;
                 }
-            }
 
-            ItemStack item = LostProfessionItems.hardMetalPiece(metal.get(0));
-            item.setAmount(5);
-            e.getInventory().setResult(item);
-            return;
-        }
-
-        //METALINGOT
-        if (e.getInventory().getResult().equals(LostProfessionItems.ironIngot())) {
-            List<Component> metal = new ArrayList<>();
-
-
-            for (ItemStack item : e.getInventory().getMatrix()) {
-                if (item != null && item.getType() == Material.IRON_NUGGET) {
-                    metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
+                for (int i = 1; i < metal.size(); i++) {
+                    if (!metal.get(i).equals(metal.get(i - 1))) {
+                        System.out.println(metal.get(i).equals(metal.get(i - 1)));
+                        e.getInventory().setResult(null);
+                        return;
+                    }
                 }
-            }
 
-            if (metal.contains(Component.BLUEPRINT)) {
-                e.getInventory().setResult(null);
+                ItemStack item = LostProfessionItems.hardMetalPiece(metal.get(0));
+                item.setAmount(5);
+                e.getInventory().setResult(item);
                 return;
             }
 
-            for (int i = 1; i < metal.size(); i++) {
-                if (!metal.get(i).equals(metal.get(i - 1))) {
-                    System.out.println(metal.get(i).equals(metal.get(i - 1)));
+            //METALINGOT
+            if (e.getInventory().getResult().equals(LostProfessionItems.ironIngot())) {
+                List<Component> metal = new ArrayList<>();
+
+
+                for (ItemStack item : e.getInventory().getMatrix()) {
+                    if (item != null && item.getType() == Material.IRON_NUGGET) {
+                        metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
+                    }
+                }
+
+                if (metal.contains(Component.BLUEPRINT)) {
                     e.getInventory().setResult(null);
                     return;
                 }
-            }
 
-            e.getInventory().setResult(metal.get(0).getItem());
-            return;
-        }
+                for (int i = 1; i < metal.size(); i++) {
+                    if (!metal.get(i).equals(metal.get(i - 1))) {
+                        System.out.println(metal.get(i).equals(metal.get(i - 1)));
+                        e.getInventory().setResult(null);
+                        return;
+                    }
+                }
+
+                e.getInventory().setResult(metal.get(0).getItem());
+                return;
+            }
 
             //BUCKET
             if (e.getInventory().getResult().equals(LostProfessionItems.bucket())) {
@@ -309,83 +321,83 @@ public class CraftingEvents implements Listener {
             }
 
 
-        //PICKAXE
-        if (e.getInventory().getResult().equals(LostProfessionItems.pickaxe(Component.BLUEPRINT))) {
-            List<Component> metal = new ArrayList<>();
+            //PICKAXE
+            if (e.getInventory().getResult().equals(LostProfessionItems.pickaxe(Component.BLUEPRINT))) {
+                List<Component> metal = new ArrayList<>();
 
-            for (ItemStack item : e.getInventory().getMatrix()) {
-                if (item != null && (item.getType() == Material.IRON_NUGGET || item.getType() == Material.ACACIA_BUTTON || item.getType() == Material.DARK_OAK_BUTTON || item.getType() == Material.IRON_INGOT || item.getType() == Material.BRICK || item.getType() == Material.NETHER_BRICK)) {
-                    metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
+                for (ItemStack item : e.getInventory().getMatrix()) {
+                    if (item != null && (item.getType() == Material.IRON_NUGGET || item.getType() == Material.ACACIA_BUTTON || item.getType() == Material.DARK_OAK_BUTTON || item.getType() == Material.IRON_INGOT || item.getType() == Material.BRICK || item.getType() == Material.NETHER_BRICK)) {
+                        metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
+                    }
                 }
-            }
 
-            if (metal.contains(Component.BLUEPRINT) || metal.contains(null)) {
-                e.getInventory().setResult(null);
-                return;
-            }
-
-            for (int i = 1; i < metal.size(); i++) {
-                if (!metal.get(i).equals(metal.get(i - 1))) {
+                if (metal.contains(Component.BLUEPRINT) || metal.contains(null)) {
                     e.getInventory().setResult(null);
                     return;
                 }
-            }
 
-            e.getInventory().setResult(LostProfessionItems.pickaxe(metal.get(0)));
-            return;
-        }
-
-        //HOE
-        if (e.getInventory().getResult() != null && e.getInventory().getResult().equals(LostProfessionItems.hoe(Component.BLUEPRINT))) {
-            List<Component> metal = new ArrayList<>();
-
-            for (ItemStack item : e.getInventory().getMatrix()) {
-                if (item != null && (item.getType() == Material.IRON_NUGGET || item.getType() == Material.ACACIA_BUTTON || item.getType() == Material.DARK_OAK_BUTTON || item.getType() == Material.IRON_INGOT || item.getType() == Material.BRICK || item.getType() == Material.NETHER_BRICK)) {
-                    metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
+                for (int i = 1; i < metal.size(); i++) {
+                    if (!metal.get(i).equals(metal.get(i - 1))) {
+                        e.getInventory().setResult(null);
+                        return;
+                    }
                 }
-            }
 
-            if (metal.contains(Component.BLUEPRINT) || metal.contains(null)) {
-                e.getInventory().setResult(null);
+                e.getInventory().setResult(LostProfessionItems.pickaxe(metal.get(0)));
                 return;
             }
 
-            for (int i = 1; i < metal.size(); i++) {
-                if (!metal.get(i).equals(metal.get(i - 1))) {
+            //HOE
+            if (e.getInventory().getResult() != null && e.getInventory().getResult().equals(LostProfessionItems.hoe(Component.BLUEPRINT))) {
+                List<Component> metal = new ArrayList<>();
+
+                for (ItemStack item : e.getInventory().getMatrix()) {
+                    if (item != null && (item.getType() == Material.IRON_NUGGET || item.getType() == Material.ACACIA_BUTTON || item.getType() == Material.DARK_OAK_BUTTON || item.getType() == Material.IRON_INGOT || item.getType() == Material.BRICK || item.getType() == Material.NETHER_BRICK)) {
+                        metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
+                    }
+                }
+
+                if (metal.contains(Component.BLUEPRINT) || metal.contains(null)) {
                     e.getInventory().setResult(null);
                     return;
                 }
-            }
 
-            e.getInventory().setResult(LostProfessionItems.hoe(metal.get(0)));
-            return;
-        }
-
-        //WOODCUTTER'S AXE
-        if (e.getInventory().getResult().equals(LostProfessionItems.woodcutteraxe(Component.BLUEPRINT))) {
-            List<Component> metal = new ArrayList<>();
-
-            for (ItemStack item : e.getInventory().getMatrix()) {
-                if (item != null && (item.getType() == Material.IRON_NUGGET || item.getType() == Material.ACACIA_BUTTON || item.getType() == Material.DARK_OAK_BUTTON || item.getType() == Material.IRON_INGOT || item.getType() == Material.BRICK || item.getType() == Material.NETHER_BRICK)) {
-                    metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
+                for (int i = 1; i < metal.size(); i++) {
+                    if (!metal.get(i).equals(metal.get(i - 1))) {
+                        e.getInventory().setResult(null);
+                        return;
+                    }
                 }
-            }
 
-            if (metal.contains(Component.BLUEPRINT) || metal.contains(null)) {
-                e.getInventory().setResult(null);
+                e.getInventory().setResult(LostProfessionItems.hoe(metal.get(0)));
                 return;
             }
 
-            for (int i = 1; i < metal.size(); i++) {
-                if (!metal.get(i).equals(metal.get(i - 1))) {
+            //WOODCUTTER'S AXE
+            if (e.getInventory().getResult().equals(LostProfessionItems.woodcutteraxe(Component.BLUEPRINT))) {
+                List<Component> metal = new ArrayList<>();
+
+                for (ItemStack item : e.getInventory().getMatrix()) {
+                    if (item != null && (item.getType() == Material.IRON_NUGGET || item.getType() == Material.ACACIA_BUTTON || item.getType() == Material.DARK_OAK_BUTTON || item.getType() == Material.IRON_INGOT || item.getType() == Material.BRICK || item.getType() == Material.NETHER_BRICK)) {
+                        metal.add(Component.getFromString(item.getItemMeta().getDisplayName()));
+                    }
+                }
+
+                if (metal.contains(Component.BLUEPRINT) || metal.contains(null)) {
                     e.getInventory().setResult(null);
                     return;
                 }
-            }
 
-            e.getInventory().setResult(LostProfessionItems.woodcutteraxe(metal.get(0)));
-            return;
-        }
+                for (int i = 1; i < metal.size(); i++) {
+                    if (!metal.get(i).equals(metal.get(i - 1))) {
+                        e.getInventory().setResult(null);
+                        return;
+                    }
+                }
+
+                e.getInventory().setResult(LostProfessionItems.woodcutteraxe(metal.get(0)));
+                return;
+            }
 
             //Reinforced Boot
             if (e.getInventory().getResult().equals(LostProfessionItems.reinforced_boots(Component.BLUEPRINT))) {
