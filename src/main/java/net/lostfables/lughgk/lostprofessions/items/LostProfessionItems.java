@@ -1736,11 +1736,12 @@ public class LostProfessionItems implements Listener {
         ItemStack item = new ItemStack(Material.GOLD_NUGGET);
         item.setAmount(9);
         ItemMeta im = item.getItemMeta();
-        im.setDisplayName(ChatColor.GREEN + "Gold Piece");
+        im.setDisplayName(ChatColor.DARK_GREEN + "Gold Piece");
         List<String> loreString = new ArrayList<>();
         loreString.add(ChatColor.translateAlternateColorCodes('&', "&7[&2Uncommon &7| &bModerate &7| &8Mundane &7| &8Currency&7]"));
         loreString.add(ChatColor.translateAlternateColorCodes('&',"&7&oA single Gold Piece. A Gold Piece is the"));
         loreString.add(ChatColor.translateAlternateColorCodes('&',"&7&ostandard money used in the old world."));
+        loreString.add("");
         loreString.add(ChatColor.translateAlternateColorCodes('&',"&8&oCreated by a Plugin"));
         im.setLore(loreString);
         item.setItemMeta(im);
