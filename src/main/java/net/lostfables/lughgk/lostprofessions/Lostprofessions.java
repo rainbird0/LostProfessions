@@ -1,3 +1,4 @@
+//Hello
 package net.lostfables.lughgk.lostprofessions;
 
 import co.lotc.core.bukkit.command.Commands;
